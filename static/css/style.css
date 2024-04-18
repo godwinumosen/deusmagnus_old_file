@@ -138,9 +138,10 @@ h6 {
     line-height: 1.5;
 }
 
+/* Pls dont touch this color */
 .cop-logo img,
 a {
-    color: #fff;
+    color: #000;
     text-decoration: none !important;
     -webkit-transition: all ease 0.3s;
     -moz-transition: all ease 0.3s;
@@ -218,6 +219,7 @@ HEADER
     padding: 15px 0 14px;
 }
 
+/* Pls dont touch this color */
 .topbar a,
 .topbar p {
     color: #fff;
@@ -254,6 +256,7 @@ HEADER
     padding: 30px 0;
 }
 
+/* Pls dont touch this color */
 .header-normal {
     position: relative;
     padding: 0 0 24px;
@@ -264,6 +267,7 @@ HEADER
     color: #848484 !important;
 }
 
+/* Pls dont touch this color */
 .header.affix {
     position: fixed;
     top: 0;
@@ -274,6 +278,7 @@ HEADER
     right: 0,
 }
 
+/* Pls dont touch this color */
 .header.header-normal.affix {
     background-color: #fff;
 }
@@ -321,6 +326,7 @@ HEADER
     margin: 0 !important;
 }
 
+/* Pls dont touch this color */
 .social a {
     font-size: 12px;
     color: #fff !important;
@@ -507,6 +513,7 @@ MEGA MENU
     min-width: 200px;
 }
 
+/* Pls dont touch this color */
 .yamm .dropdown .dropdown-menu {
     border-radius: 0;
     border-top: 3px solid #ddd;

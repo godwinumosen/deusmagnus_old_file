@@ -28,5 +28,5 @@ class ArticleDetailView(DetailView):
 
     def ArticleDetailView(request, pk):  
         object = get_object_or_404(DeusMagnusMainPost, pk=pk)
-        return render(request, 'article_detail.html', {'detail': obect})
+        return render(request, 'article_detail.html', {'detail': object})
     
