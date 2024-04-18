@@ -20,3 +20,13 @@ class HomeView(ListView):
     model = DeusMagnusMainPost
     template_name = 'deus_magnus/home.html'
     
+
+ #The first Deus Magnus Video ArticleDetailView page
+class ArticleDetailView(DetailView):
+    model = DeusMagnusMainPost
+    template_name = 'deus_magnus/article_detail.html'
+
+    def ArticleDetailView(request, pk):  
+        object = get_object_or_404(DeusMagnusMainPost, pk=pk)
+        return render(request, 'article_detail.html', {'detail': object})
+    
