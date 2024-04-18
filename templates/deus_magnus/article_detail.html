@@ -26,25 +26,25 @@
                     <div class="content blog-list">
                         <div class="blog-wrapper clearfix">
                             <div class="blog-meta">
-                                <small><a href="#">Tips & Tricks</a></small>
-                                <h3>How to Hire Icon Designer for Your Next Project</h3>
+                                <h3>{{ object.deus_magnus_title }}</h3>
                                 <ul class="list-inline">
-                                    <li>6 hours ago</li>
-                                    <li><span>written by</span> <a href="#">Edulogy Team</a></li>
+                                    <li>{{ object.deus_magnus_publish_date }}</li>
+                                    <li><span>written by</span>{{ object.deus_magnus_author }}</li>
                                 </ul>
                             </div><!-- end blog-meta -->
-
                             <div class="blog-media">
-                                <img src="upload/blog_01.jpg" alt="" class="img-responsive img-rounded">
+                                <!-- <img src="upload/blog_01.jpg" alt="" class="img-responsive img-rounded"> -->
+                                <video autoplay muted playsinline loop width="100%" height="90%"  controls >
+                                    <source src="{{ object.deus_manus_video.url }}" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
                             </div><!-- end media -->
-
                             <div class="blog-desc-big">
-                                <p class="lead">You can get andard license that come with every free icons..</p>
-                                <p>Integer eu urna sit amet dolor fringilla vellen.</p>  
+                                <p class="lead">{{ object.deus_magnus_title }}</p>
+                                <p>{{ object.deus_magnus_description }}</p>  
                             </div><!-- end desc -->
                         </div><!-- end blog -->
                     </div><!-- end content -->
-
                 </div><!-- end col -->
                 <div class="sidebar col-md-4">
                     <div class="widget clearfix">
@@ -57,39 +57,13 @@
                         <h3 class="widget-title">Popular Posts</h3>
                         <div class="post-widget">
                             <div class="media">
-                                <img src="upload/blog_small_01.jpg" alt="" class="img-responsive alignleft img-rounded">
+                                <img src="{% static 'upload/blog_small_01.jpg' %}" alt="" class="img-responsive alignleft img-rounded">
                                 <div class="media-body">
-                                    <h5 class="mt-0"><a href="blog-single.html">Learning English Like a Pro..</a></h5>
+                                    <h5 class="mt-0"><a href="blog-single.html">Bulding construction Like a Pro..</a></h5>
                                     <div class="blog-meta">
                                         <ul class="list-inline">
                                             <li>4 days ago</li>
-                                            <li><span>by</span> <a href="#">Edulogy Team</a></li>
-                                        </ul>
-                                    </div><!-- end blog-meta -->
-                                </div>
-                            </div>
-
-                            <div class="media">
-                                <img src="upload/blog_small_02.jpg" alt="" class="img-responsive alignleft img-rounded">
-                                <div class="media-body">
-                                    <h5 class="mt-0"><a href="blog-single.html">How to create a beautiful website with Bootstrap</a></h5>
-                                    <div class="blog-meta">
-                                        <ul class="list-inline">
-                                            <li>5 days ago</li>
-                                            <li><span>by</span> <a href="#">Boby DOE</a></li>
-                                        </ul>
-                                    </div><!-- end blog-meta -->
-                                </div>
-                            </div>
-
-                            <div class="media">
-                                <img src="upload/blog_small_03.jpg" alt="" class="img-responsive alignleft img-rounded">
-                                <div class="media-body">
-                                    <h5 class="mt-0"><a href="blog-single.html">Don't forget to update your Google web master tools</a></h5>
-                                    <div class="blog-meta">
-                                        <ul class="list-inline">
-                                            <li>6 days ago</li>
-                                            <li><span>by</span> <a href="#">Martin</a></li>
+                                            <li><span>by</span> <a href="#"> Team</a></li>
                                         </ul>
                                     </div><!-- end blog-meta -->
                                 </div>

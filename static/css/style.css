@@ -1,5 +1,3 @@
-
-
 @font-face {
     font-family: "Flaticon";
     src: url("fonts/Flaticon.eot");
@@ -142,7 +140,7 @@ h6 {
 
 .cop-logo img,
 a {
-    color: #000;
+    color: #fff;
     text-decoration: none !important;
     -webkit-transition: all ease 0.3s;
     -moz-transition: all ease 0.3s;
@@ -217,7 +215,7 @@ HEADER
 .topbar {
     background-color: #000;
     margin-bottom: 30px;
-    padding: 12px 0 14px;
+    padding: 15px 0 14px;
 }
 
 .topbar a,
@@ -233,6 +231,7 @@ HEADER
 
 .topbar .text-left i {
     padding-right: 3px;
+    
 }
 
 .header {
@@ -269,14 +268,14 @@ HEADER
     position: fixed;
     top: 0;
     z-index: 100;
-    background-color: #000;
+    background-color: #fff;
     left: 0;
     padding: 15px 0;
     right: 0,
 }
 
 .header.header-normal.affix {
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
 .header.affix .topbar {
@@ -293,7 +292,7 @@ HEADER
 }
 
 .navbar-default .nav>li>a {
-    color: #fff !important;
+    color: #000 !important;
     text-transform: capitalize;
     font-size: 15px;
     font-weight: 500;
@@ -1426,18 +1425,6 @@ BLOG
     padding-right: 5px;
 }
 
-  .btn {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 5px; /* Adjust the border radius as needed */
-    }
-
-    .btn:hover {
-        background-color: #0056b3;
-    }
 
 .blog-meta h3 {
     padding: 0;

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Site Meta -->
-    <title>Deus Magnus</title>
+    <title>{% block title %}Deus Magnus{% endblock %}</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -80,7 +80,7 @@
                             <span class="icon-bar"></span>
                         </button>
                         <div class="logo-normal">
-                            <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/logo.jpg' %}"width="105" height="50" alt=""></a>
+                            <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}"width="105" height="70" alt=""></a>
                         </div>
                     </div>
 
