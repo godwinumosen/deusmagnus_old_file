@@ -54,8 +54,8 @@
 <section class="section gb">
     <div class="container">
         <div class="section-title text-center">
-            <h3>Recent News</h3>
-            <p>News News News News News News News.</p>
+            <h3>RELATED PROJECTS</h3>
+            <p>With over 20 years of construction experience.</p>
         </div><!-- end title -->
 
         <div class="row">
@@ -107,36 +107,38 @@
         <section class="section gb">
             <div class="container">
                 <div class="section-title text-center">
-                    <h3>Recent News</h3>
-                    <p>News News News News News News News.</p>
+                    <h3>More News & Views</h3>
+                    <p>Providing engineering services to assist the builder.</p>
                 </div><!-- end title -->
-
                 <div class="row">
+                    {% for second_construction in second_constructions %}
                     <div class="col-lg-4 col-md-12">
                         <div class="blog-box">
                             <div class="image-wrap entry">
-                                <img src="{% static 'upload/blog_01.jpeg' %}" alt="" class="img-responsive">
+                                {% if second_construction.second_deus_magnus_img %}
+                                <img src="{{ second_construction.second_deus_magnus_img.url }}" class="custom-image">
+                                {% endif %}
                                 <div class="magnifier">
                                      <a href="blog-single.html" title=""><i class="flaticon-add"></i></a>
                                 </div>
                             </div><!-- end image-wrap -->
-
                             <div class="blog-desc">
                                 <h4><a href="blog-single.html">How to learn perfect </a></h4>
                                 <p>perfect perfect perfect perfect.</p>
                             </div><!-- end blog-desc -->
-
                             <div class="post-meta">
-                                <ul class="list-inline">
-                                    <li><a href="#">21 March 2017</a></li>
-                                </ul>
+                                    <div class="btn-wrapper">
+                                        <a href="" class="btn btn-primary"style="border-radius: 10px;">Read More</a>
+                                    </div>
                             </div><!-- end post-meta -->
                         </div><!-- end blog -->
                     </div><!-- end col -->
+                    {%endfor%}
                 </div><!-- end row -->
             </div><!-- end container -->
         </section>
   
+
         <section class="section db">
             <div class="container">
                 <div class="row">

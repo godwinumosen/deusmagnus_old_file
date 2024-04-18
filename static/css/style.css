@@ -2296,3 +2296,7 @@ RESPONSIVE
         padding: 1em 0.7em;
     }
 }
+
+.custom-image {
+    height: 220px;
+}

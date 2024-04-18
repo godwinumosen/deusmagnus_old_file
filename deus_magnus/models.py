@@ -27,3 +27,21 @@ class DeusMagnusMainPost(models.Model):
     def get_absolute_url(self):
         return reverse ('home')
     
+# The second model for Deus Magnus Model category
+class SecondDeusMagnusMainPicturePost(models.Model):
+    second_deus_magnus_title = models.CharField(max_length=255, blank=True, null=True)
+    second_deus_magnus_description = models.TextField()
+    second_deus_magnus_slug = models.SlugField (max_length=255,blank=True, null=True)
+    second_deus_magnus_img = models.ImageField(upload_to='images/')
+    second_deus_magnus_publish_date = models.DateTimeField (auto_now_add= True)
+    second_deus_magnus_author = models.ForeignKey(User, on_delete=models.CASCADE)
+
+       
+    class Meta:
+        ordering =['second_deus_magnus_publish_date']
+    
+    def __str__(self):
+        return self.second_deus_magnus_title + ' | ' + str(self.second_deus_magnus_author)
+    
+    def get_absolute_url(self):
+        return reverse ('home')

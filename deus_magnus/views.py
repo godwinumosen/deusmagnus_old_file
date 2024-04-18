@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect,get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView,ListView
 from django.contrib.auth.decorators import login_required
-from .models import DeusMagnusMainPost
+from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost
 from django.contrib import messages
 from django.http import HttpResponse
 from django.contrib.auth.models import User
@@ -19,6 +19,13 @@ def base (request):
 class HomeView(ListView):
     model = DeusMagnusMainPost
     template_name = 'deus_magnus/home.html'
+
+    #This model is for the second deus magnus sub category of the blog
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        #context['user'] = self.request.user
+        context['second_constructions'] = SecondDeusMagnusMainPicturePost.objects.all()
+        return context
     
 
  #The first Deus Magnus Video ArticleDetailView page
