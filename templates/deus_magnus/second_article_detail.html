@@ -30,8 +30,8 @@
                         <div class="shop-meta">
                                 <a href="{% url 'home' %}" class="btn btn-primary"style="border-radius: 10px;"><i class="fa fa-angle-left">Back</i></a>
                             <ul class="list-inline">
-                                <li> SKU: product-111</li>
-                                <li>Categories: <a href="#">Cements</a>
+                                <li>{{ object.second_deus_magnus_publish_date }}</li>
+                                <li>Posted by: {{ object.second_deus_magnus_author }}</li>
                             </ul>
                         </div><!-- end shop meta -->
                     </div><!-- end desc -->
