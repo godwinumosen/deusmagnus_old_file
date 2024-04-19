@@ -14,7 +14,7 @@
                         <div class="col-md-12">
                             <div class="image-wrap entry">
                                 {% if object.second_deus_magnus_img %}
-                                <img src="{{ object.second_deus_magnus_img.url }}" alt="" class="img-responsive">
+                                <img src="{{ object.second_deus_magnus_img.url }}"style="border-radius:7px;" alt="" class="img-responsive">
                                 {% endif %}
                             </div><!-- end image-wrap -->
                         </div>
@@ -28,7 +28,7 @@
                         <h3>{{ object.second_deus_magnus_title }}</h3>
                         <p>{{ object.second_deus_magnus_description }}</p>
                         <div class="shop-meta">
-                            <a href="#" class="btn btn-primary">Back</a>
+                                <a href="{% url 'home' %}" class="btn btn-primary"style="border-radius: 10px;"><i class="fa fa-angle-left">Back</i></a>
                             <ul class="list-inline">
                                 <li> SKU: product-111</li>
                                 <li>Categories: <a href="#">Cements</a>
@@ -48,7 +48,7 @@
                         <div class="tab-content">
                             <div id="home" class="tab-pane fade in active">
                                 <p>{{ object.second_deus_magnus_description }}</p>
-                                <a href="#" class="btn btn-primary">Back home</a>
+                                <a href="{% url 'home' %}" class="btn btn-primary"style="border-radius: 10px;"><i class="fa fa-angle-left">Back Home</i></a>
                             </div>
                             <div id="menu2" class="tab-pane fade">
                                 <h3>Reviews</h3>
@@ -93,7 +93,7 @@
                     <div class="col-md-3">
                         <div class="course-box shop-wrapper">
                             <div class="image-wrap entry">
-                                <img src="upload/shop_01.jpg" alt="" class="img-responsive">
+                                <img src="{% static 'upload/shop_01.jpg' %}" alt="" class="img-responsive">
                             </div>
                             <!-- end image-wrap -->
                             <div class="course-details shop-box text-center">
