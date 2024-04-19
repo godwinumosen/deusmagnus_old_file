@@ -12,12 +12,11 @@
                 <div class="col-md-6 shop-media">
                     <div class="row">
                         <div class="col-md-12">
-                        <div class="image-wrap entry">
-                            <img src="upload/single_shop_01.jpg" alt="" class="img-responsive">
-                            <div class="magnifier">
-                                <a rel="prettyPhoto[inline]" href="upload/single_shop_01.jpg" title=""><i class="flaticon-add"></i></a>
-                            </div>
-                        </div><!-- end image-wrap -->
+                            <div class="image-wrap entry">
+                                {% if object.second_deus_magnus_img %}
+                                <img src="{{ object.second_deus_magnus_img.url }}" alt="" class="img-responsive">
+                                {% endif %}
+                            </div><!-- end image-wrap -->
                         </div>
                     </div><!-- end row -->
                         <hr class="invis">
@@ -26,8 +25,8 @@
                 </div><!-- end col -->
                 <div class="col-md-6">
                     <div class="shop-desc">
-                        <h3>Brown leather bag</h3>
-                        <p>c enim id lacinia as magna quis enim.</p>
+                        <h3>{{ object.second_deus_magnus_title }}</h3>
+                        <p>{{ object.second_deus_magnus_description }}</p>
                         <div class="shop-meta">
                             <a href="#" class="btn btn-primary">Back</a>
                             <ul class="list-inline">
@@ -48,9 +47,9 @@
                         </ul>
                         <div class="tab-content">
                             <div id="home" class="tab-pane fade in active">
-                                <p> laoreetget ullamcorper sis semper.</p>
+                                <p>{{ object.second_deus_magnus_description }}</p>
+                                <a href="#" class="btn btn-primary">Back home</a>
                             </div>
-                            <a href="#" class="btn btn-primary">Back</a>
                             <div id="menu2" class="tab-pane fade">
                                 <h3>Reviews</h3>
                                 <p>Your email address will not be published. Required fields are marked *</p>
@@ -84,6 +83,7 @@
                     </div><!-- end shop-extra -->
                 </div><!-- end col -->
             </div><!-- end row -->
+
             <hr class="invis">
             <div class="related-products">
                 <div class="text-widget">
@@ -94,9 +94,6 @@
                         <div class="course-box shop-wrapper">
                             <div class="image-wrap entry">
                                 <img src="upload/shop_01.jpg" alt="" class="img-responsive">
-                                <div class="magnifier">
-                                    <a href="shop-single.html" title=""><i class="flaticon-add"></i></a>
-                                </div>
                             </div>
                             <!-- end image-wrap -->
                             <div class="course-details shop-box text-center">
