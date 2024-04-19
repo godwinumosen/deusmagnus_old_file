@@ -4,49 +4,49 @@
 {% block content%}
 
 
-        <video autoplay muted playsinline loop width="100%" height="500" controls id="myVideo">
-            <source src="{% static 'main.mp4'%}" type="video/mp4">
-            <source src="{% static 'main.mp4'%}" type="video/webm">
-            Your browser does not support the video tag
-        </video>
+<video autoplay muted playsinline loop width="100%" height="500" controls id="myVideo">
+    <source src="{% static 'main.mp4'%}" type="video/mp4">
+    <source src="{% static 'main.mp4'%}" type="video/webm">
+    Your browser does not support the video tag
+</video>
 
 
-        <section class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="custom-module">
-                            <img src="{% static 'images/device_01.png' %}" alt="" class="img-responsive wow slideInLeft">
-                        </div><!-- end module -->
-                    </div><!-- end col -->
-                    <div class="col-md-8">
-                        <div class="custom-module p40l">
-                            <h2>We are a passionate <mark>construction company</mark> from<br>
-                            Lagos. Build beautiful and affordable property <br>
-                             & development</h2>
-                            <p>affordable affordable affordable affordable.</p>
-                            <hr class="invis">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 first">
-                                    <ul class="check">
-                                        <li>Custom Shortcodes</li>
-                                        <li>Visual Page Builder</li>
-                                        
-                                    </ul><!-- end check -->
-                                </div><!-- end col-lg-4 -->    
-                            </div><!-- end row -->   
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="custom-module">
+                    <img src="{% static 'images/device_01.png' %}" alt="" class="img-responsive wow slideInLeft">
+                </div><!-- end module -->
+            </div><!-- end col -->
+            <div class="col-md-8">
+                <div class="custom-module p40l">
+                    <h2>We are a passionate <mark>construction company</mark> from<br>
+                    Lagos. Build beautiful and affordable property <br>
+                        & development</h2>
+                    <p>affordable affordable affordable affordable.</p>
+                    <hr class="invis">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 first">
+                            <ul class="check">
+                                <li>Custom Shortcodes</li>
+                                <li>Visual Page Builder</li>
+                                
+                            </ul><!-- end check -->
+                        </div><!-- end col-lg-4 -->    
+                    </div><!-- end row -->   
 
-                            <hr class="invis">
+                    <hr class="invis">
 
-                            <div class="btn-wrapper">
-                                <a href="#" class="btn btn-primary">Learn More About us</a>
-                            </div>
+                    <div class="btn-wrapper">
+                        <a href="#" class="btn btn-primary">Learn More About us</a>
+                    </div>
 
-                        </div><!-- end module -->
-                    </div><!-- end col -->
-                </div><!-- end row -->
-            </div><!-- end container -->
-        </section>
+                </div><!-- end module -->
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section>
 
 
 
@@ -90,191 +90,192 @@
 </section>
 
 
-        <section class="section db p120">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="tagline-message text-center">
-                            <h3>We have brought together the best quality services, offers, projects for you!</h3>
-                        </div>
-                    </div><!-- end col -->
-                </div><!-- end row -->
-            </div><!-- end container -->
-        </section><!-- end section -->
+<section class="section db p120">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tagline-message text-center">
+                <h3>We have brought together the best quality services, offers, projects for you!</h3>
+                </div>
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section><!-- end section -->
 
 
-          
-        <section class="section gb">
-            <div class="container">
-                <div class="section-title text-center">
-                    <h3>More News & Views</h3>
-                    <p>Providing engineering services to assist the builder.</p>
-                </div><!-- end title -->
-                <div class="row">
-                    {% for second_construction in second_constructions %}
-                    <div class="col-lg-4 col-md-12">
-                        <div class="blog-box">
-                            <div class="image-wrap entry">
-                                {% if second_construction.second_deus_magnus_img %}
-                                <img src="{{ second_construction.second_deus_magnus_img.url }}"height="230px"  class="custom-image">
-                                {% endif %}
-                                <div class="magnifier">
-                                     <a href="" title=""><i class="flaticon-add"></i></a>
-                                </div>
-                            </div><!-- end image-wrap -->
-                            <div class="blog-desc">
-                                <h4>{{ second_construction.second_deus_magnus_title |truncatechars:30}}</h4>
-                                <p>{{ second_construction.second_deus_magnus_description |truncatechars:90}}</p>
-                            </div><!-- end blog-des -->
-                            <div class="post-meta">
-                                    <div class="btn-wrapper">
-                                        <a href="" class="btn btn-primary"style="border-radius: 10px;">Read More</a>
-                                    </div>
-                            </div><!-- end post-meta -->
-                        </div><!-- end blog -->
-                    </div><!-- end col -->
-                    {%endfor%}
-                </div><!-- end row -->
-            </div><!-- end container -->
-        </section>
-  
-
-        <section class="section db">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-4">
-                        <div class="stat-count">
-                            <h4 class="stat-timer">120</h4>
-                            <h3><i class="flaticon-black-graduation-cap-tool-of-university-student-for-head"></i> Bulding construction</h3>
-                            <p>construction. </p>
-                        </div><!-- stat-count -->
-                    </div><!-- end col -->
-
-                    <div class="col-lg-4 col-md-4">
-                        <div class="stat-count">
-                            <h4 class="stat-timer">331</h4>
-                            <h3><i class="flaticon-online-course"></i> properties </h3>
-                            <p>Our construction properties. </p>
-                        </div><!-- stat-count -->
-                    </div><!-- end col -->
-
-                    <div class="col-lg-4 col-md-4">
-                        <div class="stat-count">
-                            <h4 class="stat-timer">201</h4>
-                            <h3><i class="flaticon-coffee-cup"></i> Construction</h3>
-                            <p>construction. </p>
-                        </div><!-- stat-count -->
-                    </div><!-- end col -->
-                </div><!-- end row -->
-            </div><!-- end container -->
-        </section>
-
-        <section class="section">
-            <div class="container">
-                <div class="section-title text-center">
-                    <h3>Site Site</h3>
-                    <p>Home Dashboard Home Dashboard Home Dashboard.</p>
-                </div><!-- end title -->
-
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="box testimonial">
-                            <p class="testiname"><strong><img src="{% static 'upload/testimonial_01.png' %}" alt="" class="img-circle"> Jenny LUXURY</strong></p>
-                            <p>Dashboard Dashboard Dashboard Dashboard.</p>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
+    
+<section class="section gb">
+    <div class="container">
+        <div class="section-title text-center">
+            <h3>More News & Views</h3>
+            <p>Providing engineering services to assist the builder.</p>
+        </div><!-- end title -->
+        <div class="row">
+            {% for second_construction in second_constructions %}
+            <div class="col-lg-4 col-md-12">
+                <div class="blog-box">
+                    <div class="image-wrap entry">
+                        {% if second_construction.second_deus_magnus_img %}
+                        <a href="{% url 'second_detail' second_construction.pk %}">
+                        <img src="{{ second_construction.second_deus_magnus_img.url }}"height="230px"  class="custom-image">
+                        </a>
+                        {% endif %}
+                       
+                    </div><!-- end image-wrap -->
+                    <div class="blog-desc">
+                        <h4><a href="{% url 'second_detail' second_construction.pk %}">{{ second_construction.second_deus_magnus_title |truncatechars:30}}</a></h4>
+                        <p>{{ second_construction.second_deus_magnus_description |truncatechars:80}}</p>
+                    </div><!-- end blog-des -->
+                    <div class="post-meta">
+                            <div class="btn-wrapper">
+                                <a href="{% url 'second_detail' second_construction.pk %}
+                                "class="btn btn-primary"style="border-radius: 10px;">Read More</a>
                             </div>
-                        </div><!-- end testimonial -->
-                    </div><!-- end col -->
-
-                    <div class="col-md-4">
-                        <div class="box testimonial">
-                            <p class="testiname"><strong><img src="{% static 'upload/testimonial_02.png' %}" alt="" class="img-circle"> Martin LEO</strong></p>
-                            <p>Dashboard Dashboard Dashboard Dashboard.</p>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div><!-- end testimonial -->
-                    </div><!-- end col -->
-
-                    <div class="col-md-4">
-                        <div class="box testimonial">
-                            <p class="testiname"><strong><img src="{% static 'upload/testimonial_03.png' %}" alt="" class="img-circle"> John DOE</strong></p>
-                            <p> Dashboard Dashboard Dashboard Dashboard.</p>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                        </div><!-- end testimonial -->
-                    </div><!-- end col -->
-                </div><!-- end row -->
-            </div><!-- end container -->
-        </section>
+                    </div><!-- end post-meta -->
+                </div><!-- end blog -->
+            </div><!-- end col -->
+            {%endfor%}
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section>
 
 
+<section class="section db">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4">
+                <div class="stat-count">
+                    <h4 class="stat-timer">120</h4>
+                    <h3><i class="flaticon-black-graduation-cap-tool-of-university-student-for-head"></i> Bulding construction</h3>
+                    <p>construction. </p>
+                </div><!-- stat-count -->
+            </div><!-- end col -->
 
-        <section class="section gb">
-            <div class="container">
-                <div class="section-title text-center">
-                    <h3>Recent News</h3>
-                    <p>News News News News News News News.</p>
-                </div><!-- end title -->
+            <div class="col-lg-4 col-md-4">
+                <div class="stat-count">
+                    <h4 class="stat-timer">331</h4>
+                    <h3><i class="flaticon-online-course"></i> properties </h3>
+                    <p>Our construction properties. </p>
+                </div><!-- stat-count -->
+            </div><!-- end col -->
 
-                <div class="row">
-                    <div class="col-lg-4 col-md-12">
-                        <div class="blog-box">
-                            <div class="image-wrap entry">
-                                <img src="{% static 'upload/blog_01.jpeg' %}" alt="" class="img-responsive">
-                                <div class="magnifier">
-                                     <a href="blog-single.html" title=""><i class="flaticon-add"></i></a>
-                                </div>
-                            </div><!-- end image-wrap -->
+            <div class="col-lg-4 col-md-4">
+                <div class="stat-count">
+                    <h4 class="stat-timer">201</h4>
+                    <h3><i class="flaticon-coffee-cup"></i> Construction</h3>
+                    <p>construction. </p>
+                </div><!-- stat-count -->
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section>
 
-                            <div class="blog-desc">
-                                <h4><a href="blog-single.html">How to learn perfect </a></h4>
-                                <p>perfect perfect perfect perfect.</p>
-                            </div><!-- end blog-desc -->
+<section class="section">
+    <div class="container">
+        <div class="section-title text-center">
+            <h3>Site Site</h3>
+            <p>Home Dashboard Home Dashboard Home Dashboard.</p>
+        </div><!-- end title -->
 
-                            <div class="post-meta">
-                                <ul class="list-inline">
-                                    <li><a href="#">21 March 2017</a></li>
-                                </ul>
-                            </div><!-- end post-meta -->
-                        </div><!-- end blog -->
-                    </div><!-- end col -->
-                </div><!-- end row -->
-            </div><!-- end container -->
-        </section>
-
-
-
-
-        <section class="section bgcolor1">
-            <div class="container">
-                <a href="#">
-                <div class="row callout">
-                    <div class="col-md-4 text-center">
-                        <h3><sup>$</sup>49.99</h3>
-                        <h4>Start your awesome construction today!</h4>
-                    </div><!-- end col -->
-
-                    <div class="col-md-8">
-                        <p class="lead">database directory as well. </p>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="box testimonial">
+                    <p class="testiname"><strong><img src="{% static 'upload/testimonial_01.png' %}" alt="" class="img-circle"> Jenny LUXURY</strong></p>
+                    <p>Dashboard Dashboard Dashboard Dashboard.</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
                     </div>
-                </div><!-- end row -->
-                </a>
-            </div><!-- end container -->  
-        </section>
+                </div><!-- end testimonial -->
+            </div><!-- end col -->
+
+            <div class="col-md-4">
+                <div class="box testimonial">
+                    <p class="testiname"><strong><img src="{% static 'upload/testimonial_02.png' %}" alt="" class="img-circle"> Martin LEO</strong></p>
+                    <p>Dashboard Dashboard Dashboard Dashboard.</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                </div><!-- end testimonial -->
+            </div><!-- end col -->
+
+            <div class="col-md-4">
+                <div class="box testimonial">
+                    <p class="testiname"><strong><img src="{% static 'upload/testimonial_03.png' %}" alt="" class="img-circle"> John DOE</strong></p>
+                    <p> Dashboard Dashboard Dashboard Dashboard.</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div><!-- end testimonial -->
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section>
+
+
+
+<section class="section gb">
+    <div class="container">
+        <div class="section-title text-center">
+            <h3>Recent News</h3>
+            <p>News News News News News News News.</p>
+        </div><!-- end title -->
+
+        <div class="row">
+            <div class="col-lg-4 col-md-12">
+                <div class="blog-box">
+                    <div class="image-wrap entry">
+                        <img src="{% static 'upload/blog_01.jpeg' %}" alt="" class="img-responsive">
+                        <div class="magnifier">
+                                <a href="blog-single.html" title=""><i class="flaticon-add"></i></a>
+                        </div>
+                    </div><!-- end image-wrap -->
+
+                    <div class="blog-desc">
+                        <h4><a href="blog-single.html">How to learn perfect </a></h4>
+                        <p>perfect perfect perfect perfect.</p>
+                    </div><!-- end blog-desc -->
+
+                    <div class="post-meta">
+                        <ul class="list-inline">
+                            <li><a href="#">21 March 2017</a></li>
+                        </ul>
+                    </div><!-- end post-meta -->
+                </div><!-- end blog -->
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section>
+
+
+
+
+<section class="section bgcolor1">
+    <div class="container">
+        <a href="#">
+        <div class="row callout">
+            <div class="col-md-4 text-center">
+                <h3><sup>$</sup>49.99</h3>
+                <h4>Start your awesome construction today!</h4>
+            </div><!-- end col -->
+
+            <div class="col-md-8">
+                <p class="lead">database directory as well. </p>
+            </div>
+        </div><!-- end row -->
+        </a>
+    </div><!-- end container -->  
+</section>
 
         {% endblock %}
