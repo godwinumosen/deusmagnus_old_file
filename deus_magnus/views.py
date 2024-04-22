@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost, LastDeusMagnusMainPicturePost
 from django.contrib import messages
 from django.http import HttpResponse
+from .models import SubPicture_1, SubPicture_2
 from django.contrib.auth.models import User
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse
@@ -62,3 +63,11 @@ class LastConstructionDetailViewArticleDetailView(DetailView):
 #About page of the blog
 def AboutView (request):
     return render(request, 'deus_magnus/about_us.html', {})
+
+
+def subpicture_1(request):
+    subs = SubPicture_1.objects.all()
+    context = {
+        'subs': subs
+    }
+    return render(request, 'deus_magnus/second_article_detail.html', context)

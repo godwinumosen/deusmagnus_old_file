@@ -88,9 +88,10 @@
             <hr class="invis">
             <div class="related-products">
                 <div class="text-widget">
-                    <h3>Related Products</h3>
+                    <h3>Related Sub</h3>
                 </div><!-- end title -->        
                 <div class="row blog-grid shop-grid">
+                 {% for sub in subs %}
                     <div class="col-md-3">
                         <div class="course-box shop-wrapper">
                             <div class="image-wrap entry">
@@ -98,14 +99,13 @@
                             </div>
                             <!-- end image-wrap -->
                             <div class="course-details shop-box text-center">
-                                
-                                    <a href="shop-single.html" title="">Brown leather bag</a>
-                                    <p>Sub title fourSub title four</p>
-                                    <small>Glasses</small>
-                              
+                                <a href="shop-single.html" title="">{{ sub.sub_title_1 }}</a>
+                                <p>{{ sub.sub_description_1 }}</p>
+                                <small>Glasses</small>
                             </div><!-- end details -->
-                        </div>
-                </div><!-- end row -->
+                        </div> 
+                    {% endfor %}          
+                </div><!-- end row -->   
             </div><!-- end related -->
         </div><!-- end boxed -->
     </div><!-- end container -->

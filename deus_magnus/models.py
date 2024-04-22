@@ -68,7 +68,7 @@ class LastDeusMagnusMainPicturePost(models.Model):
     
 #first sub picture category of the picture
 class SubPicture_1(models.Model):
-    sub_title_1 = models.CharField(max_length=255, blank=True, null=True)
+    sub_title_1 = models.CharField(max_length=200, blank=True, null=True)
     sub_description_1 = models.TextField()
     sub_slug_1 = models.SlugField (max_length=255,blank=True, null=True)
     sub_image_1 = models.ImageField(upload_to='images_sub/')
