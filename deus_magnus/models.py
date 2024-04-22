@@ -45,3 +45,23 @@ class SecondDeusMagnusMainPicturePost(models.Model):
     
     def get_absolute_url(self):
         return reverse ('home')
+    
+
+# The second model for Deus Magnus Model category
+class LastDeusMagnusMainPicturePost(models.Model):
+    last_deus_magnus_title = models.CharField(max_length=255, blank=True, null=True)
+    last_deus_magnus_description = models.TextField()
+    last_deus_magnus_slug = models.SlugField (max_length=255,blank=True, null=True)
+    last_deus_magnus_image = models.ImageField(upload_to='images2/')
+    last_deus_magnus_publish_date = models.DateTimeField (auto_now_add= True)
+    last_deus_magnus_author = models.ForeignKey(User, on_delete=models.CASCADE)
+
+       
+    class Meta:
+        ordering =['last_deus_magnus_publish_date']
+    
+    def __str__(self):
+        return self.last_deus_magnus_title + ' | ' + str(self.last_deus_magnus_author)
+    
+    def get_absolute_url(self):
+        return reverse ('home')
