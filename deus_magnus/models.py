@@ -67,7 +67,7 @@ class LastDeusMagnusMainPicturePost(models.Model):
         return reverse ('home')
     
 #first sub picture category of the picture
-class SubPicture(models.Model):
+class SubPicture_1(models.Model):
     sub_title_1 = models.CharField(max_length=255, blank=True, null=True)
     sub_description_1 = models.TextField()
     sub_slug_1 = models.SlugField (max_length=255,blank=True, null=True)
