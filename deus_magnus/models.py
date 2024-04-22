@@ -68,18 +68,18 @@ class LastDeusMagnusMainPicturePost(models.Model):
     
 #first sub picture category of the picture
 class SubPicture(models.Model):
-    sub_title = models.CharField(max_length=255, blank=True, null=True)
-    sub_description = models.TextField()
-    sub_slug = models.SlugField (max_length=255,blank=True, null=True)
-    sub_image = models.ImageField(upload_to='images_sub/')
-    sub_publish_date = models.DateTimeField (auto_now_add= True)
-    sub_author = models.ForeignKey(User, on_delete=models.CASCADE)
+    sub_title_1 = models.CharField(max_length=255, blank=True, null=True)
+    sub_description_1 = models.TextField()
+    sub_slug_1 = models.SlugField (max_length=255,blank=True, null=True)
+    sub_image_1 = models.ImageField(upload_to='images_sub/')
+    sub_publish_date_1 = models.DateTimeField (auto_now_add= True)
+    sub_author_1 = models.ForeignKey(User, on_delete=models.CASCADE)
 
     class Meta:
-        ordering =['sub_publish_date']
+        ordering =['sub_publish_date_1']
     
     def __str__(self):
-        return self.sub_title + ' | ' + str(self.sub_author)
+        return self.sub_title_1 + ' | ' + str(self.sub_author_1)
 
     def get_absolute_url(self):
         return reverse('home')
