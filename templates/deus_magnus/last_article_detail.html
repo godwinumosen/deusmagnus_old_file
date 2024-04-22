@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %}{{ object.second_deus_magnus_title }} {% endblock %}
+{% block title %}{{ object.last_deus_magnus_title }} {% endblock %}
 {% block content%}
         
 <br><br><br>
@@ -13,8 +13,8 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="image-wrap entry">
-                                {% if object.second_deus_magnus_img %}
-                                <img src="{{ object.second_deus_magnus_img.url }}"style="border-radius:7px;" alt="" class="img-responsive">
+                                {% if object.last_deus_magnus_img %}
+                                <img src="{{ object.last_deus_magnus_img.url }}"style="border-radius:7px;" alt="" class="img-responsive">
                                 {% endif %}
                             </div><!-- end image-wrap -->
                         </div>
@@ -25,13 +25,13 @@
                 </div><!-- end col -->
                 <div class="col-md-6">
                     <div class="shop-desc">
-                        <h3>{{ object.second_deus_magnus_title }}</h3>
-                        <p>{{ object.second_deus_magnus_description }}</p>
+                        <h3>{{ object.last_deus_magnus_title }}</h3>
+                        <p>{{ object.last_deus_magnus_description }}</p>
                         <div class="shop-meta">
                                 <a href="{% url 'home' %}" class="btn btn-primary"style="border-radius: 10px;"><i class="fa fa-angle-left">Back</i></a>
                             <ul class="list-inline">
-                                <li>{{ object.second_deus_magnus_publish_date }}</li>
-                                <li>Posted by: {{ object.second_deus_magnus_author }}</li>
+                                <li>{{ object.last_deus_magnus_publish_date }}</li>
+                                <li>Posted by: {{ object.last_deus_magnus_author }}</li>
                             </ul>
                         </div><!-- end shop meta -->
                     </div><!-- end desc -->
@@ -47,7 +47,7 @@
                         </ul>
                         <div class="tab-content">
                             <div id="home" class="tab-pane fade in active">
-                                <p>{{ object.second_deus_magnus_description }}</p>
+                                <p>{{ object.last_deus_magnus_description }}</p>
                                 <a href="{% url 'home' %}" class="btn btn-primary"style="border-radius: 10px;"><i class="fa fa-angle-left">Back Home</i></a>
                             </div>
                             <div id="menu2" class="tab-pane fade">
