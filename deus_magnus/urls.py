@@ -9,5 +9,5 @@ urlpatterns = [
     path('article/<int:pk>/', ArticleDetailView.as_view(), name="detail"),
     path('article2/<int:pk>/', SecondConstructionDetailViewArticleDetailView.as_view(), name="second_detail"),
     path('article3/<int:pk>/', LastConstructionDetailViewArticleDetailView.as_view(), name="last_detail"),
-    #path('about/', AboutView.as_view(), name='about'),
+    path('about/', views.AboutView, name='about'),
 ]

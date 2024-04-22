@@ -58,3 +58,7 @@ class LastConstructionDetailViewArticleDetailView(DetailView):
     def get(self, request, pk):  
         object = get_object_or_404(LastDeusMagnusMainPicturePost, pk=pk)
         return render(request, 'deus_magnus/last_article_detail.html', {'last_construction': object})
+    
+#About page of the blog
+def AboutView (request):
+    return render(request, 'deus_magnus/about_us.html', {})
