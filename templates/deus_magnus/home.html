@@ -184,17 +184,20 @@
                 <div class="blog-box">
                     <div class="image-wrap entry">
                         {% if last_construction.last_deus_magnus_image %}
+                        <a href="{% url 'last_detail' last_construction.pk %}">
                             <img src="{{ last_construction.last_deus_magnus_image.url }}"height="230px"  class="custom-image">
+                        </a>
                         {% endif %}
                     </div><!-- end image-wrap -->
                     <div class="blog-desc">
-                        <h4><a href="blog-single.html">{{ last_construction.last_deus_magnus_title |truncatechars:30}}</a></h4>
-                        <p>{{ last_construction.last_deus_magnus_title |truncatechars:80}}</p>
+                        <h4><a href="{% url 'last_detail' last_construction.pk %}">{{ last_construction.last_deus_magnus_title |truncatechars:30}}</a></h4>
+                        <p> {{ last_construction.last_deus_magnus_description |truncatechars:70}}</p>
                     </div><!-- end blog-desc -->
                     <div class="post-meta">
                         <div class="btn-wrapper">
                             <a href="#">{{ last_construction.last_deus_magnus_publish_date }}</a>
-                            <a href=""class="btn btn-primary"style="border-radius: 10px;">Read More</a>
+                            <a href="{% url 'last_detail' last_construction.pk %}" class="btn btn-primary" style="border-radius: 10px;">Read More</a>
+
                         </div>
                     </div><!-- end post-meta -->
                 </div><!-- end blog -->

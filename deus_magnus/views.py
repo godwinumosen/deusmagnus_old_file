@@ -54,7 +54,7 @@ class LastConstructionDetailViewArticleDetailView(DetailView):
     model = SecondDeusMagnusMainPicturePost
     template_name = 'deus_magnus/last_article_detail.html'
     context_object_name = 'last_construction'
-
-    def LastConstructionDetailViewArticleDetailView(request, pk):  
+    
+    def get(self, request, pk):  
         object = get_object_or_404(LastDeusMagnusMainPicturePost, pk=pk)
-        return render(request, 'deus_magnus/last_article_detail.html', {'last_detail': object})
+        return render(request, 'deus_magnus/last_article_detail.html', {'last_construction': object})
