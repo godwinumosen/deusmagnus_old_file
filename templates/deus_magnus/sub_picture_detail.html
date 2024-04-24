@@ -4,7 +4,6 @@
 {% block content %}
         
 <br><br><br>
-
 <section class="section">
     <div class="container">
         <div class=" ">
@@ -12,10 +11,8 @@
                 <div class="col-md-6 shop-media">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="image-wrap entry">
-                        
+                            <div class="image-wrap entry">                        
                                 <img src="" style="border-radius:5px;" alt="" class="img-responsive">
-                                
                             </div><!-- end image-wrap -->
                         </div>
                     </div><!-- end row -->
@@ -23,88 +20,19 @@
                         <div class="row">
                     </div><!-- end row -->
                 </div><!-- end col -->
-                <div class="col-md-6">
-                    <div class="shop-desc">
-                        <h3>{{ sub_picture.sub_title_1 }}</h3>
-                        <p>{{ last_construction.last_deus_magnus_description }}</p>
-                        <div class="shop-meta">
-                                <a href="{% url 'home' %}" class="btn btn-primary" style="border-radius: 10px;"><i class="fa fa-angle-left">Back</i></a>
-                            <ul class="list-inline">
-                                <li>{{ last_construction.last_deus_magnus_publish_date }}</li>
-                                <li>Posted by: {{ last_construction.last_deus_magnus_author }}</li>
-                            </ul>
-                        </div><!-- end shop meta -->
-                    </div><!-- end desc -->
-                </div><!-- end col -->
-            </div><!-- end row -->
-            <hr class="invis">
+               
             <div class="row">   
                 <div class="col-md-12">
                     <div class="shop-extra">
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a data-toggle="tab" href="#home">Description</a></li>
-                            <li><a data-toggle="tab" href="#menu2">Reviews</a></li>
-                        </ul>
                         <div class="tab-content">
                             <div id="home" class="tab-pane fade in active">
-                                <p>{{ last_construction.last_deus_magnus_description }}</p>
-                                <a href="" class="btn btn-primary" style="border-radius: 10px;"><i class="fa fa-angle-left">Back Home</i></a>
-                            </div>
-                            <div id="menu2" class="tab-pane fade">
-                                <h3>Reviews</h3>
-                                <p>Your email address will not be published. Required fields are marked *</p>
-                                <div class="rating">
-                                    <p>Your Rating</p>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-
-                                <hr class="invis">
-                            
-                                <form class="big-contact-form row" role="search">
-                                    <div class="col-md-12">
-                                        <textarea class="form-control" placeholder="Your reviews.."></textarea>
-                                    </div>              
-                                    <div class="col-md-6">   
-                                        <input type="text" class="form-control" placeholder="Enter your name..">
-                                    </div>     
-                                    <div class="col-md-6">   
-                                        <input type="email" class="form-control" placeholder="Enter email..">
-                                    </div>             
-                                    <div class="col-md-12">
-                                        <button type="submit" class="btn btn-primary">Submit</button>
-                                    </div>              
-                                </form>
+                                <h3>{{ sub_picture.sub_title_1 }}</h3>
+                                <p>{{ sub_picture.sub_description_1 }}</p>                                
                             </div>
                         </div>
                     </div><!-- end shop-extra -->
                 </div><!-- end col -->
             </div><!-- end row -->
-
-            <hr class="invis">
-            <div class="related-products">
-                <div class="text-widget">
-                    <h3>Related Products</h3>
-                </div><!-- end title -->        
-                <div class="row blog-grid shop-grid">
-                    <div class="col-md-3">
-                        <div class="course-box shop-wrapper">
-                            <div class="image-wrap entry">
-                                <img src="{% static 'upload/shop_01.jpg' %}" alt="" class="img-responsive">
-                            </div>
-                            <!-- end image-wrap -->
-                            <div class="course-details shop-box text-center">
-                                <h4>
-                                    <a href="shop-single.html" title="">Brown leather bag</a>
-                                    <small>Glasses</small>
-                                </h4>
-                            </div><!-- end details -->
-                        </div>
-                </div><!-- end row -->
-            </div><!-- end related -->
         </div><!-- end boxed -->
     </div><!-- end container -->
 </section>
