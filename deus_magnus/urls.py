@@ -2,7 +2,7 @@
 from django.urls import path
 from . import views
 from .views import HomeView, ArticleDetailView, SecondConstructionDetailViewArticleDetailView
-from .views import LastConstructionDetailViewArticleDetailView, SubPictureDetailView
+from .views import LastConstructionDetailViewArticleDetailView, SubPictureDetailView,SubVideoDetailView
 
 urlpatterns = [
     path('', HomeView.as_view(), name="home"),
@@ -13,4 +13,5 @@ urlpatterns = [
     path('about/', views.AboutView, name='about'),
     #path('subpicture_1/', views.subpicture_1, name='subpicture_1'),
     path('sub_picture/<int:pk>/', SubPictureDetailView.as_view(), name="sub_detail"),
+    path('sub_video/<int:pk>/', SubVideoDetailView.as_view(), name="sub_detail_video"),
 ]

@@ -52,13 +52,26 @@ class SecondConstructionDetailViewArticleDetailView(DetailView):
     #This sub-model data related to the second second model instance
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['subs'] = SubPicture_1.objects.all()  
+        context['subs'] = SubPicture_1.objects.all() 
         return context
+    
+#The last sub ArticleDetailView page    
+class LastConstructionDetailViewArticleDetailView(DetailView):
+    model = LastDeusMagnusMainPicturePost
+    template_name = 'deus_magnus/last_article_detail.html'
+    context_object_name = 'last_construction'
+    def LastConstructionDetailViewArticleDetailView(request, pk):  
+        object = get_object_or_404(LastDeusMagnusMainPicturePost, pk=pk)
+        return render(request, 'deus_magnus/last_article_detail.html', {'last_construction': object})
      #This sub-model data related to the last article model instance
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['subs_2'] = SubPicture_2.objects.all()  
+        context['subs_2'] = SubPicture_2.objects.all() 
         return context
+    
+#About page of the blog
+def AboutView (request):
+    return render(request, 'deus_magnus/about_us.html', {})
 
 #sub_picture article display inside second detailsview
 class SubPictureDetailView(DetailView):
@@ -69,19 +82,12 @@ class SubPictureDetailView(DetailView):
         object = get_object_or_404(SubPictureDetailView, pk=pk)
         return render(request, 'deus_magnus/sub_picture_detail.html', {'sub_detail': object})
     
+#sub_picture article display inside second detailsview
+class SubVideoDetailView(DetailView):
+    model = SubPicture_2
+    template_name = 'deus_magnus/sub_video_detail.html'
+    context_object_name = 'sub_video'
+    def SubVideoDetailView(request, pk):  
+        object = get_object_or_404(SubVideoDetailView, pk=pk)
+        return render(request, 'deus_magnus/sub_video_detail.html', {'sub_detail_video': object})
     
-#The last sub ArticleDetailView page    
-class LastConstructionDetailViewArticleDetailView(DetailView):
-    model = SecondDeusMagnusMainPicturePost
-    template_name = 'deus_magnus/last_article_detail.html'
-    context_object_name = 'last_construction'
-    
-    def get(self, request, pk):  
-        object = get_object_or_404(LastDeusMagnusMainPicturePost, pk=pk)
-        return render(request, 'deus_magnus/last_article_detail.html', {'last_construction': object})
-    
-#About page of the blog
-def AboutView (request):
-    return render(request, 'deus_magnus/about_us.html', {})
-
-
