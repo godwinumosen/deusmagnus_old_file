@@ -49,20 +49,22 @@ class SecondConstructionDetailViewArticleDetailView(DetailView):
     def SecondConstructionDetailViewArticleDetailView(request, pk):  
         object = get_object_or_404(SecondDeusMagnusMainPicturePost, pk=pk)
         return render(request, 'deus_magnus/second_article_detail.html', {'second_detail': object})
-    
+    #This sub-model data related to the current main model instance
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        # Fetch sub-model data related to the current main model instance
-        context['subs'] = SubPicture_1.objects.all()  # Or any other filtering you want
+        context['subs'] = SubPicture_1.objects.all()  
         return context
 
-'''def subpicture_1(request):
-    subs = SubPicture_1.objects.all()
-    context = {
-        'subs': subs
-    }
-    return render(request, 'deus_magnus/second_article_detail.html', context)'''
-
+#sub_picture article display inside second detailsview
+class SubPictureDetailView(DetailView):
+    model = SubPicture_1
+    template_name = 'deus_magnus/sub_picture_detail.html'
+    context_object_name = 'sub_picture'
+    def SubPictureDetailView(request, pk):  
+        object = get_object_or_404(SubPictureDetailView, pk=pk)
+        return render(request, 'deus_magnus/sub_article_detail.html', {'sub_detail': object})
+    
+    
 #The last sub ArticleDetailView page    
 class LastConstructionDetailViewArticleDetailView(DetailView):
     model = SecondDeusMagnusMainPicturePost
