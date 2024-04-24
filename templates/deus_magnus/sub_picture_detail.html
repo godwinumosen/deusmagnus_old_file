@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %}{{ object.second_deus_magnus_title }} {% endblock %}
-{% block content%}
+{% block title %}{{ sub_picture.sub_title_1 }}{% endblock %}
+{% block content %}
         
 <br><br><br>
 
@@ -13,9 +13,9 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="image-wrap entry">
-                                {% if object.second_deus_magnus_img %}
-                                <img src="{{ object.second_deus_magnus_img.url }}"style="border-radius:5px;" alt="" class="img-responsive">
-                                {% endif %}
+                        
+                                <img src="" style="border-radius:5px;" alt="" class="img-responsive">
+                                
                             </div><!-- end image-wrap -->
                         </div>
                     </div><!-- end row -->
@@ -25,13 +25,13 @@
                 </div><!-- end col -->
                 <div class="col-md-6">
                     <div class="shop-desc">
-                        <h3>{{ object.second_deus_magnus_title }}</h3>
-                        <p>{{ object.second_deus_magnus_description }}</p>
+                        <h3>{{ sub_picture.sub_title_1 }}</h3>
+                        <p>{{ last_construction.last_deus_magnus_description }}</p>
                         <div class="shop-meta">
-                                <a href="{% url 'home' %}" class="btn btn-primary"style="border-radius: 10px;"><i class="fa fa-angle-left">Back</i></a>
+                                <a href="{% url 'home' %}" class="btn btn-primary" style="border-radius: 10px;"><i class="fa fa-angle-left">Back</i></a>
                             <ul class="list-inline">
-                                <li>{{ object.second_deus_magnus_publish_date }}</li>
-                                <li>Posted by: {{ object.second_deus_magnus_author }}</li>
+                                <li>{{ last_construction.last_deus_magnus_publish_date }}</li>
+                                <li>Posted by: {{ last_construction.last_deus_magnus_author }}</li>
                             </ul>
                         </div><!-- end shop meta -->
                     </div><!-- end desc -->
@@ -47,8 +47,8 @@
                         </ul>
                         <div class="tab-content">
                             <div id="home" class="tab-pane fade in active">
-                                <p>{{ object.second_deus_magnus_description }}</p>
-                                <a href="{% url 'home' %}" class="btn btn-primary"style="border-radius: 10px;"><i class="fa fa-angle-left">Back Home</i></a>
+                                <p>{{ last_construction.last_deus_magnus_description }}</p>
+                                <a href="" class="btn btn-primary" style="border-radius: 10px;"><i class="fa fa-angle-left">Back Home</i></a>
                             </div>
                             <div id="menu2" class="tab-pane fade">
                                 <h3>Reviews</h3>
@@ -84,29 +84,26 @@
                 </div><!-- end col -->
             </div><!-- end row -->
 
-
             <hr class="invis">
             <div class="related-products">
                 <div class="text-widget">
-                    <h3>Related Sub</h3>
+                    <h3>Related Products</h3>
                 </div><!-- end title -->        
                 <div class="row blog-grid shop-grid">
-                 {% for sub in subs %}
                     <div class="col-md-3">
                         <div class="course-box shop-wrapper">
                             <div class="image-wrap entry">
-                                <img src="{{ sub.sub_image_1.url }}"height="180px" alt="" class="img-responsive">
+                                <img src="{% static 'upload/shop_01.jpg' %}" alt="" class="img-responsive">
                             </div>
                             <!-- end image-wrap -->
                             <div class="course-details shop-box text-center">
-                                <a href="{% url 'sub_detail' pk=sub.pk %}">{{ sub.sub_title_1|truncatechars:30 }}</a>
-                                <p>{{ sub.sub_description_1|truncatechars:50 }}</p>
-                                <small>Glasses</small>
+                                <h4>
+                                    <a href="shop-single.html" title="">Brown leather bag</a>
+                                    <small>Glasses</small>
+                                </h4>
                             </div><!-- end details -->
-                        </div> 
-                             
-                  </div><!-- end row -->   
-                {% endfor %} 
+                        </div>
+                </div><!-- end row -->
             </div><!-- end related -->
         </div><!-- end boxed -->
     </div><!-- end container -->

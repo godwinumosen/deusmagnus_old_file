@@ -62,7 +62,7 @@ class SubPictureDetailView(DetailView):
     context_object_name = 'sub_picture'
     def SubPictureDetailView(request, pk):  
         object = get_object_or_404(SubPictureDetailView, pk=pk)
-        return render(request, 'deus_magnus/sub_article_detail.html', {'sub_detail': object})
+        return render(request, 'deus_magnus/sub_picture_detail.html', {'sub_detail': object})
     
     
 #The last sub ArticleDetailView page    
