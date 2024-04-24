@@ -31,5 +31,5 @@ admin.site.register(SubPicture_1, SubPicture_1_ModelAdmin)
 #The inner second sub category of the detailview page view
 class SubPicture_2_ModelAdmin (admin.ModelAdmin):
     prepopulated_fields = {'sub_slug_2': ('sub_title_2',)}
-    list_display = ['sub_title_2','sub_description_2','sub_image_2','sub_author_2']
+    list_display = ['sub_title_2','sub_description_2','sub_video_2','sub_author_2']
 admin.site.register(SubPicture_2, SubPicture_2_ModelAdmin)

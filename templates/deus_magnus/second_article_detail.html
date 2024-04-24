@@ -95,17 +95,18 @@
                     <div class="col-md-3">
                         <div class="course-box shop-wrapper">
                             <div class="image-wrap entry">
-                                <img src="{% static 'upload/shop_01.jpg' %}" alt="" class="img-responsive">
+                                <img src="{{ sub.sub_image_1.url }}"height="180px" alt="" class="img-responsive">
                             </div>
                             <!-- end image-wrap -->
                             <div class="course-details shop-box text-center">
-                                <a href="shop-single.html" title="">{{ sub.sub_title_1 }}</a>
-                                <p>{{ sub.sub_description_1 }}</p>
+                                <a href="shop-single.html" title="">{{ sub.sub_title_1|truncatechars:30 }}</a>
+                                <p>{{ sub.sub_description_1|truncatechars:50 }}</p>
                                 <small>Glasses</small>
                             </div><!-- end details -->
                         </div> 
-                    {% endfor %}          
-                </div><!-- end row -->   
+                             
+                  </div><!-- end row -->   
+                {% endfor %} 
             </div><!-- end related -->
         </div><!-- end boxed -->
     </div><!-- end container -->
