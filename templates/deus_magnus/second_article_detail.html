@@ -95,13 +95,15 @@
                     <div class="col-md-3">
                         <div class="course-box shop-wrapper">
                             <div class="image-wrap entry">
+                                <a href="{% url 'sub_detail' pk=sub.pk %}">
                                 <img src="{{ sub.sub_image_1.url }}"height="180px" alt="" class="img-responsive">
+                                </a>
                             </div>
                             <!-- end image-wrap -->
                             <div class="course-details shop-box text-center">
                                 <a href="{% url 'sub_detail' pk=sub.pk %}">{{ sub.sub_title_1|truncatechars:30 }}</a>
-                                <p>{{ sub.sub_description_1|truncatechars:50 }}</p>
-                                <small>Glasses</small>
+                                <p>{{ sub.sub_description_1|truncatechars:40 }}</p>
+                                <a href="{% url 'sub_detail' pk=sub.pk %}"><small>View More</small></a>
                             </div><!-- end details -->
                         </div> 
                              
