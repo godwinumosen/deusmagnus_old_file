@@ -102,3 +102,22 @@ class SubPicture_2 (models.Model):
 
     def get_absolute_url(self):
         return reverse('home')
+    
+    
+#first sub video category of the video
+class VideoSubImage(models.Model):
+    video_sub_title = models.CharField(max_length=200, blank=True, null=True)
+    video_sub_description = models.TextField()
+    video_sub_slug = models.SlugField (max_length=255,blank=True, null=True)
+    video_sub_image = models.ImageField(upload_to='video_sub_images/')
+    video_sub_publish_date = models.DateTimeField (auto_now_add= True)
+    video_sub_author = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    class Meta:
+        ordering =['video_sub_publish_date']
+    
+    def __str__(self):
+        return self.video_sub_title + ' | ' + str(self.video_sub_author)
+
+    def get_absolute_url(self):
+        return reverse('home')

@@ -44,10 +44,9 @@
                                 <p>{{ object.deus_magnus_description }}</p>  
                             </div><!-- end desc -->
                         </div><!-- end blog -->
-            
-                            <div class="btn-wrapper">
-                                <a href="{% url 'home' %}" class="btn btn-primary"style="border-radius: 10px;"><i class="fa fa-angle-left">Back</i></a>
-                            </div>
+                        <div class="btn-wrapper">
+                            <a href="{% url 'home' %}" class="btn btn-primary"style="border-radius: 10px;"><i class="fa fa-angle-left">Back</i></a>
+                        </div>
                     </div><!-- end content -->
                 </div><!-- end col -->
                 <div class="sidebar col-md-4">
@@ -58,26 +57,29 @@
                     </div>
 
                     <div class="widget clearfix">
-                        <h3 class="widget-title">Popular Posts</h3>
-                        <div class="post-widget">
-                            <div class="media">
-                                <img src="{% static 'upload/blog_small_01.jpg' %}" alt="" class="img-responsive alignleft img-rounded">
-                                <div class="media-body">
-                                    <h5 class="mt-0"><a href="blog-single.html">Bulding construction Like a Pro..</a></h5>
-                                    <div class="blog-meta">
-                                        <ul class="list-inline">
-                                            <li>4 days ago</li>
-                                            <li><span>by</span> <a href="#"> Team</a></li>
-                                        </ul>
-                                    </div><!-- end blog-meta -->
+                        <h3 class="widget-title">Popular Post Views</h3>
+                            <div class="post-widget"> 
+                                {% for sub_v_img in sub_v_imgs %}
+                                <div class="media"> 
+                                    <img src="{{ sub_v_img.video_sub_image.url }}"height="20px" alt="" class="img-responsive alignleft img-rounded">
+                                    <div class="media-body">
+                                        <h5 class="mt-0"><a href="blog-single.html">Bulding construction Like a Pro..</a></h5>
+                                        <div class="blog-meta">
+                                            <ul class="list-inline">
+                                                <li>{{ sub_v_img.video_sub_publish_date }}</li>
+                                                <li><span>by</span>Deus Magnus</li>
+                                            </ul>
+                                        </div><!-- end blog-meta -->            
+                                    </div>
                                 </div>
-                            </div>
-                        </div><!-- end post-widget -->
+                                {% endfor %}
+                            </div><!-- end post-widget -->
                     </div><!-- end widget -->
                 </div><!-- end sidebar -->
             </div><!-- end row -->
         </div><!-- end boxed -->
     </div><!-- end container -->
 </section>
+
 
 {% endblock %}

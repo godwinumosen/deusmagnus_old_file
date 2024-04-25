@@ -2,7 +2,7 @@ from django.contrib import admin
 # Register your models here.
 from . import models
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost, LastDeusMagnusMainPicturePost,SubPicture_2
-from .models import SubPicture_1
+from .models import SubPicture_1, VideoSubImage
 
 #The DeusMagnus post post model admin of josepdam
 class DeusMagnusMainPostModelAdmin (admin.ModelAdmin):
@@ -33,3 +33,9 @@ class SubPicture_2_ModelAdmin (admin.ModelAdmin):
     prepopulated_fields = {'sub_slug_2': ('sub_title_2',)}
     list_display = ['sub_title_2','sub_description_2','sub_video_2','sub_author_2']
 admin.site.register(SubPicture_2, SubPicture_2_ModelAdmin)
+
+#The first sub category of the detailview page view article
+class VideoSubModelAdmin (admin.ModelAdmin):
+    prepopulated_fields = {'video_sub_slug': ('video_sub_title',)}
+    list_display = ['video_sub_title','video_sub_description','video_sub_image','video_sub_author']
+admin.site.register(VideoSubImage, VideoSubModelAdmin)

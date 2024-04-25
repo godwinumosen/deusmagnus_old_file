@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost, LastDeusMagnusMainPicturePost
 from django.contrib import messages
 from django.http import HttpResponse
-from .models import SubPicture_1, SubPicture_2
+from .models import SubPicture_1, SubPicture_2,VideoSubImage
 from django.contrib.auth.models import User
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse
@@ -39,6 +39,11 @@ class ArticleDetailView(DetailView):
     def ArticleDetailView(request, pk):  
         object = get_object_or_404(DeusMagnusMainPost, pk=pk)
         return render(request, 'article_detail.html', {'detail': object})
+    #This is the sub-model data related to the first video model instance
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['sub_v_imgs'] = VideoSubImage.objects.all() 
+        return context
     
 #The second ArticleDetailView page    
 class SecondConstructionDetailViewArticleDetailView(DetailView):
@@ -90,4 +95,13 @@ class SubVideoDetailView(DetailView):
     def SubVideoDetailView(request, pk):  
         object = get_object_or_404(SubVideoDetailView, pk=pk)
         return render(request, 'deus_magnus/sub_video_detail.html', {'sub_detail_video': object})
+    
+#First video image sub category iterate    
+class VideoImageDetailView(DetailView):
+    model = VideoSubImage
+    template_name = 'deus_magnus/sub_video_img_detail.html'
+    context_object_name = 'sub_video_img'
+    def VideoImageDetailView(request, pk):  
+        object = get_object_or_404(VideoImageDetailView, pk=pk)
+        return render(request, 'deus_magnus/sub_video_img_detail.html', {'sub_video_img_detail': object})
     

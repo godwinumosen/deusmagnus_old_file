@@ -1,7 +1,7 @@
 
 from django.urls import path
 from . import views
-from .views import HomeView, ArticleDetailView, SecondConstructionDetailViewArticleDetailView
+from .views import HomeView, ArticleDetailView, SecondConstructionDetailViewArticleDetailView,VideoImageDetailView
 from .views import LastConstructionDetailViewArticleDetailView, SubPictureDetailView,SubVideoDetailView
 
 urlpatterns = [
@@ -14,4 +14,5 @@ urlpatterns = [
     #path('subpicture_1/', views.subpicture_1, name='subpicture_1'),
     path('sub_picture/<int:pk>/', SubPictureDetailView.as_view(), name="sub_detail"),
     path('sub_video/<int:pk>/', SubVideoDetailView.as_view(), name="sub_detail_video"),
+    path('sub_video_img/<int:pk>/', VideoImageDetailView.as_view(), name="sub_video_img_detail"),
 ]
