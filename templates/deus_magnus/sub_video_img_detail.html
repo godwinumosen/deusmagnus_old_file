@@ -11,7 +11,6 @@
             <div class="col-md-12">
                 <div class="tagline-message page-title text-center">
                     <h3>Dues & Magnus v_m</h3>
-                  
                 </div>
             </div><!-- end col -->
         </div><!-- end row -->
@@ -26,22 +25,18 @@
                     <div class="content blog-list">
                         <div class="blog-wrapper clearfix">
                             <div class="blog-meta">
-                                <h3>{{ sub_video.sub_title_2 }}</h3>
+                                <h3>{{ sub_video_img.video_sub_title }}</h3>
                                 <ul class="list-inline">
-                                    <li>{{ sub_video.sub_publish_date_2 }}</li>
-                                    <li><span>written by</span>{{ sub_video.sub_author_2 }}</li>
+                                    <li>{{ sub_video_img.video_sub_publish_date }}</li>
+                                    <li><span>written by</span>Deus Magnus</li>
                                 </ul>
                             </div><!-- end blog-meta -->
                             <div class="blog-media">
-                                <!-- <img src="upload/blog_01.jpg" alt="" class="img-responsive img-rounded"> -->
-                                <video autoplay muted playsinline loop width="100%"style="border-radius: 5px;" controls >
-                                    <source src="{{ sub_video.sub_video_2.url }}" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                </video>
+                                <img src="{{ sub_video_img.video_sub_image.url }}" alt="" class="img-responsive img-rounded">   
                             </div><!-- end media -->
                             <div class="blog-desc-big">
-                                <p class="lead">{{ sub_video.sub_title_2 }}</p>
-                                <p>{{ sub_video.sub_description_2 }}</p>  
+                                <p class="lead">{{ sub_video_img.video_sub_title }}</p>
+                                <p>{{ sub_video_img.video_sub_description }}</p>  
                             </div><!-- end desc -->
                         </div><!-- end blog -->
             
