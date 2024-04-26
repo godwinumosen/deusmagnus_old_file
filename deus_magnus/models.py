@@ -25,7 +25,7 @@ class DeusMagnusMainPost(models.Model):
         return self.deus_magnus_title + ' | ' + str(self.deus_magnus_author)
     
     def get_absolute_url(self):
-        return reverse ('home')
+        return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail','last_detail','second_detail','detail')
     
 # The second model for Deus Magnus Model category
 class SecondDeusMagnusMainPicturePost(models.Model):
@@ -44,7 +44,7 @@ class SecondDeusMagnusMainPicturePost(models.Model):
         return self.second_deus_magnus_title + ' | ' + str(self.second_deus_magnus_author)
     
     def get_absolute_url(self):
-        return reverse ('home')
+        return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail','last_detail','second_detail','detail')
     
 
 # The second model for Deus Magnus Model category
@@ -64,7 +64,7 @@ class LastDeusMagnusMainPicturePost(models.Model):
         return self.last_deus_magnus_title + ' | ' + str(self.last_deus_magnus_author)
     
     def get_absolute_url(self):
-        return reverse ('home')
+        return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail','last_detail','second_detail','detail')
     
 #first sub picture category of the picture
 class SubPicture_1(models.Model):
@@ -82,7 +82,7 @@ class SubPicture_1(models.Model):
         return self.sub_title_1 + ' | ' + str(self.sub_author_1)
 
     def get_absolute_url(self):
-        return reverse('home')
+        return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail','last_detail','second_detail','detail')
     
 
 class SubPicture_2 (models.Model):
@@ -101,7 +101,7 @@ class SubPicture_2 (models.Model):
         return self.sub_title_2 + ' | ' + str(self.sub_author_2)
 
     def get_absolute_url(self):
-        return reverse('home')
+        return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail','last_detail','second_detail','detail')
     
     
 #first sub video category of the video
@@ -120,4 +120,5 @@ class VideoSubImage(models.Model):
         return self.video_sub_title + ' | ' + str(self.video_sub_author)
 
     def get_absolute_url(self):
-        return reverse('home')
+        return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail','last_detail','second_detail','detail')
+    
