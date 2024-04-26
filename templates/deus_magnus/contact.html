@@ -1,79 +1,115 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %} Contact Us {% endblock %}
-{% block content %}
+{% block title %} Contact JosepDam {% endblock %}
+{% block content%}
 
+    <!-- Page Content -->
+    <div class="page-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Talk to us</h1>
+            <span>feel free to send us a message now and we'll get back to you..!</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <section class="section db p120">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="tagline-message page-title text-center">
-                            <h3>Get In Touch</h3>
-                            <ul class="breadcrumb">                                
-                                <li class="active">Talk to Us</li>
-                            </ul>
-                        </div>
-                    </div><!-- end col -->
-                </div><!-- end row -->
-            </div><!-- end container -->
-        </section><!-- end section -->
-
-        <section class="section gb nopadtop">
-            <div class="container">
-                <div class="boxed boxedp4">
-                    <div id="map" class="wow slideInUp"></div>
-                    <div class="row contactv2 text-center">
-                        <div class="col-md-4">
-                            <div class="small-box">
-                                <i class="flaticon-email wow fadeIn"></i>
-                                <h4>Contact us today</h4>
-                                <small>Phone: +90 987 665 55 44</small>
-                                <small>Fax:  +90 987 665 55 45</small>
-                                <p><a href="mail:to">info@deusmagnus.com</a></p>
-                            </div><!-- end small-box -->
-                        </div><!-- end col -->
-
-                        <div class="col-md-4">
-                            <div class="small-box">
-                                <i class="flaticon-map-with-position-marker wow fadeIn"></i>
-                                <h4>Visit Our Office</h4>
-                                <small>PO Box 16122 Collins Street West</small>
-                                <small>Victoria 8007 Australia</small>
-                                <p><a href="#">View on Google Map</a></p>
-                            </div><!-- end small-box -->
-                        </div><!-- end col -->
-
-                        <div class="col-md-4">
-                            <div class="small-box">
-                                <i class="flaticon-share wow fadeIn"></i>
-                                <h4>Be Social</h4>
-                                <small>Twitter: @yourhandle</small>
-                                <small>Facebook: facebook.com/yourhandle</small>
-                                <p><a href="#">Email Newsletter</a></p>
-                            </div><!-- end small-box -->
-                        </div><!-- end col -->
-                    </div><!-- end contactv2 -->
-
-                    <div class="row">
-                        <div class="col-md-6 col-md-offset-3">
-                            <div class="section-title text-center">
-                                <h3>Contact Form</h3>
-                                <p>Maecenas sit amet tristique turpis. Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis.</p>
-                            </div><!-- end title -->
-                            
-                            <form class="big-contact-form" role="search">
-                                <input type="text" class="form-control" placeholder="Enter your name..">
-                                <input type="email" class="form-control" placeholder="Enter email..">
-                                <input type="text" class="form-control" placeholder="Your phone..">
-                                <input type="text" class="form-control" placeholder="Subject..">
-                                <textarea class="form-control" placeholder="Message goes here.."></textarea>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </form>
-                        </div><!-- end col -->
-                    </div><!-- end row -->
-                </div><!-- end container -->
+    <div class="contact-information">
+      <div class="container">
+        <div class="row">
+          <a href="https://wa.me/+2348106941149?text=Hi JosepDam ?">
+          <div class="col-md-4">
+            <div class="contact-item">
+              <i class="fa fa-whatsapp"></i>
+              <h4>Whatsapp</h4>
+              <p>Send a message on whatsapp.</p>
+              <a href="https://wa.me/+2348106941149?text=Hi JosepDam ?">View on Whatsapp</a>
             </div>
-        </section>
+          </a>
+          </div>
 
-       {% endblock %}
+          <a href="mailto:info@josepdam.com">
+          <div class="col-md-4">
+            <div class="contact-item">
+              <i class="fa fa-envelope"></i>
+              <h4>Email/Info</h4>
+              <p>Email us directly on gmail.</p>
+              <a href="mailto:info@josepdam.com">View on Gmail</a>
+            </div>
+          </div>
+         </a>
+
+          <a href="https://maps.app.goo.gl/uNNsbrMFuA9V3HN36">
+          <div class="col-md-4">
+            <div class="contact-item">
+              <i class="fa fa-map-marker"></i>
+              <h4>Location</h4>
+              <p>19 Fatai Atere way Mushin,Lagos Nigeria</p>
+              <a href="https://maps.app.goo.gl/uNNsbrMFuA9V3HN36">View on Google Maps</a>
+            </div>
+          </div>
+        </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="callback-form contact-us">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>Send us a <em>message</em></h2>
+              <span>We'll get back to you before 24 hours..</span>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="contact-form">
+              <form method="POST">
+                {% csrf_token %}
+                <div class="row">
+                  <div class="col-lg-4 col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="message-name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-4 col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="message-email" type="text" class="form-control" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-Mail Address" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-4 col-md-12 col-sm-12">
+                    <fieldset>
+                      <input name="message-subject" type="text" class="form-control" id="subject" placeholder="Subject" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="filled-button">Send Message</button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="map">
+<!-- How to change your own map point
+	1. Go to Google Maps
+	2. Click on your location point
+	3. Click "Share" and choose "Embed map" tab
+	4. Copy only URL and paste it within the src="" field below
+-->
+      <div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=19%20FATAI%20ATERE%20MUSHIN%20LAGOS+(asiness%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/population/">Calculate population in area</a></iframe></div>
+    </div> 
+
+{% endblock %}
+   

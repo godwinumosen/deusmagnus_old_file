@@ -110,4 +110,4 @@ class SubVideoDetailView(DetailView):
 
 #Page Contact Us of the website
 def ContactView (request):
-    return render(request, 'deus_magnus/contact.html', {})
+    return render(request, 'deus_magnus/contact_us.html', {})
