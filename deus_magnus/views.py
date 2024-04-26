@@ -78,6 +78,17 @@ class LastConstructionDetailViewArticleDetailView(DetailView):
 def AboutView (request):
     return render(request, 'deus_magnus/about_us.html', {})
 
+
+#First video image sub category iterate    
+class VideoImageDetailView(DetailView):
+    model = VideoSubImage
+    template_name = 'deus_magnus/sub_video_img_detail.html'
+    context_object_name = 'sub_video_img'
+    def VideoImageDetailView(request, pk):  
+        object = get_object_or_404(VideoImageDetailView, pk=pk)
+        return render(request, 'deus_magnus/sub_video_img_detail.html', {'sub_video_img_detail': object})
+    
+
 #sub_picture article display inside second detailsview
 class SubPictureDetailView(DetailView):
     model = SubPicture_1
@@ -96,12 +107,7 @@ class SubVideoDetailView(DetailView):
         object = get_object_or_404(SubVideoDetailView, pk=pk)
         return render(request, 'deus_magnus/sub_video_detail.html', {'sub_detail_video': object})
     
-#First video image sub category iterate    
-class VideoImageDetailView(DetailView):
-    model = VideoSubImage
-    template_name = 'deus_magnus/sub_video_img_detail.html'
-    context_object_name = 'sub_video_img'
-    def VideoImageDetailView(request, pk):  
-        object = get_object_or_404(VideoImageDetailView, pk=pk)
-        return render(request, 'deus_magnus/sub_video_img_detail.html', {'sub_video_img_detail': object})
-    
+
+#Page Contact Us of the website
+def ContactView (request):
+    return render(request, 'deus_magnus/contact.html', {})
