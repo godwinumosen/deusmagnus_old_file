@@ -105,9 +105,17 @@ class SubVideoDetailView(DetailView):
     context_object_name = 'sub_video'
     def SubVideoDetailView(request, pk):  
         object = get_object_or_404(SubVideoDetailView, pk=pk)
-        return render(request, 'deus_magnus/sub_video_detail.html', {'sub_detail_video': object})
-    
+        return render(request, 'deus_magnus/sub_video_detail.html', {'sub_detail_video': object})    
 
 #Page Contact Us of the website
 def ContactView (request):
     return render(request, 'deus_magnus/contact_us.html', {})
+
+#This category is for the Whatsapp API for deus magnus
+def whatsapp (request):
+    return render(request, 'deus_magnus/whatsapp.html', {}) 
+def whatsapp_message(request):
+    whatsapp_number = '+2348066295770'
+    whatsapp_link = f'https://api.whatsapp.com/send?phone={whatsapp_number}'
+    context = {'whatsapp_link': whatsapp_link}
+    return render(request, 'whatsapp_message.html', context)
