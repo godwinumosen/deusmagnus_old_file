@@ -112,8 +112,6 @@ def ContactView (request):
     return render(request, 'deus_magnus/contact_us.html', {})
 
 #This category is for the Whatsapp API for deus magnus
-def whatsapp (request):
-    return render(request, 'deus_magnus/whatsapp.html', {}) 
 def whatsapp_message(request):
     whatsapp_number = '+2348066295770'
     whatsapp_link = f'https://api.whatsapp.com/send?phone={whatsapp_number}'
