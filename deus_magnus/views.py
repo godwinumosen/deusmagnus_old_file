@@ -114,7 +114,22 @@ def deus_magnus_whatsapp_message(request):
     context = {'whatsapp_link': dues_magnus_whatsapp_link}
     return render(request, 'deus_magnus_kwhatsapp_message.html', context)
 
-#Page Contact Us of the website
-def ContactView (request):
-    return render(request, 'deus_magnus/contact_us.html', {})
 
+# The Contact view been implemented
+def ContactView (request):
+    email='info@deusmagnus.com'
+    if request.method == 'POST':
+        message_name = request.POST['message-name']
+        message_email = request.POST['message-email']
+        message_subject = request.POST['message-subject']
+        message = request.POST['message'] 
+        messages.success(request, f'Your email was Successfully sent to Deus Magnus {message_name}..!')
+        return redirect('/message')
+    else:
+        context={
+            'email':email
+        }
+        return render(request, 'deus_magnus/contact_us.html',context)
+
+def message (request):
+    return render (request, 'deus_magnus/message.html', {})

@@ -68,13 +68,13 @@
                                 <h3>Contact Form</h3>
                                 <p>Whether you have questions or need assistance, our team is here to help within 24 hours.</p>
                             </div><!-- end title -->
-                            <form>
+                            <form method="POST">
                                 {% csrf_token %}
-                                <input name="message-name" type="text" class="form-control" placeholder="Enter your name..">
-                                <input name="message-email" type="email" class="form-control" placeholder="Enter email..">
-                                <input name="message-subject" type="text" class="form-control" placeholder="Subject..">
-                                <textarea name="message" class="form-control" placeholder="Message goes here.."></textarea>
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <input name="message-name" type="text" class="form-control" placeholder="Enter your name.."><br>
+                                <input name="message-email" type="email" class="form-control" placeholder="Enter email.."><br>
+                                <input name="message-subject" type="text" class="form-control" placeholder="Subject.."><br>
+                                <textarea name="message" class="form-control" placeholder="Message goes here.."></textarea><br>
+                                <center><button type="submit" class="btn btn-primary" style="border-radius:5px;">Submit</button></center>
                             </form>
                         </div><!-- end col -->
                     </div><!-- end row -->
