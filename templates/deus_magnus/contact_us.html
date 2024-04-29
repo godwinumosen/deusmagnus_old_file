@@ -39,8 +39,6 @@
                             </div><!-- end small-box -->
                         </div><!-- end col -->
                     
-
-                        
                         <div class="col-md-4">
                             <div class="small-box">
                                 <i class="fa fa-envelope"></i>
@@ -70,13 +68,12 @@
                                 <h3>Contact Form</h3>
                                 <p>Whether you have questions or need assistance, our team is here to help within 24 hours.</p>
                             </div><!-- end title -->
-                            
                             <form>
                                 {% csrf_token %}
-                                <input type="text" class="form-control" placeholder="Enter your name..">
-                                <input type="email" class="form-control" placeholder="Enter email..">
-                                <input type="text" class="form-control" placeholder="Subject..">
-                                <textarea class="form-control" placeholder="Message goes here.."></textarea>
+                                <input name="message-name" type="text" class="form-control" placeholder="Enter your name..">
+                                <input name="message-email" type="email" class="form-control" placeholder="Enter email..">
+                                <input name="message-subject" type="text" class="form-control" placeholder="Subject..">
+                                <textarea name="message" class="form-control" placeholder="Message goes here.."></textarea>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
                         </div><!-- end col -->
