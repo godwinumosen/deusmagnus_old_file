@@ -116,5 +116,6 @@ def whatsapp_message(request):
 
 #Page Contact Us of the website
 def ContactView (request):
+    
     return render(request, 'deus_magnus/contact_us.html', {})
 
