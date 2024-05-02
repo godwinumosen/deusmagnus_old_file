@@ -120,7 +120,7 @@ class VideoSubImage(models.Model):
     def get_absolute_url(self):
         return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail','last_detail','second_detail','detail')
     
-
+#The blog category
 class BlogDeusMagnus(models.Model):
     blog_deus_magnus_title = models.CharField(max_length=255, blank=True, null=True)
     blog_deus_magnus_description = models.TextField()

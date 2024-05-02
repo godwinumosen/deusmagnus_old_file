@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost, LastDeusMagnusMainPicturePost
 from django.contrib import messages
 from django.http import HttpResponse
-from .models import SubPicture_1, SubPicture_2,VideoSubImage
+from .models import SubPicture_1, SubPicture_2,VideoSubImage, BlogDeusMagnus
 from django.contrib.auth.models import User
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse
@@ -29,6 +29,7 @@ class HomeView(ListView):
     #Last deus magnus sub category of the blog for picture 
         context['last_constructions'] = LastDeusMagnusMainPicturePost.objects.all()   
         return context
+    
     
 
  #The first Deus Magnus Video ArticleDetailView page
@@ -133,3 +134,10 @@ def ContactView (request):
 
 def message (request):
     return render (request, 'deus_magnus/message.html', {})
+
+#This is the blog category of deus magnus
+class BlogView(ListView):
+    model = BlogDeusMagnus
+    template_name = 'deus_magnus/blog.html'
+
+    

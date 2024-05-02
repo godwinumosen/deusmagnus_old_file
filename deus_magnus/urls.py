@@ -2,11 +2,12 @@
 from django.urls import path
 from . import views
 from .views import HomeView, ArticleDetailView, SecondConstructionDetailViewArticleDetailView,VideoImageDetailView
-from .views import LastConstructionDetailViewArticleDetailView, SubPictureDetailView,SubVideoDetailView
+from .views import LastConstructionDetailViewArticleDetailView, SubPictureDetailView,SubVideoDetailView,BlogView
 
 urlpatterns = [
     path('', HomeView.as_view(), name="home"),
     path('home/', HomeView.as_view(), name='home'),
+    path('blog/', BlogView.as_view(), name='blog'),
     path('article/<int:pk>/', ArticleDetailView.as_view(), name="detail"),
     path('article2/<int:pk>/', SecondConstructionDetailViewArticleDetailView.as_view(), name="second_detail"),
     path('article3/<int:pk>/', LastConstructionDetailViewArticleDetailView.as_view(), name="last_detail"),
