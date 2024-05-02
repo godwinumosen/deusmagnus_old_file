@@ -83,7 +83,21 @@
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="{% url 'home' %}">Home</a></li>
-                            <li><a href="{% url 'about' %}">About Us</a></li>
+                            <li class="dropdown hassubmenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About Us<span class="fa fa-angle-down"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="{% url 'about' %}">About Us</a></li>
+                                    <li><a href="shop.html">Board of Directors</a></li>
+                                    <li><a href="shop-single.html">Management Team</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown hassubmenu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Member Companies<span class="fa fa-angle-down"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="https://www.josepdam.com/"target="_blank">JosepDam Real Estate</a></li>
+                                    <li><a href="https://www.jps.ng/"target="_blank">JosepDam Port Service</a></li>
+                                </ul>
+                            </li>  
                             <li><a href="{% url 'contact' %}">Contact</a></li>
                             <li><a href="events.html">Events</a></li>
                             <li class="dropdown hassubmenu">
