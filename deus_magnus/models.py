@@ -14,7 +14,7 @@ class DeusMagnusMainPost(models.Model):
     #thumbnail = models.ImageField(max_length=100, null=True, blank=True)
     deus_magnus_publish_date = models.DateTimeField (auto_now_add= True)
     deus_magnus_author = models.ForeignKey(User, on_delete=models.CASCADE)
-    
+
        
     class Meta:
         ordering =['-deus_magnus_publish_date']
@@ -120,3 +120,21 @@ class VideoSubImage(models.Model):
     def get_absolute_url(self):
         return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail','last_detail','second_detail','detail')
     
+
+class BlogDeusMagnus(models.Model):
+    blog_deus_magnus_title = models.CharField(max_length=255, blank=True, null=True)
+    blog_deus_magnus_description = models.TextField()
+    blog_deus_magnus_slug = models.SlugField (max_length=255,blank=True, null=True)
+    blog_deus_magnus_img = models.ImageField(upload_to='blog_images/')
+    blog_deus_magnus_publish_date = models.DateTimeField (auto_now_add= True)
+    blog_deus_magnus_author = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    class Meta:
+        ordering =['-blog_deus_magnus_publish_date']
+    
+    def __str__(self):
+        return self.blog_deus_magnus_title + ' | ' + str(self.blog_deus_magnus_author)
+    
+    def get_absolute_url(self):
+        return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail','last_detail','second_detail','detail')
+        
