@@ -264,7 +264,7 @@ HEADER
 }
 
 .header-normal .navbar-default .nav>li>a {
-    color: #848484 !important;
+    color: #000080 !important;
 }
 
 /* Pls dont touch this color */
@@ -297,7 +297,7 @@ HEADER
 }
 
 .navbar-default .nav>li>a {
-    color: #000 !important;
+    color: #000080 !important;
     text-transform: capitalize;
     font-size: 15px;
     font-weight: 500;
@@ -356,7 +356,7 @@ HEADER
 }
 
 .social a.facebook {
-    background-color: #3b5998;
+    background-color: #000080;
 }
 
 .social a.pinterest {
@@ -1224,7 +1224,7 @@ COURSE MODULES
     right: 0;
     opacity: 0;
     top: 0;
-    background-color: rgba(1, 186, 207, 0.8);
+    background-color: #000080(46, 68, 206, 0.8);
     -webkit-transition: visibility 0.35s ease-in-out, opacity 0.35s ease-in-out, top 0.35s ease-in-out, bottom 0.35s ease-in-out, left 0.35s ease-in-out, right 0.35s ease-in-out;
     -moz-transition: visibility 0.35s ease-in-out, opacity 0.35s ease-in-out, top 0.35s ease-in-out, bottom 0.35s ease-in-out, left 0.35s ease-in-out, right 0.35s ease-in-out;
     -o-transition: visibility 0.35s ease-in-out, opacity 0.35s ease-in-out, top 0.35s ease-in-out, bottom 0.35s ease-in-out, left 0.35s ease-in-out, right 0.35s ease-in-out;
@@ -2078,11 +2078,11 @@ COLOR BLUE
 ******************************************/
 
 .yamm .dropdown .dropdown-menu {
-    border-top-color: #01bacf;
+    border-top-color: #000080;
 }
 
 .iconitem a.shopicon i {
-    color: #01bacf !important;
+    color: #000080 !important;
 }
 
 .shop-desc small,
@@ -2109,7 +2109,7 @@ a:hover,
 a:focus,
 .box i,
 .topbar .text-left i {
-    color: #01bacf;
+    color: #000080;
 }
 
 .shop-extra .nav-tabs>li:hover a,
@@ -2117,7 +2117,7 @@ a:focus,
 .modal .form-control,
 .form-control:focus,
 .btn-transparent {
-    border-color: #01bacf !important;
+    border-color: #000080 !important;
 }
 
 .cb,
@@ -2138,9 +2138,9 @@ mark,
 .image-wrap:before,
 .image-wrap:after,
 .btn-primary {
-    border-color: #01bacf;
-    background-color: #01bacf;
-    box-shadow: inset 0 0 0 0 #00a8bd;
+    border-color: #000080;
+    background-color: #000080;
+    box-shadow: inset 0 0 0 0 #000080;
     -webkit-transition: all ease 0.5s;
     -moz-transition: all ease 0.5s;
     transition: all ease 0.5s;
@@ -2150,8 +2150,8 @@ mark,
 .tags-widget a:hover,
 .btn-primary:hover {
     color: #ffffff !important;
-    box-shadow: inset 0 100px 0 0 #00a8bd;
-    border-color: #00a8bd;
+    box-shadow: inset 0 100px 0 0 #000080;
+    border-color: #000080;
 }
 
 
@@ -2161,21 +2161,21 @@ COLOR GREEN
 
 .menu-widget small,
 .course-footer .pull-right a {
-    color: #82b440;
+    color: #000080;
 }
 
 .btn-default {
-    border-color: #82b440;
-    background-color: #82b440;
-    box-shadow: inset 0 0 0 0 #74a632;
+    border-color: #000080;
+    background-color: #000080;
+    box-shadow: inset 0 0 0 0 #000080;
     -webkit-transition: all ease 0.5s;
     -moz-transition: all ease 0.5s;
     transition: all ease 0.5s;
 }
 
 .btn-default:hover {
-    box-shadow: inset 0 100px 0 0 #74a632;
-    border-color: #74a632;
+    box-shadow: inset 0 100px 0 0 #000080;
+    border-color: #000080;
 }
 
 
