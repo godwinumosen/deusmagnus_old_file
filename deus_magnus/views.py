@@ -8,7 +8,7 @@ from .models import SubPicture_1, SubPicture_2,VideoSubImage, BlogDeusMagnus
 from django.contrib.auth.models import User
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse
-from django.urls import reverse_lazy
+from django.urls import reverse_laz
 
 '''def home (request):
     return render (request, 'deus_magnus/home.html')'''
