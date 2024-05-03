@@ -17,7 +17,7 @@ class DeusMagnusMainPost(models.Model):
 
        
     class Meta:
-        ordering =['-deus_magnus_publish_date']
+        ordering =['deus_magnus_publish_date']
     
     def __str__(self):
         return self.deus_magnus_title + ' | ' + str(self.deus_magnus_author)
