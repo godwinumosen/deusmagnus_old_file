@@ -3,12 +3,11 @@ from django.urls import path
 from . import views
 from .views import HomeView, ArticleDetailView, SecondConstructionDetailViewArticleDetailView,VideoImageDetailView
 from .views import LastConstructionDetailViewArticleDetailView, SubPictureDetailView,SubVideoDetailView,BlogView
-#from .views import 
+from .views import BlogArticleDetail
 
 urlpatterns = [
     path('', HomeView.as_view(), name="home"),
     path('home/', HomeView.as_view(), name='home'),
-    path('blog/', BlogView.as_view(), name='blog'),
     path('article/<int:pk>/', ArticleDetailView.as_view(), name="detail"),
     path('article2/<int:pk>/', SecondConstructionDetailViewArticleDetailView.as_view(), name="second_detail"),
     path('article3/<int:pk>/', LastConstructionDetailViewArticleDetailView.as_view(), name="last_detail"),
@@ -19,5 +18,7 @@ urlpatterns = [
     path('sub_video/<int:pk>/', SubVideoDetailView.as_view(), name="sub_detail_video"),
     path('sub_video_img/<int:pk>/', VideoImageDetailView.as_view(), name="sub_video_img_detail"),
     path('message/', views.message, name='message'),
+    path('blog/', BlogView.as_view(), name='blog'),
+    path('blog_article/<int:pk>/', BlogArticleDetail.as_view(), name="blog_detail"),
     
 ]

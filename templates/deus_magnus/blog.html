@@ -27,19 +27,19 @@
                             <div class="content blog-list">
                                 <div class="blog-wrapper clearfix">
                                     <div class="blog-meta">  
-                                        <h3><a href="blog-single.html" title="">{{ blog.blog_deus_magnus_title }}</a></h3>
+                                        <h3><a href="{% url 'blog_detail' blog.pk %}" >{{ blog.blog_deus_magnus_title }}</a></h3>
                                         <ul class="list-inline">
                                             <li>{{ blog.blog_deus_magnus_publish_date }}</li>
                                             <li><span>written by</span> Deus Magnus</li>
                                         </ul>
                                     </div><!-- end blog-meta -->
                                     <div class="blog-media">
-                                        <a href="blog-single.html" title=""><img src="{{ blog.blog_deus_magnus_img.url }}" alt="" class="img-responsive img-rounded"></a>
+                                        <a href="{% url 'blog_detail' blog.pk %}" ><img src="{{ blog.blog_deus_magnus_img.url }}" alt="" class="img-responsive img-rounded"></a>
                                     </div><!-- end media -->
                                     <div class="blog-desc-big">
                                         <p class="lead">{{ blog.blog_deus_magnus_title }}</p>
                                         <p>{{ blog.blog_deus_magnus_description|truncatechars:200 }}</p>
-                                        <a href="blog-single.html" class="btn btn-primary">Read More</a>
+                                        <a href="{% url 'blog_detail' blog.pk %}" class="btn btn-primary">Read More</a>
                                     </div><!-- end desc -->
                                 </div><!-- end blog -->
                             </div><!-- end content -->  
