@@ -3,6 +3,7 @@ from django.urls import path
 from . import views
 from .views import HomeView, ArticleDetailView, SecondConstructionDetailViewArticleDetailView,VideoImageDetailView
 from .views import LastConstructionDetailViewArticleDetailView, SubPictureDetailView,SubVideoDetailView,BlogView
+#from .views import 
 
 urlpatterns = [
     path('', HomeView.as_view(), name="home"),
