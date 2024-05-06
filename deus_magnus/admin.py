@@ -50,5 +50,5 @@ admin.site.register(BlogDeusMagnus, BlogDeusMagnusModelAdmin)
 class BoardOfDirectorsModelAdmin (admin.ModelAdmin):
     prepopulated_fields = {'board_of_directos_slug': ('board_of_directos_name',)}
     list_display = ['board_of_directos_name','board_of_directos_description','board_of_directos_img',
-                    'board_of_directos_author'
+                    'board_of_directos_author']
 admin.site.register(BoardOfDirectorsInDeusMagnus, BoardOfDirectorsModelAdmin)
