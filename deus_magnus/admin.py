@@ -46,7 +46,7 @@ class BlogDeusMagnusModelAdmin (admin.ModelAdmin):
     list_display = ['blog_deus_magnus_title','blog_deus_magnus_description','blog_deus_magnus_img','blog_deus_magnus_author']
 admin.site.register(BlogDeusMagnus, BlogDeusMagnusModelAdmin)
 
-#This is the board of director in Deus Magnus
+#This is the board of director in Deus Magnus 
 class BoardOfDirectorsModelAdmin (admin.ModelAdmin):
     prepopulated_fields = {'board_of_directos_slug': ('board_of_directos_name',)}
     list_display = ['board_of_directos_name','board_of_directos_description','board_of_directos_img',
