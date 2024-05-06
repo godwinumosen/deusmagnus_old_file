@@ -2,7 +2,7 @@ from django.contrib import admin
 # Register your models here.
 from . import models
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost, LastDeusMagnusMainPicturePost,SubPicture_2
-from .models import SubPicture_1, VideoSubImage, BlogDeusMagnus
+from .models import SubPicture_1, VideoSubImage, BlogDeusMagnus,BoardOfDirectorsInDeusMagnus
 
 #The DeusMagnus post post model admin of josepdam
 class DeusMagnusMainPostModelAdmin (admin.ModelAdmin):
@@ -45,3 +45,10 @@ class BlogDeusMagnusModelAdmin (admin.ModelAdmin):
     prepopulated_fields = {'blog_deus_magnus_slug': ('blog_deus_magnus_title',)}
     list_display = ['blog_deus_magnus_title','blog_deus_magnus_description','blog_deus_magnus_img','blog_deus_magnus_author']
 admin.site.register(BlogDeusMagnus, BlogDeusMagnusModelAdmin)
+
+#This is the board of director in Deus Magnus
+class BoardOfDirectorsModelAdmin (admin.ModelAdmin):
+    prepopulated_fields = {'board_of_directos_slug': ('board_of_directos_name',)}
+    list_display = ['board_of_directos_name','board_of_directos_description','board_of_directos_img',
+                    'board_of_directos_author']
+admin.site.register(BoardOfDirectorsInDeusMagnus, BoardOfDirectorsModelAdmin)

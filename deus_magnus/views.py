@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost, LastDeusMagnusMainPicturePost
 from django.contrib import messages
 from django.http import HttpResponse
-from .models import SubPicture_1, SubPicture_2,VideoSubImage, BlogDeusMagnus
+from .models import SubPicture_1, SubPicture_2,VideoSubImage, BlogDeusMagnus,BoardOfDirectorsInDeusMagnus
 from django.contrib.auth.models import User
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse
@@ -148,7 +148,16 @@ class BlogArticleDetail(DetailView):
     def BlogArticleDetail(request, pk):  
         object = get_object_or_404(BlogDeusMagnus, pk=pk)
         return render(request, 'deus_magnus/blog_article_detail.html', {'blog_detail': object})
-
     
+#The board of director's view
+class BoardOfDirectors(ListView):
+    model = BoardOfDirectorsInDeusMagnus
+    template_name = 'deus_magnus/board_of_directors.html'
 
+'''class BoardOfDirectors(DetailView):
+    model = BoardOfDirectorsInDeusMagnus
+    template_name = 'deus_magnus/board_of_directors.html'
+    def BoardOfDirectors(request, pk):  
+        object = get_object_or_404(BoardOfDirectorsInDeusMagnus, pk=pk)
+        return render(request, 'deus_magnus/board_of_directors.html', {'board_detail': object})'''
     

@@ -23,7 +23,8 @@ class DeusMagnusMainPost(models.Model):
         return self.deus_magnus_title + ' | ' + str(self.deus_magnus_author)
     
     def get_absolute_url(self):
-        return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail','last_detail','second_detail','detail')
+        return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail',
+                       'board_detail','blog_detail','last_detail','second_detail','detail')
     
 # The second model for Deus Magnus Model category
 class SecondDeusMagnusMainPicturePost(models.Model):
@@ -42,7 +43,8 @@ class SecondDeusMagnusMainPicturePost(models.Model):
         return self.second_deus_magnus_title + ' | ' + str(self.second_deus_magnus_author)
     
     def get_absolute_url(self):
-        return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail','last_detail','second_detail','detail')
+        return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail',
+                       'board_detail','blog_detail','last_detail','second_detail','detail')
     
 
 # The second model for Deus Magnus Model category
@@ -62,7 +64,8 @@ class LastDeusMagnusMainPicturePost(models.Model):
         return self.last_deus_magnus_title + ' | ' + str(self.last_deus_magnus_author)
     
     def get_absolute_url(self):
-        return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail','last_detail','second_detail','detail')
+        return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail',
+                       'board_detail','blog_detail','last_detail','second_detail','detail')
     
 #first sub picture category of the picture
 class SubPicture_1(models.Model):
@@ -80,7 +83,8 @@ class SubPicture_1(models.Model):
         return self.sub_title_1 + ' | ' + str(self.sub_author_1)
 
     def get_absolute_url(self):
-        return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail','last_detail','second_detail','detail')
+        return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail',
+                       'board_detail','blog_detail','last_detail','second_detail','detail')
     
 
 class SubPicture_2 (models.Model):
@@ -99,7 +103,8 @@ class SubPicture_2 (models.Model):
         return self.sub_title_2 + ' | ' + str(self.sub_author_2)
 
     def get_absolute_url(self):
-        return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail','last_detail','second_detail','detail')
+        return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail',
+                       'board_detail','blog_detail','last_detail','second_detail','detail')
     
     
 #first sub video category of the video
@@ -118,7 +123,8 @@ class VideoSubImage(models.Model):
         return self.video_sub_title + ' | ' + str(self.video_sub_author)
 
     def get_absolute_url(self):
-        return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail','last_detail','second_detail','detail')
+        return reverse('home','sub_video_img_detail','sub_detail_video',
+                       'board_detail','blog_detail','sub_detail','last_detail','second_detail','detail')
     
 #The blog category
 class BlogDeusMagnus(models.Model):
@@ -136,5 +142,26 @@ class BlogDeusMagnus(models.Model):
         return self.blog_deus_magnus_title + ' | ' + str(self.blog_deus_magnus_author)
     
     def get_absolute_url(self):
-        return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail','last_detail','second_detail','detail')
-        
+        return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail',
+                       'last_detail','second_detail','detail','board_detail','blog_detail',)
+
+
+#The board of director's view
+class BoardOfDirectorsInDeusMagnus(models.Model):
+    board_of_directos_name = models.CharField(max_length=255, blank=True, null=True)
+    board_of_directos_position = models.CharField(max_length=255, blank=True, null=True)
+    board_of_directos_description = models.TextField()
+    board_of_directos_slug = models.SlugField (max_length=255,blank=True, null=True)
+    board_of_directos_img = models.ImageField(upload_to='directors_images/')
+    board_of_directos_author = models.ForeignKey(User, on_delete=models.CASCADE)
+    board_of_directos_publish_date = models.DateTimeField (auto_now_add= True)
+
+    class Meta:
+        ordering =['-board_of_directos_publish_date']
+    
+    def __str__(self):
+        return self.board_of_directos_name + ' | ' + str(self.board_of_directos_author)
+    
+    def get_absolute_url(self):
+        return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail','last_detail',
+                       'second_detail','detail','board_detail','blog_detail',)
