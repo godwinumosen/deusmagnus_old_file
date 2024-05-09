@@ -1224,7 +1224,7 @@ COURSE MODULES
     right: 0;
     opacity: 0;
     top: 0;
-    background-color: #4444A1(46, 68, 206, 0.8);
+    background-color: #005B8C(46, 68, 206, 0.8);
     -webkit-transition: visibility 0.35s ease-in-out, opacity 0.35s ease-in-out, top 0.35s ease-in-out, bottom 0.35s ease-in-out, left 0.35s ease-in-out, right 0.35s ease-in-out;
     -moz-transition: visibility 0.35s ease-in-out, opacity 0.35s ease-in-out, top 0.35s ease-in-out, bottom 0.35s ease-in-out, left 0.35s ease-in-out, right 0.35s ease-in-out;
     -o-transition: visibility 0.35s ease-in-out, opacity 0.35s ease-in-out, top 0.35s ease-in-out, bottom 0.35s ease-in-out, left 0.35s ease-in-out, right 0.35s ease-in-out;
@@ -2078,11 +2078,11 @@ COLOR BLUE
 ******************************************/
 
 .yamm .dropdown .dropdown-menu {
-    border-top-color: #4444A1;
+    border-top-color: #005B8C;
 }
 
 .iconitem a.shopicon i {
-    color: #4444A1 !important;
+    color: #005B8C !important;
 }
 
 .shop-desc small,
@@ -2109,7 +2109,7 @@ a:hover,
 a:focus,
 .box i,
 .topbar .text-left i {
-    color: #4444A1;
+    color: #005B8C;
 }
 
 .shop-extra .nav-tabs>li:hover a,
@@ -2117,7 +2117,7 @@ a:focus,
 .modal .form-control,
 .form-control:focus,
 .btn-transparent {
-    border-color: #000080 !important;
+    border-color: #005B8C !important;
 }
 
 .cb,
@@ -2138,9 +2138,9 @@ mark,
 .image-wrap:before,
 .image-wrap:after,
 .btn-primary {
-    border-color: #4444A1;
-    background-color: #4444A1;
-    box-shadow: inset 0 0 0 0 #4444A1;
+    border-color: #005B8C;
+    background-color: #005B8C;
+    box-shadow: inset 0 0 0 0 #005B8C;
     -webkit-transition: all ease 0.5s;
     -moz-transition: all ease 0.5s;
     transition: all ease 0.5s;
@@ -2150,8 +2150,8 @@ mark,
 .tags-widget a:hover,
 .btn-primary:hover {
     color: #ffffff !important;
-    box-shadow: inset 0 100px 0 0 #4444A1;
-    border-color: #4444A1;
+    box-shadow: inset 0 100px 0 0 #005B8C;
+    border-color: #005B8C;
 }
 
 
@@ -2161,21 +2161,21 @@ COLOR GREEN
 
 .menu-widget small,
 .course-footer .pull-right a {
-    color: #4444A1;
+    color: #005B8C;
 }
 
 .btn-default {
-    border-color: #4444A1;
-    background-color: #4444A1;
-    box-shadow: inset 0 0 0 0 #4444A1;
+    border-color: #005B8C;
+    background-color: #005B8C;
+    box-shadow: inset 0 0 0 0 #005B8C;
     -webkit-transition: all ease 0.5s;
     -moz-transition: all ease 0.5s;
     transition: all ease 0.5s;
 }
 
 .btn-default:hover {
-    box-shadow: inset 0 100px 0 0 #4444A1;
-    border-color: #4444A1;
+    box-shadow: inset 0 100px 0 0 #005B8C;
+    border-color: #005B8C;
 }
 
 
