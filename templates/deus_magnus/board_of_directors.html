@@ -33,8 +33,8 @@
                     <div class="teamdesc">
                         <h4>{{ post.board_of_directos_name }}</h4>
                         <hr>
-                        <h6>Director</h6>
-                        <p>Web Design Builder & Seo Specialist</p>
+                        <h6>{{ post.board_of_directos_position}}</h6>
+                        <p>{{ post.board_of_directos_description|truncatechars:80}}</p>
                     </div><!-- end teamdesc -->
                 </div><!-- end teammembers -->
             </div><!-- end col -->
