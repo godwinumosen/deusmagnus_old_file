@@ -28,15 +28,12 @@ class HomeView(ListView):
         context['second_constructions'] = SecondDeusMagnusMainPicturePost.objects.all()
     #Last deus magnus sub category of the blog for picture 
         context['last_constructions'] = LastDeusMagnusMainPicturePost.objects.all()   
-        return context
-    
-    
+        return context    
 
  #The first Deus Magnus Video ArticleDetailView page
 class ArticleDetailView(DetailView):
     model = DeusMagnusMainPost
     template_name = 'deus_magnus/article_detail.html'
-
     def ArticleDetailView(request, pk):  
         object = get_object_or_404(DeusMagnusMainPost, pk=pk)
         return render(request, 'article_detail.html', {'detail': object})
@@ -45,6 +42,15 @@ class ArticleDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         context['sub_v_imgs'] = VideoSubImage.objects.all() 
         return context
+    
+#The board of director's article details view
+class BoardOfDirectorsArticleDetailView(DetailView):
+    model = BoardOfDirectorsInDeusMagnus
+    template_name = 'deus_magnus/board_of_directors_article_detail.html'
+    def BoardOfDirectorsArticleDetailView(request, pk):  
+        object = get_object_or_404(BoardOfDirectorsInDeusMagnus, pk=pk)
+        return render(request, 'deus_magnus/board_of_directors_article_detail.html', 
+                      {'board_of_directors_detail': object})
     
 #The second ArticleDetailView page    
 class SecondConstructionDetailViewArticleDetailView(DetailView):
@@ -154,10 +160,4 @@ class BoardOfDirectors(ListView):
     model = BoardOfDirectorsInDeusMagnus
     template_name = 'deus_magnus/board_of_directors.html'
 
-'''class BoardOfDirectors(DetailView):
-    model = BoardOfDirectorsInDeusMagnus
-    template_name = 'deus_magnus/board_of_directors.html'
-    def BoardOfDirectors(request, pk):  
-        object = get_object_or_404(BoardOfDirectorsInDeusMagnus, pk=pk)
-        return render(request, 'deus_magnus/board_of_directors.html', {'board_detail': object})'''
     
