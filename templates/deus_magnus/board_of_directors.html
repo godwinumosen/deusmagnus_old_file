@@ -6,21 +6,15 @@
 <section class="parallax event-section" data-stellar-background-ratio="0.5" style="background-image:url({% static "images/banner.jpg" %});">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-121">
                 <div class="tagline-message event-title text-center">
-                    <p>Deus Magnus Board of Director</p>
+                    <h3>Board Directors</h3>
+                    <b><p>Deus Magnus Board of Director</p></b>
                 </div>
             </div><!-- end col -->
         </div><!-- end row -->
     </div><!-- end container -->
 </section><!-- end section -->
-
-
-
-
-
-
-
 
 <section class="section">
     <div class="container">
@@ -30,35 +24,23 @@
         </div><!-- end title -->
 
         <div class="row text-center">
+            {% for post in object_list %}
             <div class="col-md-4 col-sm-6">
                 <div class="teammembers">
                     <div class="entry">
-                        <img src="upload/01_team.png" alt="" class="img-responsive">
-                        <div class="magnifier">
-                            <div class="visible-buttons1 teambuttons">
-                                <p>We’re committed to work and play our client meeting room transforms  into a table tennis</p>
-                                <div class="social-links">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-dribbble"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-skype"></i></a>
-                                </div><!-- end social -->
-                            </div>
-                        </div>
+                        <img src="{{ post.board_of_directos_img.url }}" alt="" class="img-responsive">
                     </div><!-- end box -->
                     <div class="teamdesc">
-                        <h4>Ruben Franklin</h4>
+                        <h4>{{ post.board_of_directos_name }}</h4>
                         <hr>
                         <h6>Director</h6>
                         <p>Web Design Builder & Seo Specialist</p>
                     </div><!-- end teamdesc -->
                 </div><!-- end teammembers -->
             </div><!-- end col -->
+            {% endfor %}
         </div><!-- end row -->
     </div><!-- end container -->
 </section>
-
-
-
 
 {% endblock %}
