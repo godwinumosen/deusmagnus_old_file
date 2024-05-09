@@ -27,11 +27,13 @@
             {% for post in object_list %}
             <div class="col-md-4 col-sm-6">
                 <div class="teammembers">
+                    <a href="{% url 'board_of_director_detail' post.pk %}">
                     <div class="entry">
                         <img src="{{ post.board_of_directos_img.url }}" alt="" class="img-responsive">
                     </div><!-- end box -->
+                    </a>
                     <div class="teamdesc">
-                        <h4>{{ post.board_of_directos_name }}</h4>
+                        <h4><a href="{% url 'board_of_director_detail' post.pk %}">{{ post.board_of_directos_name }}</a></h4>
                         <hr>
                         <h6>{{ post.board_of_directos_position}}</h6>
                         <p>{{ post.board_of_directos_description|truncatechars:80}}</p>

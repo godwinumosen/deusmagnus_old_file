@@ -165,3 +165,24 @@ class BoardOfDirectorsInDeusMagnus(models.Model):
     def get_absolute_url(self):
         return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail','last_detail',
                        'second_detail','detail','board_detail','blog_detail',)
+
+
+#Our Team management of deus magnus view
+class OurManagementsInDeusMagnus(models.Model):
+    our_team_name = models.CharField(max_length=255, blank=True, null=True)
+    our_team_position = models.CharField(max_length=255, blank=True, null=True)
+    our_team_description = models.TextField()
+    our_team_slug = models.SlugField (max_length=255,blank=True, null=True)
+    our_team_img = models.ImageField(upload_to='our_team_images/')
+    our_team_author = models.ForeignKey(User, on_delete=models.CASCADE)
+    our_team_publish_date = models.DateTimeField (auto_now_add= True)
+
+    class Meta:
+        ordering =['-our_team_publish_date']
+    
+    def __str__(self):
+        return self.our_team_name + ' | ' + str(self.our_team_author)
+    
+    def get_absolute_url(self):
+        return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail','last_detail',
+                       'second_detail','detail','board_detail','blog_detail',)

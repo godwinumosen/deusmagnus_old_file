@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect,get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView,ListView
 from django.contrib.auth.decorators import login_required
-from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost, LastDeusMagnusMainPicturePost
+from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost, LastDeusMagnusMainPicturePost,OurManagementsInDeusMagnus
 from django.contrib import messages
 from django.http import HttpResponse
 from .models import SubPicture_1, SubPicture_2,VideoSubImage, BlogDeusMagnus,BoardOfDirectorsInDeusMagnus
@@ -42,15 +42,6 @@ class ArticleDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         context['sub_v_imgs'] = VideoSubImage.objects.all() 
         return context
-    
-#The board of director's article details view
-class BoardOfDirectorsArticleDetailView(DetailView):
-    model = BoardOfDirectorsInDeusMagnus
-    template_name = 'deus_magnus/board_of_directors_article_detail.html'
-    def BoardOfDirectorsArticleDetailView(request, pk):  
-        object = get_object_or_404(BoardOfDirectorsInDeusMagnus, pk=pk)
-        return render(request, 'deus_magnus/board_of_directors_article_detail.html', 
-                      {'board_of_directors_detail': object})
     
 #The second ArticleDetailView page    
 class SecondConstructionDetailViewArticleDetailView(DetailView):
@@ -160,4 +151,16 @@ class BoardOfDirectors(ListView):
     model = BoardOfDirectorsInDeusMagnus
     template_name = 'deus_magnus/board_of_directors.html'
 
+#The board of director's article details view
+class BoardOfDirectorsArticleDetailView(DetailView):
+    model = BoardOfDirectorsInDeusMagnus
+    template_name = 'deus_magnus/board_of_directors_article_detail.html'
+    def BoardOfDirectorsArticleDetailView(request, pk):  
+        object = get_object_or_404(BoardOfDirectorsInDeusMagnus, pk=pk)
+        return render(request, 'deus_magnus/board_of_directors_article_detail.html', 
+                      {'board_of_directors_detail': object})
     
+#Our Team management of deus magnus view
+class OurTeam(ListView):
+    model = OurManagementsInDeusMagnus
+    template_name = 'deus_magnus/our_team.html'
