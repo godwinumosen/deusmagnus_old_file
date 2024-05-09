@@ -264,7 +264,7 @@ HEADER
 }
 
 .header-normal .navbar-default .nav>li>a {
-    color: #4444A1 !important;
+    color: #005B8C; important;
 }
 
 /* Pls dont touch this color */
@@ -297,7 +297,7 @@ HEADER
 }
 
 .navbar-default .nav>li>a {
-    color: #4444A1 !important;
+    color: #005B8C !important;
     text-transform: capitalize;
     font-size: 15px;
     font-weight: 500;
@@ -356,7 +356,7 @@ HEADER
 }
 
 .social a.facebook {
-    background-color: #4444A1;
+    background-color: #005B8C;
 }
 
 .social a.pinterest {
@@ -364,7 +364,7 @@ HEADER
 }
 
 .social a.twitter {
-    background-color: #1da1f2;
+    background-color: #005B8C;
 }
 
 .social a.google {
@@ -372,7 +372,7 @@ HEADER
 }
 
 .social a.linkedin {
-    background-color: #0077b5;
+    background-color: #005B8C;
 }
 
 .modal {
