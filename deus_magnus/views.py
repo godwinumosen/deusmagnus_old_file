@@ -156,7 +156,7 @@ class BoardOfDirectorsArticleDetailView(DetailView):
     model = BoardOfDirectorsInDeusMagnus
     template_name = 'deus_magnus/board_of_directors_article_detail.html'
     def BoardOfDirectorsArticleDetailView(request, pk):  
-        object = get_object_or_404(BoardOfDirectorsInDeusMagnus, pk=pk)l
+        object = get_object_or_404(BoardOfDirectorsInDeusMagnus, pk=pk)
         return render(request, 'deus_magnus/board_of_directors_article_detail.html', 
                       {'board_of_directors_detail': object})
     
