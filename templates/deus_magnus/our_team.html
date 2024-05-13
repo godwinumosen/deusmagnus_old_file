@@ -62,39 +62,32 @@
     <div class="container">
         <div class="section-title text-center">
             <h3>We are proudly certified</h3>
-            <p>Deus Magnus Managements.</p>
+             <p>Deus Magnus Managements.</p>
         </div><!-- end title -->
 
         <div class="row text-center">
+            {% for post in object_list %}
             <div class="col-md-4 col-sm-6">
                 <div class="teammembers">
+                    <a href="{% url 'board_of_director_detail' post.pk %}">
                     <div class="entry">
-                        <img src="upload/01_team.png" alt="" class="img-responsive">
-                        <div class="magnifier">
-                            <div class="visible-buttons1 teambuttons">
-                                <p>We’re committed to work and play our client meeting room transforms  into a table tennis</p>
-                                <div class="social-links">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-dribbble"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-skype"></i></a>
-                                </div><!-- end social -->
-                            </div>
-                        </div>
+                        <img src="{{ post.our_team_img.url }}" alt="" class="img-responsive">
                     </div><!-- end box -->
+                    </a>
                     <div class="teamdesc">
-                        <h4>Ruben Franklin</h4>
+                        <h4><a href="{% url 'board_of_director_detail' post.pk %}">{{ post.our_team_name }}</a></h4>
                         <hr>
-                        <h6>Director</h6>
-                        <p>Web Design Builder & Seo Specialist</p>
+                        <h6>{{ post.our_team_position }}</h6>
+                        <p>{{ post.our_team_description }}</p>
                     </div><!-- end teamdesc -->
                 </div><!-- end teammembers -->
-            </div><!-- end col -->
+                <br>
+            </div><!-- end col --> 
+            
+            {% endfor %}
         </div><!-- end row -->
     </div><!-- end container -->
 </section>
-
-
 
 
 {% endblock %}
