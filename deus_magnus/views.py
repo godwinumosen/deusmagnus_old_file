@@ -164,3 +164,12 @@ class BoardOfDirectorsArticleDetailView(DetailView):
 class OurTeam(ListView):
     model = OurManagementsInDeusMagnus
     template_name = 'deus_magnus/our_team.html'
+
+#the management team article of dues magnus details view 
+class ManagementTeamArticleOfDuesMagnusDetail(DeleteView):
+    model = OurManagementsInDeusMagnus
+    template_name = 'deus_magnus/our_team_article_detail.html'
+    def ManagementTeamArticleOfDuesMagnusDetail(request, pk):
+        object = get_object_or_404(OurManagementsInDeusMagnus, pk=pk)
+        return render (request, 'dues_magnus/our_team_article_detail.html',
+                       {'our_management_team_article': object})
