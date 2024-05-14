@@ -173,4 +173,4 @@ class ManagementTeamArticleOfDuesMagnusDetail(DeleteView):
         return render (request, 'dues_magnus/our_team_article_detail.html', {'our_management_team_article': object})
     
 def MissionVisionStrategesView (request):
-    return render (request, 'deus_magnus/mission_vision.html')
+    return render (request, 'deus_magnus/mission_vision.html', {})
