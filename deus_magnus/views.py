@@ -157,8 +157,7 @@ class BoardOfDirectorsArticleDetailView(DetailView):
     template_name = 'deus_magnus/board_of_directors_article_detail.html'
     def BoardOfDirectorsArticleDetailView(request, pk):  
         object = get_object_or_404(BoardOfDirectorsInDeusMagnus, pk=pk)
-        return render(request, 'deus_magnus/board_of_directors_article_detail.html', 
-                      {'board_of_directors_detail': object})
+        return render(request, 'deus_magnus/board_of_directors_article_detail.html', {'board_of_directors_detail': object})
     
 #Our Team management of deus magnus view
 class OurTeam(ListView):
@@ -171,5 +170,7 @@ class ManagementTeamArticleOfDuesMagnusDetail(DeleteView):
     template_name = 'deus_magnus/our_team_article_detail.html'
     def ManagementTeamArticleOfDuesMagnusDetail(request, pk):
         object = get_object_or_404(OurManagementsInDeusMagnus, pk=pk)
-        return render (request, 'dues_magnus/our_team_article_detail.html',
-                       {'our_management_team_article': object})
+        return render (request, 'dues_magnus/our_team_article_detail.html', {'our_management_team_article': object})
+    
+def MissionVisionStrategesView (request):
+    return render (request, 'deus_magnus/mission_vision.html')

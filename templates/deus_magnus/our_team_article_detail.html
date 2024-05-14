@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %}{{ object.board_of_directos_name }} {% endblock %}
+{% block title %}{{ object.our_team_name }} {% endblock %}
 {% block content%}
 
 
@@ -25,19 +25,20 @@
                     <div class="content blog-list">
                         <div class="blog-wrapper clearfix">
                             <div class="blog-meta">
-                                <h3>{{ object.board_of_directos_name }}</h3>
+                                <h3>{{ object.our_team_name }}</h3>
                                 <ul class="list-inline">
-                                    <li>{{ object.board_of_directos_publish_date }}</li>
+                                    <li>{{ object.our_team_publish_date }}</li>
                                     <li><span>written by</span> Deus Magnus</li>
                                 </ul>
                             </div><!-- end blog-meta -->
                             <div class="blog-media">
-                                <img src="{{ object.board_of_directos_img.url }}" alt="" class="img-responsive img-rounded"> 
+                                <img src="{{ object.our_team_img.url }}" alt="" class="img-responsive img-rounded"> 
                             </div><!-- end media -->
                             <div class="blog-desc-big">
-                                <p class="lead">{{ object.board_of_directos_name }}</p>
-                                <p>{{ object.board_of_directos_position }}</p> 
-                                <p>{{ object.board_of_directos_description }}</p> 
+                                <p class="lead">{{ object.our_team_name }}</p>
+                                <hr>
+                               <p><b>{{ object.our_team_position }}</b></p> 
+                                <p>{{ object.our_team_description }}</p> 
                             </div><!-- end desc -->
                         </div><!-- end blog -->
                         <div class="btn-wrapper">
