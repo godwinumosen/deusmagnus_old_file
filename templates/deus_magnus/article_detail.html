@@ -65,7 +65,7 @@
                                     <img src="{{ sub_v_img.video_sub_image.url }}"height="20px" alt="" class="img-responsive alignleft img-rounded">
                                     </a>
                                     <div class="media-body">
-                                        <h5 class="mt-0"><a href="{% url 'sub_video_img_detail' pk=sub_v_img.pk %}">{{ sub_v_img.video_sub_title|truncatechars:30}}</a></h5>
+                                        <h5 class="mt-0"><a href="{% url 'sub_video_img_detail' pk=sub_v_img.pk %}">{{ sub_v_img.video_sub_title|truncatechars:30 }}</a></h5>
                                         <div class="blog-meta">
                                             <ul class="list-inline">
                                                 <li>{{ sub_v_img.video_sub_publish_date }}</li>
