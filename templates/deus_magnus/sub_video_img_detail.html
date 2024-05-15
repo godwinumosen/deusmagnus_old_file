@@ -35,7 +35,7 @@
                                 <img src="{{ sub_video_img.video_sub_image.url }}" alt="" class="img-responsive img-rounded">   
                             </div><!-- end media -->
                             <div class="blog-desc-big">
-                                <p class="lead">{{ sub_video_img.video_sub_title }}</p>
+                                <p class="lead">{{ sub_video_img.video_sub_title|truncatechars:30 }}</p>
                                 <p>{{ sub_video_img.video_sub_description }}</p>  
                             </div><!-- end desc -->
                         </div><!-- end blog -->
