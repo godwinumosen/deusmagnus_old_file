@@ -59,7 +59,7 @@
                             <div class="course-details shop-box text-center">
                                 <h4>
                                     <a href="{% url 'sub_detail_video' pk=sub_2.pk %}">{{ sub_2.sub_title_2|truncatechars:30 }}</a>
-                                    <p>{{ sub_2.sub_description_2|truncatechars:40 }}</p>
+                                    <small><p>{{ sub_2.sub_description_2|truncatechars:37 }}</p></small>
                                     <a href="{% url 'sub_detail_video' pk=sub_2.pk %}" class="btn btn-primary"style="border-radius:7px;">View More</a>
                                 </h4>
                             </div><!-- end details -->
