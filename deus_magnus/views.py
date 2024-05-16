@@ -30,7 +30,7 @@ class HomeView(ListView):
         context['last_constructions'] = LastDeusMagnusMainPicturePost.objects.all()   
         return context    
 
- #The first Deus Magnus Video ArticleDetailView page
+ #The first Deus Magnus Video ArticleDetailView pag
 class ArticleDetailView(DetailView):
     model = DeusMagnusMainPost
     template_name = 'deus_magnus/article_detail.html'
