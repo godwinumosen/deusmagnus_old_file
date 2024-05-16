@@ -22,7 +22,7 @@ class HomeView(ListView):
     template_name = 'deus_magnus/home.html'
 
     #This model is for the second deus magnus sub category of the blog
-    def get_context_data(self, **kwargs):
+    def get_context_data(self, **kwargs):  
         context = super().get_context_data(**kwargs)
     #context['user'] = self.request.user
         context['second_constructions'] = SecondDeusMagnusMainPicturePost.objects.all()
@@ -32,7 +32,7 @@ class HomeView(ListView):
 
  #The first Deus Magnus Video ArticleDetailView page
 class ArticleDetailView(DetailView):
-    model = DeusMagnusMainPost
+    model = DeusMagnusMainPos
     template_name = 'deus_magnus/article_detail.html'
     def ArticleDetailView(request, pk):  
         object = get_object_or_404(DeusMagnusMainPost, pk=pk)
