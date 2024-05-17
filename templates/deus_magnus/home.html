@@ -153,6 +153,50 @@
     </div><!-- end container -->
 </section><!-- end section -->
 
+<style>
+    .mySlides {display:none;}
+    </style>
+    </head>
+    
+    <body>
+    
+    <h2 class="w3-center">Automatic Slideshow</h2>
+    <section class="parallax event-section" class="mySlides" data-stellar-background-ratio="0.5" style="background-image:url({% static "images/banner.jpg" %});">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-121">
+                    <div class="tagline-message event-title text-center">
+                        <div class="btn-wrapper">
+                            <a href="{% url 'contact' %}" class="btn btn-primary" style="border-radius: 10px;">Get in Touch with Dues Magnu</a>
+                        </div>
+                    </div>
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </section><!-- end section -->
+    
+    <script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+    </script>
+
+
+
+
+
+
 <section class="section db">
     <div class="container">
         <div class="row">
@@ -182,7 +226,6 @@
         </div><!-- end row -->
     </div><!-- end container -->
 </section>
-
 
 
 <section class="section gb">
