@@ -174,3 +174,6 @@ class ManagementTeamArticleOfDuesMagnusDetail(DeleteView):
     
 def MissionVisionStrategesView (request):
     return render (request, 'deus_magnus/mission_vision.html', {})
+
+def FounderMessageView (request):
+    return render(request, 'deus_magnus/founder_message.html', {})
