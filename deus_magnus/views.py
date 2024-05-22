@@ -164,7 +164,7 @@ class OurTeam(ListView):
     model = OurManagementsInDeusMagnus
     template_name = 'deus_magnus/our_team.html'
 
-#the management team article of dues magnus details view 
+#the management team article of dues magnus details views
 class ManagementTeamArticleOfDuesMagnusDetail(DeleteView):
     model = OurManagementsInDeusMagnus
     template_name = 'deus_magnus/our_team_article_detail.html'
