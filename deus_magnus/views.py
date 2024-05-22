@@ -166,7 +166,7 @@ class OurTeam(ListView):
 
 #the management team article of dues magnus details views
 class ManagementTeamArticleOfDuesMagnusDetail(DeleteView):
-    model = OurManagementsInDeusMagnus
+    model = OurManagementsInDeusMagnus 
     template_name = 'deus_magnus/our_team_article_detail.html'
     def ManagementTeamArticleOfDuesMagnusDetail(request, pk):
         object = get_object_or_404(OurManagementsInDeusMagnus, pk=pk)
