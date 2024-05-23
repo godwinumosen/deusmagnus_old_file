@@ -57,7 +57,7 @@ class SecondConstructionDetailViewArticleDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         context['subs'] = SubPicture_1.objects.all() 
         return context
-    
+
 #The last sub ArticleDetailView page    
 class LastConstructionDetailViewArticleDetailView(DetailView):
     model = LastDeusMagnusMainPicturePost
