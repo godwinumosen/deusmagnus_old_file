@@ -66,13 +66,13 @@ class LastConstructionDetailViewArticleDetailView(DetailView):
     def LastConstructionDetailViewArticleDetailView(request, pk):  
         object = get_object_or_404(LastDeusMagnusMainPicturePost, pk=pk)
         return render(request, 'deus_magnus/last_article_detail.html', {'last_construction': object})
-     #This sub-model data related to the last article model instance
+     #This sub-model data related to the last article model instance of magnus
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['subs_2'] = SubPicture_2.objects.all() 
         return context
     
-#About page of the blog
+#About page of the deus magnus blog app..
 def AboutView (request):
     return render(request, 'deus_magnus/about_us.html', {})
 
