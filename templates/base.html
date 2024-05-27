@@ -1,9 +1,11 @@
+{% load static %}
+
 {% for message in messages %}
 <div id='lower-side'>
   <p id='message'>{{ message }}</p>
   {% endfor %}
   
-{% load static %}
+
 <html class="no-js " lang="en">
 <head>
     <!-- Basic -->
@@ -167,8 +169,8 @@
                 <ul>
                     <li><a href="#">Terms of Use</a></li>
                     <li><a href="#">Event</a></li>
-                    <li><a href="#">Blog Project</a></li>
-                    <li><a href="#">Message from Founder</a></li>
+                    <li><a href="{% url 'blog' %}">Blog Project</a></li>
+                    <li><a href="{% url 'founder_message' %}">Message from Founder</a></li>
                 </ul>
             </div><!-- end list-widget -->
         </div><!-- end widget -->
