@@ -145,7 +145,7 @@ class BlogDeusMagnus(models.Model):
         return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail',
                        'last_detail','second_detail','detail','board_detail','blog_detail',)
 
-#The board of director's view
+#The board of director's view 
 class BoardOfDirectorsInDeusMagnus(models.Model):
     board_of_directos_name = models.CharField(max_length=255, blank=True, null=True)
     board_of_directos_position = models.CharField(max_length=255, blank=True, null=True)
