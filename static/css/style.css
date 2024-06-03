@@ -1888,13 +1888,13 @@ FOOTER
 }
 
 .copyrights {
-    background-color: #000;
-    border-top: 1px solid #181818;
+    background-color: #005B8C ;
+    border-top: 1px solid #005B8C ;
     padding: 30px 0;
 }
 
 .copyrights li a {
-    color: #aaa;
+    color: #005B8C ;
 }
 
 .copyrights ul {
