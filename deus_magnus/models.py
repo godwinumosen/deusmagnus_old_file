@@ -27,7 +27,7 @@ class DeusMagnusMainPost(models.Model):
                        'board_detail','blog_detail','last_detail','second_detail','detail')
     
 # The second model for Deus Magnus Model category
-class SecondDeusMagnusMainPicturePost(models.Model)
+class SecondDeusMagnusMainPicturePost(models.Model):
     second_deus_magnus_title = models.CharField(max_length=255, blank=True, null=True)
     second_deus_magnus_description = models.TextField()
     second_deus_magnus_slug = models.SlugField (max_length=255,blank=True, null=True)
