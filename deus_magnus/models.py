@@ -143,7 +143,7 @@ class BlogDeusMagnus(models.Model):
     
     def get_absolute_url(self):
         return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail',
-                       'last_detail','second_detail','detail','board_detail','blog_detail',)
+                       'last_detail','second_detail','detail','board_detail','blog_detail',,)
 
 #The board of director's view 
 class BoardOfDirectorsInDeusMagnus(models.Model):
