@@ -41,7 +41,7 @@ class ArticleDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['sub_v_imgs'] = VideoSubImage.objects.all() 
-        return context
+        return contextl
     
 #The second ArticleDetailView page of deus magnus group   
 class SecondConstructionDetailViewArticleDetailView(DetailView):\
