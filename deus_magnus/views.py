@@ -50,7 +50,7 @@ class SecondConstructionDetailViewArticleDetailView(DetailView):
     context_object_name = 'second_construction'
 
     def SecondConstructionDetailViewArticleDetailView(request, pk)
-        object = get_object_or_404(SecondDeusMagnusMainPicturePost, pk=pk)
+        object = get_object_or_404(SecondDeusMagnusMainPicturePost, pk=pk
         return render(request, 'deus_magnus/second_article_detail.html', {'second_detail': object})
     #This sub-model data related to the second article model instance in deus magnus group
     def get_context_data(self, **kwargs):
