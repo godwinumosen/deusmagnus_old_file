@@ -45,7 +45,7 @@ class ArticleDetailView(DetailView):
     
 #The second ArticleDetailView page of deus magnus group   
 class SecondConstructionDetailViewArticleDetailView(DetailView):
-    model = SecondDeusMagnusMainPicturePost
+    model = SecondDeusMagnusMainPicturePos
     template_name = 'deus_magnus/second_article_detail.html'
     context_object_name = 'second_construction'
 
@@ -176,4 +176,4 @@ def MissionVisionStrategesView (request):
     return render (request, 'deus_magnus/mission_vision.html', {})
 
 def FounderMessageView (request):
-    return render(request, 'deus_magnus/founder_message.html', {})
+    return render(request, 'deus_magnus/founder_message.html', {}) 
