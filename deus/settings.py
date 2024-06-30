@@ -82,7 +82,7 @@ DATABASES = {
 }
 
 # Password validatio
-# https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
+# https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validat
 
 AUTH_PASSWORD_VALIDATORS = [
     {
