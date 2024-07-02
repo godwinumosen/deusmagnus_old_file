@@ -47,7 +47,7 @@ class ArticleDetailView(DetailView):
 class SecondConstructionDetailViewArticleDetailView(DetailView):
     model = SecondDeusMagnusMainPicturePost
     template_name = 'deus_magnus/second_article_detail.html'    
-    context_object_name = 'second_construction'
+    context_object_name = 'second_construction
 
     def SecondConstructionDetailViewArticleDetailView(request, pk):    
         object = get_object_or_404(SecondDeusMagnusMainPicturePost, pk=pk)
