@@ -43,7 +43,7 @@ class ArticleDetailView(DetailView):
         context['sub_v_imgs'] = VideoSubImage.objects.all() 
         return context
     
-#The second ArticleDetailView page of deus magnus group   
+#The second ArticleDetailView page of deus magnus grou
 class SecondConstructionDetailViewArticleDetailView(DetailView):
     model = SecondDeusMagnusMainPicturePost
     template_name = 'deus_magnus/second_article_detail.html'
