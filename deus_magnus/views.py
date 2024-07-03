@@ -88,7 +88,7 @@ class VideoImageDetailView(DetailView):
     
 
 #sub_picture article display inside second detailsview
-class SubPictureDetailView(DetailView)
+class SubPictureDetailView(DetailView):
     model = SubPicture_1
     template_name = 'deus_magnus/sub_picture_detail.html'
     context_object_name = 'sub_picture'
