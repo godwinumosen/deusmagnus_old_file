@@ -88,7 +88,7 @@ class SubPicture_1(models.Model):
 class SubPicture_2 (models.Model):
     sub_title_2 = models.CharField(max_length=255, blank=True, null=True)
     sub_description_2 = models.TextField()
-    sub_slug_2 = models.SlugField (max_length=255,blank=True, null=True
+    sub_slug_2 = models.SlugField (max_length=255,blank=True, null=True)
     #sub_image_2 = models.ImageField(upload_to='images_sub/')
     sub_video_2 = models.FileField(upload_to='video_sub/')
     sub_publish_date_2 = models.DateTimeField (auto_now_add= True)
