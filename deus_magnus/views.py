@@ -92,10 +92,10 @@ class SubPictureDetailView(DetailView):
     model = SubPicture_1
     template_name = 'deus_magnus/sub_picture_detail.html'
     context_object_name = 'sub_picture'
-    def SubPictureDetailView(request, pk):  
+    def SubPictureDetailView(request, pk):   
         object = get_object_or_404(SubPictureDetailView, pk=pk)
         return render(request, 'deus_magnus/sub_picture_detail.html', {'sub_detail': object})
-    
+     
 #sub_picture article display inside second detailsview
 class SubVideoDetailView(DetailView):
     model = SubPicture_2
@@ -103,7 +103,7 @@ class SubVideoDetailView(DetailView):
     context_object_name = 'sub_video'
     def SubVideoDetailView(request, pk):  
         object = get_object_or_404(SubVideoDetailView, pk=pk)
-        return render(request, 'deus_magnus/sub_video_detail.html', {'sub_detail_video': object})    
+        return render(request, 'deus_magnus/sub_video_detail.html', {'sub_detail_video':object})    
 
 #This category is for the Whatsapp API for deus magnus
 def deus_magnus_whatsapp_message(request):
