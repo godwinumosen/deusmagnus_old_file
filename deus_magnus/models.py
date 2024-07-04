@@ -35,7 +35,6 @@ class SecondDeusMagnusMainPicturePost(models.Model):
     second_deus_magnus_publish_date = models.DateTimeField (auto_now_add= True)
     second_deus_magnus_author = models.ForeignKey(User, on_delete=models.CASCADE)
 
-       
     class Meta:
         ordering =['second_deus_magnus_publish_date']
     
@@ -85,7 +84,6 @@ class SubPicture_1(models.Model):
     def get_absolute_url(self):
         return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail',
                        'board_detail','blog_detail','last_detail','second_detail','detail')
-    
 
 class SubPicture_2 (models.Model):
     sub_title_2 = models.CharField(max_length=255, blank=True, null=True)
@@ -95,7 +93,6 @@ class SubPicture_2 (models.Model):
     sub_video_2 = models.FileField(upload_to='video_sub/')
     sub_publish_date_2 = models.DateTimeField (auto_now_add= True)
     sub_author_2 = models.ForeignKey(User, on_delete=models.CASCADE)
-
     class Meta:
         ordering =['sub_publish_date_2']
     
