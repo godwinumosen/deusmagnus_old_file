@@ -17,7 +17,7 @@ def base (request):
     return render(request,"base.html")
 
 #The main HomeView page
-class HomeView(ListView)
+class HomeView(ListView):
     model = DeusMagnusMainPost
     template_name = 'deus_magnus/home.html'
 
