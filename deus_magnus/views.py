@@ -32,7 +32,7 @@ class HomeView(ListView):
 
  #The first Deus Magnus Video ArticleDetailView page
 class ArticleDetailView(DetailView):
-    model = DeusMagnusMainPost
+    model = DeusMagnusMainPos
     template_name = 'deus_magnus/article_detail.html'
     def ArticleDetailView(request, pk):  
         object = get_object_or_404(DeusMagnusMainPost, pk=pk)
