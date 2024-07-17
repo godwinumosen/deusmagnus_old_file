@@ -10,8 +10,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse
 from django.urls import reverse_lazy
 
-'''def home (request):
-    return render (request, 'deus_magnus/home.html')'''
+def index (request):
+    return render (request, 'deus_magnus/index.html')
 
 def base (request):
     return render(request,"base.html")

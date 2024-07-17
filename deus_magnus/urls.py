@@ -6,6 +6,7 @@ from .views import LastConstructionDetailViewArticleDetailView, SubPictureDetail
 from .views import BlogArticleDetail,BoardOfDirectors,BoardOfDirectorsArticleDetailView,OurTeam,ManagementTeamArticleOfDuesMagnusDetail
 
 urlpatterns = [
+    path('index/', views.index, name='index'),
     path('', HomeView.as_view(), name="home"),
     path('home/', HomeView.as_view(), name='home'),
     path('article/<int:pk>/', ArticleDetailView.as_view(), name="detail"),
