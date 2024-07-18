@@ -114,7 +114,7 @@ body,
 p,
 li,
 a {
-    font-family: 'merriweather';
+    font-family:'Roboto''merriweather';
 }
 
 .course-details h4 a,
@@ -1681,11 +1681,11 @@ TESTIMONIAL
 }
 
 .callout h3 {
-    font-size: 90px;
+    font-size: 85px;
     line-height: 90px;
     margin-top: 0;
     color: #ffffff;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 .callout h4 {
