@@ -2,7 +2,7 @@ from django.contrib import admin
 # Register your models here.
 from . import models
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost, LastDeusMagnusMainPicturePost,SubPicture_2
-from .models import SubPicture_1, VideoSubImage, BlogDeusMagnus,BoardOfDirectorsInDeusMagnus,OurManagementsInDeusMagnus
+from .models import SubPicture_1, VideoSubImage, BlogDeusMagnus,DeusMagnusEventBlog,OurManagementsInDeusMagnus
 
 #The DeusMagnus post,post model admin
 class DeusMagnusMainPostModelAdmin (admin.ModelAdmin):
@@ -47,11 +47,11 @@ class BlogDeusMagnusModelAdmin (admin.ModelAdmin):
 admin.site.register(BlogDeusMagnus, BlogDeusMagnusModelAdmin)
 
 #This is the board of director in Deus Magnus 
-class BoardOfDirectorsModelAdmin (admin.ModelAdmin):
-    prepopulated_fields = {'board_of_directos_slug': ('board_of_directos_name',)}
-    list_display = ['board_of_directos_name','board_of_directos_description','board_of_directos_img',
-                    'board_of_directos_author']
-admin.site.register(BoardOfDirectorsInDeusMagnus, BoardOfDirectorsModelAdmin)
+class DeusMagnusEventBlogModelAdmin (admin.ModelAdmin):
+    prepopulated_fields = {'deus_magnus_event_slug': ('deus_magnus_event_title',)}
+    list_display = ['deus_magnus_event_title','deus_magnus_event_description','deus_magnus_event_img',
+                    'deus_magnus_event_author']
+admin.site.register(DeusMagnusEventBlog, DeusMagnusEventBlogModelAdmin)
 
 #Our Team management of deus magnus view
 class OurManagementsInDeusMagnusModelAdmin (admin.ModelAdmin):

@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost, LastDeusMagnusMainPicturePost,OurManagementsInDeusMagnus
 from django.contrib import messages
 from django.http import HttpResponse
-from .models import SubPicture_1, SubPicture_2,VideoSubImage, BlogDeusMagnus,BoardOfDirectorsInDeusMagnus
+from .models import SubPicture_1, SubPicture_2,VideoSubImage, BlogDeusMagnus,DeusMagnusEventBlog
 from django.contrib.auth.models import User
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse
@@ -145,18 +145,18 @@ class BlogArticleDetail(DetailView):
         object = get_object_or_404(BlogDeusMagnus, pk=pk)
         return render(request, 'deus_magnus/blog_article_detail.html', {'blog_detail': object})
     
-#The board of director's view
-class BoardOfDirectors(ListView):
-    model = BoardOfDirectorsInDeusMagnus
-    template_name = 'deus_magnus/board_of_directors.html'
+#This article belong to deus_magnus_events view
+class EventBlog(ListView):
+    model = DeusMagnusEventBlog
+    template_name = 'deus_magnus/deus_magnus_events.html'
 
 #The board of director's article details view
-class BoardOfDirectorsArticleDetailView(DetailView):
-    model = BoardOfDirectorsInDeusMagnus
+'''class BoardOfDirectorsArticleDetailView(DetailView):
+    model = DeusMagnusEventBlog
     template_name = 'deus_magnus/board_of_directors_article_detail.html'
     def BoardOfDirectorsArticleDetailView(request, pk):  
-        object = get_object_or_404(BoardOfDirectorsInDeusMagnus, pk=pk)
-        return render(request, 'deus_magnus/board_of_directors_article_detail.html', {'board_of_directors_detail': object})
+        object = get_object_or_404(DeusMagnusEventBlog, pk=pk)
+        return render(request, 'deus_magnus/board_of_directors_article_detail.html', {'board_of_directors_detail': object})'''
     
 #Our Team management of deus magnus view
 class OurTeam(ListView):

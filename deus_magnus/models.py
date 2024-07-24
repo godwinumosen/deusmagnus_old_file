@@ -143,21 +143,20 @@ class BlogDeusMagnus(models.Model):
         return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail',
                        'last_detail','second_detail','detail','board_detail','blog_detail',)
 
-#The board of director's view 
-class BoardOfDirectorsInDeusMagnus(models.Model):
-    board_of_directos_name = models.CharField(max_length=255, blank=True, null=True)
-    board_of_directos_position = models.CharField(max_length=255, blank=True, null=True)
-    board_of_directos_description = models.TextField()
-    board_of_directos_slug = models.SlugField (max_length=255,blank=True, null=True)
-    board_of_directos_img = models.ImageField(upload_to='directors_images/')
-    board_of_directos_author = models.ForeignKey(User, on_delete=models.CASCADE)
-    board_of_directos_publish_date = models.DateTimeField (auto_now_add= True)
+#The deus_magnus_event view model page
+class DeusMagnusEventBlog(models.Model):
+    deus_magnus_event_title = models.CharField(max_length=255, blank=True, null=True)
+    deus_magnus_event_description = models.TextField()
+    deus_magnus_event_slug = models.SlugField (max_length=255,blank=True, null=True)
+    deus_magnus_event_img = models.ImageField(upload_to='even_images/')
+    deus_magnus_event_author = models.ForeignKey(User, on_delete=models.CASCADE)
+    deus_magnus_event_publish_date = models.DateTimeField (auto_now_add= True)
 
     class Meta:
-        ordering =['-board_of_directos_publish_date']
+        ordering =['-deus_magnus_event_publish_date']
     
     def __str__(self):
-        return self.board_of_directos_name + ' | ' + str(self.board_of_directos_author)
+        return self.deus_magnus_event_title + ' | ' + str(self.deus_magnus_event_author)
     
     def get_absolute_url(self):
         return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail','last_detail',
