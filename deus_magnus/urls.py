@@ -3,7 +3,7 @@ from django.urls import path
 from . import views
 from .views import HomeView, ArticleDetailView, SecondConstructionDetailViewArticleDetailView,VideoImageDetailView
 from .views import LastConstructionDetailViewArticleDetailView, SubPictureDetailView,SubVideoDetailView,BlogView
-from .views import BlogArticleDetail,EventBlog,OurTeam,ManagementTeamArticleOfDuesMagnusDetail
+from .views import BlogArticleDetail,EventBlog,OurTeam,ManagementTeamArticleOfDuesMagnusDetail,DeusMagnusEventBlogArticleDetailView
 
 urlpatterns = [
     path('index/', views.index, name='index'),
@@ -22,6 +22,7 @@ urlpatterns = [
     path('blog/', BlogView.as_view(), name='blog'),
     path('blog_article/<int:pk>/', BlogArticleDetail.as_view(), name="blog_detail"),
     path('deus_magnus_event/', EventBlog.as_view(), name='deus_magnus_event'),
+    path('events_article_detail/', DeusMagnusEventBlogArticleDetailView.as_view(), name='events_article_detail'),
     path('our_management_team/', OurTeam.as_view(), name='our_management_team'),
     path('our_management_team_article/<int:pk>/', ManagementTeamArticleOfDuesMagnusDetail.as_view(), name="our_management_team_article"),
     path('mission_vision_strategy/', views.MissionVisionStrategesView, name='mission_vision_strategy'),
