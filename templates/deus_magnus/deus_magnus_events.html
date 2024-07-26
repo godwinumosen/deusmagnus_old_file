@@ -28,7 +28,9 @@
             <div class="col-md-4 col-sm-6">
                 <div class="teammembers">
                     <div class="entry">
-                        <img src="{{ post.deus_magnus_event_img.url }}"height="240px" alt="" >
+                        <a href="{% url 'events_article_detail' post.pk %}">
+                            <img src="{{ post.deus_magnus_event_img.url }}"height="240px" alt="" >
+                        </a>
                     </div><!-- end box -->
                     <div class="teamdesc">
                         <h4>{{ post.deus_magnus_event_title|truncatechars:25}}</h4>

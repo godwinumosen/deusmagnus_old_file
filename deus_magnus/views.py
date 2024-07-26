@@ -155,7 +155,7 @@ class EventBlog(ListView):
 class DeusMagnusEventBlogArticleDetailView(DetailView):
     model = DeusMagnusEventBlog
     template_name = 'deus_magnus/deus_magnus_event_article.html'
-    def DeusMagnusEventBlogArticleDetailView(request, pk):  
+    def DeusMagnusEventBlogArticleDetailView(request, pk): 
         object = get_object_or_404(DeusMagnusEventBlog, pk=pk)
         return render(request, 'deus_magnus/deus_magnus_event_article.html',{'events_article_detail': object})
     
