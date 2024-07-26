@@ -999,7 +999,7 @@ SECTIONS
 
 .section {
     background-color: #ffffff;
-    padding: 8rem 0;
+    padding: 1rem 0;
     position: relative;
     display: block;
 }
@@ -1033,10 +1033,6 @@ SECTIONS
 .section.db {
     background-color: #000000;
 }
-
-
-
-
 
 .slider-bottom {
     position: absolute;
