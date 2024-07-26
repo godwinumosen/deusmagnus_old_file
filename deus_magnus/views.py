@@ -1,14 +1,15 @@
 from django.shortcuts import render,redirect,get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView,ListView
 from django.contrib.auth.decorators import login_required
-from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost, LastDeusMagnusMainPicturePost,OurManagementsInDeusMagnus
-from django.contrib import messages
 from django.http import HttpResponse
-from .models import SubPicture_1, SubPicture_2,VideoSubImage, BlogDeusMagnus,DeusMagnusEventBlog
-from django.contrib.auth.models import User
-from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse
 from django.urls import reverse_lazy
+from .models import SubPicture_1, SubPicture_2,VideoSubImage, BlogDeusMagnus,DeusMagnusEventBlog
+from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost, LastDeusMagnusMainPicturePost,OurManagementsInDeusMagnus
+from django.contrib import messages
+from django.contrib.auth.models import User
+from django.contrib.auth.mixins import LoginRequiredMixin
+
 
 def index (request):
     return render (request, 'deus_magnus/index.html')
@@ -151,12 +152,12 @@ class EventBlog(ListView):
     template_name = 'deus_magnus/deus_magnus_events.html'
 
 #The board of director's article details view
-'''class BoardOfDirectorsArticleDetailView(DetailView):
+class DeusMagnusEventBlogArticleDetailView(DetailView):
     model = DeusMagnusEventBlog
-    template_name = 'deus_magnus/board_of_directors_article_detail.html'
+    template_name = 'deus_magnus/deus_magnus_events_article_detail.html'
     def BoardOfDirectorsArticleDetailView(request, pk):  
         object = get_object_or_404(DeusMagnusEventBlog, pk=pk)
-        return render(request, 'deus_magnus/board_of_directors_article_detail.html', {'board_of_directors_detail': object})'''
+        return render(request, 'deus_magnus/deus_magnus_events_article_detail.html', {'deus_magnus_events_detail': object})
     
 #Our Team management of deus magnus view
 class OurTeam(ListView):
