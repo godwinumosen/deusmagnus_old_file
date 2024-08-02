@@ -126,7 +126,7 @@ def ContactView (request):
     else:
         context={
             'email':email
-        }
+        
         return render(request, 'deus_magnus/contact_us.html',context)
 
 def message (request):
