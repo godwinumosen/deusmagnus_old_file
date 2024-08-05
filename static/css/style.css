@@ -516,7 +516,7 @@ MEGA MENU
 .yamm .dropdown .dropdown-menu {
     border-radius: 0;
     border-top: 3px solid #ddd;
-    background-color: #fff !important;
+    background-color: #d4af37 !important;
     margin-top: 24px;
     padding: 20px 30px;
 }
@@ -564,7 +564,7 @@ MEGA MENU
     font-weight: bold;
     color: #ffffff !important;
     display: block;
-    background-color: #111;
+    background-color: #d4af37;
     padding: 5px 20px !important;
     max-width: 140px;
     margin: 10px auto 0;
@@ -1821,7 +1821,7 @@ SHOP
 
 .shop-extra .nav-tabs>li:hover a,
 .shop-extra .nav-tabs>li.active a {
-    border-bottom-color: #111 !important;
+    border-bottom-color: #d4af37 !important;
 }
 
 .shop-extra .tab-content {
@@ -2112,7 +2112,7 @@ a:focus,
 .modal .form-control,
 .form-control:focus,
 .btn-transparent {
-    border-color: #005B8C !important;
+    border-color: #d4af37 !important;
 }
 
 .cb,
@@ -2133,9 +2133,9 @@ mark,
 .image-wrap:before,
 .image-wrap:after,
 .btn-primary {
-    border-color: #005B8C;
-    background-color: #005B8C;
-    box-shadow: inset 0 0 0 0 #005B8C;
+    border-color: #d4af37;
+    background-color: #d4af37;
+    box-shadow: inset 0 0 0 0 #d4af37;
     -webkit-transition: all ease 0.5s;
     -moz-transition: all ease 0.5s;
     transition: all ease 0.5s;
