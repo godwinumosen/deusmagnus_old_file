@@ -59,55 +59,89 @@
                 </div>
             </div>
         </div>
-        <!-- END # MODAL LOGIN -->
-        <header class="header">    
-            <div class="container">
-                <nav class="navbar navbar-default yamm">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <div class="logo-normal">
-                            <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}"width="105" height="70" alt=""></a>
-                        </div>
-                    </div>
+<!-- END # MODAL LOGIN -->
+<header class="header">    
+    <div class="container">
+        <nav class="navbar navbar-default yamm">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="logo-normal">
+                    <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}"width="105" height="70" alt=""></a>
+                </div>
+            </div>
 
-                    <div id="navbar" class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="{% url 'home' %}">Home</a></li>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li class="dropdown hassubmenu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About Us<span class="fa fa-angle-down"></span></a>
+                        <ul class="dropdown-menu" role="menu">
                             <li class="dropdown hassubmenu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About Us<span class="fa fa-angle-down"></span></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About Deus Magnus<span class="fa fa-angle-down"></span></a>
                                 <ul class="dropdown-menu" role="menu">
                                     <li><a href="{% url 'about' %}">About Deus Magnus</a></li>
-                                    <li><a href="{% url 'our_management_team' %}">Management Team</a></li> 
+                                    <li><a href="{% url 'our_management_team' %}">Our Management Team</a></li> 
                                     <li><a href="{% url 'founder_message' %}">Message From Founder</a></li>
-                                    <li><a href="{% url 'about' %}">Who we Are</a></li>
-                                    <li><a href="{% url 'mission_vision_strategy' %}">Mission, Vision & Strategy</a></li>    
                                 </ul>
-                            </li>     
-                            <li class="dropdown hassubmenu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Member Companies<span class="fa fa-angle-down"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="https://www.josepdam.com/"target="_blank">JosepDam Real Estate</a></li>
-                                    <li><a href="https://www.jps.ng/"target="_blank">JosepDam Port Service</a></li>
-                                </ul>
-                            </li>  
-                            <li class="dropdown hassubmenu">
-                                <a href="#" class="dropdown-oggle" data-toggle="dropdown" role="button"aria-expanded="false">Media<span class="fa fa-angle-down"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="{% url 'deus_magnus_event' %}">News and Events</a></li>
-                                    <li><a href="{% url 'blog' %}">Blog</a></li>
-                                </ul>
-                            </li>     
-                            <li><a href="{% url 'contact' %}">Contact</a></li>            
+                            </li> 
+                            <li><a href="{% url 'our_management_team' %}">Our Management Team</a></li> 
+                            <li><a href="{% url 'founder_message' %}">Message From Founder</a></li>
+                            <li><a href="{% url 'about' %}">Who we Are</a></li>
+                            <li><a href="{% url 'mission_vision_strategy' %}">Our Vision || Our Mission || Our Core Value</a></li>    
                         </ul>
-                    </div>
-                </nav><!-- end navbar -->
-            </div><!-- end container -->
-        </header>
+                    </li> 
+                    <li class="dropdown hassubmenu">
+                        <a href="#" class="dropdown-oggle" data-toggle="dropdown" role="button"aria-expanded="false">Our Services<span class="fa fa-angle-down"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="dropdown hassubmenu">
+                                <a href="#" class="dropdown-oggle" data-toggle="dropdown" role="button"aria-expanded="false">Who We Do<span class="fa fa-angle-down"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                        <li class="dropdown hassubmenu">
+                                        <li class="dropdown hassubmenu">
+                                            <a href="#" class="dropdown-oggle" data-toggle="dropdown" role="button"aria-expanded="false">Real Estate Development<span class="fa fa-angle-down"></span></a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                    <li class="dropdown hassubmenu">
+                                                    <li><a href="">Residential </a></li>
+                                                    <li><a href="">Commercial </a></li>
+                                                    <li><a href="">Investment properties </a></li>
+                                                </li>         
+                                            </ul>       
+                                        </li>   
+                                    </li>         
+                                </ul>       
+                            </li>   
+                                <li class="dropdown hassubmenu">
+                                <li><a href="">Construction Services</a></li>
+                                <li><a href="">Consultancy Services</a></li>
+                                <li><a href="">Facility Management</a></li>
+                            </li>         
+                        </ul>       
+                    </li>         
+                    <li class="dropdown hassubmenu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Member Companies<span class="fa fa-angle-down"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="https://www.josepdam.com/"target="_blank">JosepDam Real Estate</a></li>
+                            <li><a href="https://www.jps.ng/"target="_blank">JosepDam Port Service</a></li>
+                        </ul>
+                    </li>  
+                    <li class="dropdown hassubmenu">
+                        <a href="#" class="dropdown-oggle" data-toggle="dropdown" role="button"aria-expanded="false">Media<span class="fa fa-angle-down"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="{% url 'deus_magnus_event' %}">News and Events</a></li>
+                            <li><a href="{% url 'blog' %}">Blog</a></li>
+                        </ul>
+                    </li>     
+                    <li><a href="{% url 'contact' %}">Contact</a></li>            
+                </ul>
+            </div>  
+        </nav><!-- end navbar -->
+    </div><!-- end container -->
+</header>
 
 
         {% block content %}
