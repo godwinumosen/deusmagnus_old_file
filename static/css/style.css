@@ -1961,10 +1961,11 @@ FOOTER
 .footer p,
 .footer a {
     color: #aaa;
+    
 }
 
 .footer a:hover {
-    color: #ffffff;
+    color: #d4af37;
 }
 
 .absolute-widget {
@@ -2133,8 +2134,8 @@ mark,
 .image-wrap:before,
 .image-wrap:after,
 .btn-primary {
-    border-color: #d4af37;
-    background-color: #d4af37;
+    border-color: #005B8C;
+    background-color: #005b8c;
     box-shadow: inset 0 0 0 0 #d4af37;
     -webkit-transition: all ease 0.5s;
     -moz-transition: all ease 0.5s;
@@ -2146,8 +2147,8 @@ mark,
 .tags-widget a:hover,
 .btn-primary:hover {
     color: #ffffff !important;
-    box-shadow: inset 0 100px 0 0 #005B8C;
-    border-color: #005B8C;
+    box-shadow: inset 0 100px 0 0 #d4af37;
+    border-color: #d4af37;
 }
 
 
