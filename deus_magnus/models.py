@@ -182,3 +182,20 @@ class OurManagementsInDeusMagnus(models.Model):
     def get_absolute_url(self):
         return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail','last_detail',
                        'second_detail','detail','board_detail','blog_detail',)
+
+# Resources FAQs of deus magnus view
+class FAQs(models.Model):
+    FAQs_title = models.CharField(max_length=255, blank=True, null=True)
+    FAQs_response = models.TextField()
+    FAQs_slug = models.SlugField (max_length=255,blank=True, null=True)
+    FAQs_author = models.ForeignKey(User, on_delete=models.CASCADE)
+    FAQs_publish_date = models.DateTimeField (auto_now_add= True)
+
+    class Meta:
+        ordering =['-FAQs_publish_date']
+    
+    def __str__(self):
+        return self.FAQs_title + ' | ' + str(self.FAQs_author)
+    
+    def get_absolute_url(self):
+        return reverse('home',)

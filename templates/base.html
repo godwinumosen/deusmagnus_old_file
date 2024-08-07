@@ -101,7 +101,8 @@
                             </li> 
                             <li class="dropdown hassubmenu">
                                 <li><a href="{% url 'facility_management' %}">Facility Management</a></li>
-                                <li><a href="">Construction Services</a></li>
+                                <li><a href="{% url 'real_estate_services'%}"> Real Estate Services</a></li>
+                                <li><a href="{% url 'project_management'%}">Project Management</a></li>
                                 <li><a href="">Consultancy Services</a></li>
                                 <li><a href="">Investment Opportunities</a></li>
                             </li>        
@@ -120,7 +121,15 @@
                             <li><a href="{% url 'deus_magnus_event' %}">News and Events</a></li>
                             <li><a href="{% url 'blog' %}">Blog</a></li>
                         </ul>
-                    </li>     
+                    </li>
+                    <li class="dropdown hassubmenu">
+                        <a href="#" class="dropdown-oggle" data-toggle="dropdown" role="button"aria-expanded="false">Resources<span class="fa fa-angle-down"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="">FAQs</a></li>
+                            <li><a href="">Guides</a></li>
+                            <li><a href="">Glossary</a></li>
+                        </ul>
+                    </li>       
                     <li><a href="{% url 'contact' %}">Contact</a></li>            
                 </ul>
             </div>  

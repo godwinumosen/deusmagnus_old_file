@@ -2,7 +2,7 @@ from django.contrib import admin
 # Register your models here.
 from . import models
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost, LastDeusMagnusMainPicturePost,SubPicture_2
-from .models import SubPicture_1, VideoSubImage, BlogDeusMagnus,DeusMagnusEventBlog,OurManagementsInDeusMagnus
+from .models import SubPicture_1, VideoSubImage, BlogDeusMagnus,DeusMagnusEventBlog,OurManagementsInDeusMagnus,FAQs
 
 #The DeusMagnus post,post model admin
 class DeusMagnusMainPostModelAdmin (admin.ModelAdmin):
@@ -58,3 +58,9 @@ class OurManagementsInDeusMagnusModelAdmin (admin.ModelAdmin):
     prepopulated_fields = {'our_team_slug': ('our_team_name',)}
     list_display = ['our_team_name','our_team_description','our_team_img','our_team_author']
 admin.site.register(OurManagementsInDeusMagnus, OurManagementsInDeusMagnusModelAdmin)
+
+# Resources FAQs of deus magnus view
+class FAQsModelAdmin (admin.ModelAdmin):
+    prepopulated_fields = {'FAQs_slug': ('FAQs_title',)}
+    list_display = ['FAQs_response','FAQs_author']
+admin.site.register(FAQs, FAQsModelAdmin)

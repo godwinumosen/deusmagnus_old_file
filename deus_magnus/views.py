@@ -82,7 +82,12 @@ def ServicesPage (request):
 # Facility Management page of the deus magnus webapp
 def FacilityManagement (request):
     return render(request, 'deus_magnus/facility_management.html', {})
-
+# Real Estate Services page of the deus magnus webapp
+def RealEstateServices (request):
+    return render(request, 'deus_magnus/real_estate_services.html', {})
+# Project Management page of the deus magnus webapp
+def ProjectManagement (request):
+    return render(request, 'deus_magnus/project_management.html', {})
 
 #First video image sub category iterate    
 class VideoImageDetailView(DetailView):
