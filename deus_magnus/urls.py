@@ -27,5 +27,6 @@ urlpatterns = [
     path('our_management_team_article/<int:pk>/', ManagementTeamArticleOfDuesMagnusDetail.as_view(), name="our_management_team_article"),
     path('mission_vision_strategy/', views.MissionVisionStrategesView, name='mission_vision_strategy'),
     path('founder_message/', views.FounderMessageView, name='founder_message'),
+    path('services/', views.ServicesPage, name='services'),
     
 ]   

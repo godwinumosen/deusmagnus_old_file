@@ -76,6 +76,9 @@ class LastConstructionDetailViewArticleDetailView(DetailView):
 #About page of the deus magnus blog app
 def AboutView (request):
     return render(request, 'deus_magnus/about_us.html', {})
+# Services page of the deus magnus webapp
+def ServicesPage (request):
+    return render(request, 'deus_magnus/servicespage.html', {})
 
 
 #First video image sub category iterate    
