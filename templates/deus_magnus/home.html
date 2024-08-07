@@ -11,25 +11,25 @@
     Your browser does not support the video tag
 </video> 
 
-<center><section class="section db">
+<center><section class="section db" >
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-4">
                 <div class="stat-count">
                     <h4 class="stat-timer">15+</h4>
-                    <h3><i class="fa fa-university"></i> Combined Years of Experience</h3>
+                    <h3 style="color: #d4af37;"><i class="fa fa-university"></i> Combined Years of Experience</h3>
                 </div><!-- stat-count -->
             </div><!-- end col -->
             <div class="col-lg-4 col-md-4">
                 <div class="stat-count">
                     <h4 class="stat-timer">10+</h4>
-                    <h3><i class="fa fa-list"></i> Properties Sold</h3>
+                    <h3 style="color: #d4af37;"><i class="fa fa-list"></i> Properties Sold</h3>
                 </div><!-- stat-count -->
             </div><!-- end col -->
             <div class="col-lg-4 col-md-4">
                 <div class="stat-count">
                     <h4 class="stat-timer">12+</h4>
-                    <h3><i class="fa fa-building"></i> Completed Construction Projects</h3>
+                    <h3 style="color: #d4af37;"><i class="fa fa-building"></i> Completed Construction Projects</h3>
                 </div><!-- stat-count -->
             </div><!-- end col -->
         </div><!-- end row -->
@@ -145,12 +145,12 @@
                     </div><!-- end image-wrap -->
                     <div class="blog-desc">
                         <h4><a href="{% url 'second_detail' second_construction.pk %}">{{ second_construction.second_deus_magnus_title |truncatechars:30}}</a></h4>
-                        <p>{{ second_construction.second_deus_magnus_description |truncatechars:80}}</p>
+                        <p>{{ second_construction.second_deus_magnus_description |truncatechars:75}}</p>
                     </div><!-- end blog-des -->
                     <div class="post-meta">
                             <div class="btn-wrapper">
                                 <a href="{% url 'second_detail' second_construction.pk %}
-                                "class="btn btn-primary"style="border-radius: 10px;">Read More</a>
+                                "class="btn btn-primary"style="border-radius: 10px;">See More Listings </a>
                             </div>
                     </div><!-- end post-meta -->
                 </div><!-- end blog -->
@@ -172,13 +172,13 @@
             </div><!-- end col -->
         </div><!-- end row -->
     </div><!-- end container -->
-</section><!-- end section -->
+</section><!-- end section --><br><br>
 
 <section class="section gb">
     <div class="container">
         <div class="section-title text-center">
             <h3>Recent News</h3>
-            <p>Realizing Long-Term Value of Quality Used Equipment.</p>
+            <p>Realizing Long-Term Value in Nigerian Real Estate.</p>
         </div><!-- end title -->
         <div class="row">
             {% for last_construction in last_constructions %}
