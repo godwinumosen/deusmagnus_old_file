@@ -79,6 +79,9 @@ def AboutView (request):
 # Services page of the deus magnus webapp
 def ServicesPage (request):
     return render(request, 'deus_magnus/servicespage.html', {})
+# Facility Management page of the deus magnus webapp
+def FacilityManagement (request):
+    return render(request, 'deus_magnus/facility_management.html', {})
 
 
 #First video image sub category iterate    

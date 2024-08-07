@@ -28,5 +28,6 @@ urlpatterns = [
     path('mission_vision_strategy/', views.MissionVisionStrategesView, name='mission_vision_strategy'),
     path('founder_message/', views.FounderMessageView, name='founder_message'),
     path('services/', views.ServicesPage, name='services'),
+    path('facility_management/', views.FacilityManagement, name='facility_management'),
     
 ]   
