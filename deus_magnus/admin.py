@@ -62,5 +62,5 @@ admin.site.register(OurManagementsInDeusMagnus, OurManagementsInDeusMagnusModelA
 # Resources FAQs of deus magnus view
 class FAQsModelAdmin (admin.ModelAdmin):
     prepopulated_fields = {'FAQs_slug': ('FAQs_title',)}
-    list_display = ['FAQs_response','FAQs_author']
+    list_display = ['FAQs_title','FAQs_response','FAQs_author']
 admin.site.register(FAQs, FAQsModelAdmin)

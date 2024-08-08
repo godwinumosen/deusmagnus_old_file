@@ -198,4 +198,4 @@ class FAQs(models.Model):
         return self.FAQs_title + ' | ' + str(self.FAQs_author)
     
     def get_absolute_url(self):
-        return reverse('home',)
+        return reverse('home')

@@ -2,8 +2,9 @@
 from django.urls import path
 from . import views
 from .views import HomeView, ArticleDetailView, SecondConstructionDetailViewArticleDetailView,VideoImageDetailView
-from .views import LastConstructionDetailViewArticleDetailView, SubPictureDetailView,SubVideoDetailView,BlogView
-from .views import BlogArticleDetail,EventBlog,OurTeam,ManagementTeamArticleOfDuesMagnusDetail,DeusMagnusEventBlogArticleDetailView
+from .views import LastConstructionDetailViewArticleDetailView, SubPictureDetailView,SubVideoDetailView
+from .views import BlogArticleDetail,EventBlog,OurTeam,ManagementTeamArticleOfDuesMagnusDetail
+from .views import DeusMagnusEventBlogArticleDetailView,BlogView,FAQs_item
 
 urlpatterns = [
     path('index/', views.index, name='index'),
@@ -31,5 +32,6 @@ urlpatterns = [
     path('facility_management/', views.FacilityManagement, name='facility_management'),
     path('real_estate_services/', views.RealEstateServices, name='real_estate_services'),
     path('project_management/', views.ProjectManagement, name='project_management'),
+    path('faqs_items/', FAQs_item.as_view(), name='faqs_items'),
     
 ]   

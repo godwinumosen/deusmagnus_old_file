@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.urls import reverse
 from django.urls import reverse_lazy
-from .models import SubPicture_1, SubPicture_2,VideoSubImage, BlogDeusMagnus,DeusMagnusEventBlog
+from .models import SubPicture_1, SubPicture_2,VideoSubImage, BlogDeusMagnus,DeusMagnusEventBlog,FAQs
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost, LastDeusMagnusMainPicturePost,OurManagementsInDeusMagnus
 from django.contrib import messages
 from django.contrib.auth.models import User
@@ -89,6 +89,13 @@ def RealEstateServices (request):
 def ProjectManagement (request):
     return render(request, 'deus_magnus/project_management.html', {})
 
+# The frequently ask qeustion page of the media dropdown
+class FAQs_item(ListView):
+    model = FAQs
+    template_name = 'deus_magnus/faqs.html'
+    context_object_name = 'faqs_items'
+
+
 #First video image sub category iterate    
 class VideoImageDetailView(DetailView):
     model = VideoSubImage
@@ -98,7 +105,6 @@ class VideoImageDetailView(DetailView):
         object = get_object_or_404(VideoImageDetailView, pk=pk)
         return render(request, 'deus_magnus/sub_video_img_detail.html', {'sub_video_img_detail': object})
     
-
 #sub_picture article display inside second detailsview
 class SubPictureDetailView(DetailView):
     model = SubPicture_1

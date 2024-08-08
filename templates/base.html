@@ -23,12 +23,9 @@
     <link rel="apple-touch-icon" href="{% static 'images/logo.png' %}">	<!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet"> 
-    
-	
-    <!-- Bootstrap core CSS -->
+    <!-- Libraries Stylesheet -->
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     <!-- Custom & Default Styles -->
-    
 	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/carousel.css' %}">
@@ -125,7 +122,7 @@
                     <li class="dropdown hassubmenu">
                         <a href="#" class="dropdown-oggle" data-toggle="dropdown" role="button"aria-expanded="false">Resources<span class="fa fa-angle-down"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="">FAQs</a></li>
+                            <li><a href="{% url 'faqs_items'%}">FAQs</a></li>
                             <li><a href="">Guides</a></li>
                             <li><a href="">Glossary</a></li>
                         </ul>
