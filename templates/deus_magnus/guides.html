@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Guides {% endblock %}
+{% block content %}
+<br><br><br>
+<section class="section db p120">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12"><br><br>
+                <div class="tagline-message page-title text-center">
+                    <h3> Guideslines </h3>
+                </div>
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section><!-- end section -->
+<section class="section">
+    <div class="container">
+        <div class="row">
+           
+            <div class="col-md-8">  
+                <div class="custom-module p40l">
+                    <h3>Guideslines</h3>
+                    <p>  </p><br>
+                    <div class="row">
+                        <div class="col-lg-12 col-md-4 col-sm-4 col-xs-12 first">
+                            <ul class="check">
+                                <li>Investing in Nigerian Luxury Real Estate: A Complete Guide</li>
+                                <li>5 Things to Consider When Choosing Your Dream Home in Nigeria</li>
+                                <li>Cleaning and janitorial services</li>
+                                <li>The Expatriate's Guide to Premium Living in Lagos</li>
+                            </ul><!-- end check -->
+                        </div><!-- end col-lg-4 -->   
+                    </div><!-- end row -->   
+                    <hr class="invis">
+                    <div class="btn-wrapper">
+                        <a href=""onclick="history.back(); return false;" class="btn btn-primary"style="border-radius: 10px;"><i class="fa fa-angle-left">Back</i></a>
+                    </div>
+                </div><!-- end module -->
+            </div><!-- end col --><br>
+            <div class="col-md-4">
+                <div class="custom-module">
+                    <img src="{% static 'images/mitchell.jpg ' %}" alt="" class="img-responsive wow slideInLeft">
+                </div><!-- end module -->
+            </div><!-- end col --> 
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section><br><br>
+
+{% endblock %}
