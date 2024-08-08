@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.urls import reverse
 from django.urls import reverse_lazy
-from .models import SubPicture_1, SubPicture_2,VideoSubImage, BlogDeusMagnus,DeusMagnusEventBlog,FAQs
+from .models import SubPicture_1, SubPicture_2,VideoSubImage, BlogDeusMagnus,DeusMagnusEventBlog,FAQs,GLOSSARY
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost, LastDeusMagnusMainPicturePost,OurManagementsInDeusMagnus
 from django.contrib import messages
 from django.contrib.auth.models import User
@@ -97,6 +97,12 @@ class FAQs_item(ListView):
     model = FAQs
     template_name = 'deus_magnus/faqs.html'
     context_object_name = 'faqs_items'
+
+# The GLOSSARY page of the media dropdown
+class GLOSSARY_item(ListView):
+    model = GLOSSARY
+    template_name = 'deus_magnus/glossary.html'
+    context_object_name = 'glossary_items'
 
 
 #First video image sub category iterate    

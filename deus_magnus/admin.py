@@ -3,7 +3,7 @@ from django.contrib import admin
 from . import models
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost, LastDeusMagnusMainPicturePost,SubPicture_2
 from .models import SubPicture_1, VideoSubImage, BlogDeusMagnus,DeusMagnusEventBlog,OurManagementsInDeusMagnus,FAQs
-
+from .models import GLOSSARY
 #The DeusMagnus post,post model admin
 class DeusMagnusMainPostModelAdmin (admin.ModelAdmin):
     prepopulated_fields = {'deus_magnus_slug': ('deus_magnus_title',)}
@@ -64,3 +64,10 @@ class FAQsModelAdmin (admin.ModelAdmin):
     prepopulated_fields = {'FAQs_slug': ('FAQs_title',)}
     list_display = ['FAQs_title','FAQs_response','FAQs_author']
 admin.site.register(FAQs, FAQsModelAdmin)
+
+# Resources GLOSSARY of deus magnus view
+class GLOSSARYModelAdmin (admin.ModelAdmin):
+    prepopulated_fields = {'GLOSSARY_slug': ('GLOSSARY_title',)}
+    list_display = ['GLOSSARY_title','GLOSSARY_response','GLOSSARY_author']
+admin.site.register(GLOSSARY, GLOSSARYModelAdmin)
+
