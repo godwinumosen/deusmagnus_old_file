@@ -4,7 +4,8 @@ from django.urls import reverse
 from datetime import datetime, date
 
 #The search button model of locatin
-    
+class Mainvideo(models.Model):
+    deus_magnus_first_video = models.FileField(upload_to='main_videos/') 
 # The main model for Deus Magnus Model category
 class DeusMagnusMainPost(models.Model):
     deus_magnus_title = models.CharField(max_length=255, blank=True, null=True)

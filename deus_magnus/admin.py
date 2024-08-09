@@ -2,13 +2,14 @@ from django.contrib import admin
 # Register your models here.
 from . import models
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost, LastDeusMagnusMainPicturePost,SubPicture_2
-from .models import SubPicture_1, VideoSubImage, BlogDeusMagnus,DeusMagnusEventBlog,OurManagementsInDeusMagnus,FAQs
-from .models import GLOSSARY
+from .models import SubPicture_1, VideoSubImage, DeusMagnusEventBlog,OurManagementsInDeusMagnus,FAQs
+from .models import GLOSSARY,Mainvideo,BlogDeusMagnus
 #The DeusMagnus post,post model admin
-class DeusMagnusMainPostModelAdmin (admin.ModelAdmin):
-    prepopulated_fields = {'deus_magnus_slug': ('deus_magnus_title',)}
-    list_display = ['deus_magnus_title','deus_magnus_description','deus_manus_video','deus_magnus_author']
-admin.site.register(DeusMagnusMainPost, DeusMagnusMainPostModelAdmin)
+
+
+class MainvideoModelAdmin (admin.ModelAdmin):
+    list_display = ['deus_magnus_first_video']
+admin.site.register(Mainvideo, MainvideoModelAdmin)
 
 #The Second DeusMagnus post post model admin of josepdam
 class SecondDeusMagnusMainPicturePosttModelAdmin (admin.ModelAdmin):

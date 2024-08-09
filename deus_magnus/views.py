@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.urls import reverse
 from django.urls import reverse_lazy
-from .models import SubPicture_1, SubPicture_2,VideoSubImage, BlogDeusMagnus,DeusMagnusEventBlog,FAQs,GLOSSARY
+from .models import SubPicture_1, SubPicture_2,VideoSubImage, BlogDeusMagnus,DeusMagnusEventBlog,FAQs,GLOSSARY,Mainvideo
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost, LastDeusMagnusMainPicturePost,OurManagementsInDeusMagnus
 from django.contrib import messages
 from django.contrib.auth.models import User
@@ -25,11 +25,14 @@ class HomeView(ListView):
     #This model is for the second deus magnus sub category of the blog
     def get_context_data(self, **kwargs):  
         context = super().get_context_data(**kwargs)
+    #the first deus magnus home video
+        context['first_videos'] = Mainvideo.objects.all()    
     #context['user'] = self.request.user
         context['second_constructions'] = SecondDeusMagnusMainPicturePost.objects.all()
     #Last deus magnus sub category of the blog for picture 
         context['last_constructions'] = LastDeusMagnusMainPicturePost.objects.all()   
         return context    
+
 
  #The first Deus Magnus Video ArticleDetailView page
 class ArticleDetailView(DetailView):
