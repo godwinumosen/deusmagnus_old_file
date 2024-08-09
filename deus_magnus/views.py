@@ -91,6 +91,9 @@ def ProjectManagement (request):
 # Guides Management page of the deus magnus webapp
 def Guides (request):
     return render(request, 'deus_magnus/guides.html', {})
+# Construction Development Management page of the deus magnus webapp
+def ConstructionDevelopment (request):
+    return render(request, 'deus_magnus/construction_development.html', {})
 
 # The frequently ask qeustion page of the media dropdown
 class FAQs_item(ListView):

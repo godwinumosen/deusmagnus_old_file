@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Construction and Development  {% endblock %}
+{% block content %}
+<br><br><br>
+<section class="section db p120">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12"><br><br>
+                <div class="tagline-message page-title text-center">
+                    <h3> Construction Management</h3>
+                </div>
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section><!-- end section -->
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="custom-module">
+                    <img src="{% static 'images/mitchell.jpg ' %}" alt="" class="img-responsive wow slideInLeft">
+                </div><!-- end module -->
+            </div><!-- end col -->
+            <div class="col-md-8">  
+                <div class="custom-module p40l">
+                    <h3>Construction and Development</h3>
+                    <h4>From groundbreaking to finishing touches, our construction services
+                        ensure impeccable quality and timely delivery of your dream property.
+                    </h4><br>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-4 col-sm-4 col-xs-12 first">
+                            <ul class="check">
+                                <li>Industrial warehouse</li>
+                                <li>Service apartments</li>
+                                <li>Luxury apartments and homes</li>
+                                <li>Student housing</li>
+                                <li>Office spaces</li>
+                            </ul><!-- end check -->
+                        </div><!-- end col-lg-4 -->    
+                    </div><!-- end row -->   
+                    <center> <h3>Pioneers in Construction and Development</h3></center>
+                    <p>Deus Magnus Limited stands at the forefront of the construction and development industry,
+                         renowned for its commitment to innovation, sustainability, and excellence. With a rich 
+                         history of successful projects and a forward-thinking approach, the company has 
+                         established itself as a leader in shaping modern infrastructure and real estate..</p><br>
+                    <div class="row">
+                        <div class="col-lg-10 col-md-4 col-sm-4 col-xs-12 first">
+                            <ul class="check">
+                                <li>Excellence in Execution</li>
+                                <li>Innovation and Technology</li>
+                                <li>Sustainability and Environmental Responsibility</li>
+                                <li>Residential Developments</li>
+                                <li>Infrastructure and Public Works</li>
+                            </ul><!-- end check -->
+                        </div><!-- end col-lg-4 -->    
+                    </div><!-- end row -->   
+                    <hr class="invis">
+                    <div class="btn-wrapper">
+                        <a href="{% url 'about' %}" class="btn btn-primary" style="border-radius:5px;">About us</a>
+                    </div>
+                </div><!-- end module -->
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section><br><br>
+
+{% endblock %}

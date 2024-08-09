@@ -32,6 +32,7 @@ urlpatterns = [
     path('guides/', views.Guides, name='guides'),
     path('facility_management/', views.FacilityManagement, name='facility_management'),
     path('real_estate_services/', views.RealEstateServices, name='real_estate_services'),
+    path('construction_development/', views.ConstructionDevelopment, name='construction_development'),
     path('project_management/', views.ProjectManagement, name='project_management'),
     path('faqs_items/', FAQs_item.as_view(), name='faqs_items'),
     path('glossary_items/', GLOSSARY_item.as_view(), name='glossary_items'),
