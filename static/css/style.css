@@ -455,7 +455,7 @@ MEGA MENU
 .yamm .collapse,
 .yamm .dropup,
 .yamm .dropdown {
-    position:relative;
+    position:static;
 }
 
 .yamm .dropdown.yamm-fw {
@@ -2302,4 +2302,3 @@ RESPONSIVE
         padding: 1em 0.7em;
     }
 }
-
