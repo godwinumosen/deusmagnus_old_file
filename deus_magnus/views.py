@@ -76,7 +76,7 @@ class LastConstructionDetailViewArticleDetailView(DetailView):
         context['subs_2'] = SubPicture_2.objects.all() 
         return context
     
-#About page of the deus magnus blog app
+# About page of  the deus magnus blog app
 def AboutView (request):
     return render(request, 'deus_magnus/about_us.html', {})
 # Services page of the deus magnus webapp
