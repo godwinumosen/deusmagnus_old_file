@@ -27,12 +27,12 @@
                     <div class="shop-desc">
                         <h3 style="color: #d4af37;">{{ last_construction.last_deus_magnus_title }}</h3>
                         <p>{{ last_construction.last_deus_magnus_description }}</p>
-                        <div class="shop-meta">
-                                <a href=""onclick="history.back(); return false;" class="btn btn-primary" style="border-radius: 10px;"><i class="fa fa-angle-left">Back</i></a>
-                            <ul class="list-inline">
                                 <li>{{ last_construction.last_deus_magnus_publish_date }}</li>
                                 <li>Posted by: {{ last_construction.last_deus_magnus_author }}</li>
                             </ul>
+                            <div class="btn-wrapper">
+                                <a href=""onclick="history.back(); return false;" class="btn btn-primary"style="border-radius: 10px;"><i class="fa fa-arrow-left"> Back </i></a>
+                            </div>
                         </div><!-- end shop meta -->
                     </div><!-- end desc -->
                 </div><!-- end col -->
@@ -60,7 +60,7 @@
                                 <h4>
                                     <a href="{% url 'sub_detail_video' pk=sub_2.pk %}">{{ sub_2.sub_title_2|truncatechars:26 }}</a>
                                     <small><p>{{ sub_2.sub_description_2|truncatechars:37 }}</p></small>
-                                    <a href="{% url 'sub_detail_video' pk=sub_2.pk %}" class="btn btn-primary"style="border-radius:7px;">View More</a>
+                                    <a href="{% url 'sub_detail_video' pk=sub_2.pk %}" class="btn btn-primary"style="border-radius:7px;">View More <i class="fa fa-arrow-right"></i></a>
                                 </h4>
                             </div><!-- end details -->
                         </div>                  
@@ -80,7 +80,9 @@
                 <div class="tab-content">
                     <div id="home" class="tab-pane fade in active">
                         <p>{{ last_construction.last_deus_magnus_description }}</p>
-                        <a href="" onclick="history.back(); return false;" class="btn btn-primary" style="border-radius: 10px;"><i class="fa fa-angle-left">Back Home</i></a>
+                        <div class="btn-wrapper">
+                            <a href=""onclick="history.back(); return false;" class="btn btn-primary"style="border-radius: 10px;"><i class="fa fa-arrow-left"> Back </i></a>
+                        </div>
                     </div>
                     <div id="menu2" class="tab-pane fade">
                         <h3>Reviews</h3>
