@@ -83,12 +83,14 @@ SKELETON
 ******************************************/
 
 body {
-    background-color: #f6f6f6;
-    line-height: 1.6;
-    font-size: 16px;
-    color: #a2a2a2;
-    font-family: sans-serif;
+    background-color: #fff;
+    line-height: 1.5;
+    font-size: 15px;
+    color: #52565b;
+    font-family: "Heebo", sans-serif;
     position: static;
+    font-weight: 400;
+
 }
 
 
@@ -1546,7 +1548,8 @@ BLOG
     font-weight: 700;
     padding: 0 0 15px;
     margin: 0;
-    color: #000000;
+    color: #181d38;
+    font-family: "Nunito", sans-serif;
 }
 
 .blog-desc p {
