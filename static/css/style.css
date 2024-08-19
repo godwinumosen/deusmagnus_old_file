@@ -1875,7 +1875,7 @@ FOOTER
 
 .section.footer {
     padding: 12rem 0;
-    background-color: #005b8c
+    background-color: rgb(23, 23, 44)
 }
 
 .social-links i {
@@ -1900,8 +1900,8 @@ FOOTER
 }
 
 .copyrights {
-    background-color: #005B8C ;
-    border-top: 1px solid #005B8C ;
+    background-color: rgb(23, 23, 44) ;
+    border-top: 1px solid rgb(23, 23, 44) ;
     padding: 30px 0;
 }
 
