@@ -152,14 +152,14 @@ def ContactView (request):
         message_name = request.POST['message-name']
         message_email = request.POST['message-email']
         message_subject = request.POST['message-subject']
-        message = request.POST['message']
+        message = request.POST['message'] 
         messages.success(request, f'Your email was Successfully sent to Deus Magnus {message_name}..!')
         return redirect('/message')
     else:
         context={
             'email':email
-        }
-        return render(request, 'deus_magnus/contact_us.html',context)
+        } 
+        return render(request, 'deus_magnus/contact_us.html', {})
 
 def message (request):
     return render (request, 'deus_magnus/message.html', {})
