@@ -6,6 +6,10 @@
     font-style: normal;
 }
 
+.text-primary {
+    color: #04245c;
+}
+
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     @font-face {
         font-family: "sans-serif";
@@ -269,7 +273,7 @@ HEADER
 }
 
 .header-normal .navbar-default .nav>li>a {
-    color: #005B8C; important;
+    color: #04245c; important;
 }
 
 /* Pls dont touch this color */
@@ -302,7 +306,7 @@ HEADER
 }
 
 .navbar-default .nav>li>a {
-    color: #005B8C !important;
+    color: #04245c !important;
     text-transform: capitalize;
     font-size: 15px;
     font-weight: 500;
@@ -364,7 +368,7 @@ HEADER
 }
 
 .social a.facebook {
-    background-color: #005B8C;
+    background-color: #04245c;
 }
 
 .social a.pinterest {
@@ -372,7 +376,7 @@ HEADER
 }
 
 .social a.twitter {
-    background-color: #005B8C;
+    background-color: #04245c;
 }
 
 .social a.google {
@@ -380,7 +384,7 @@ HEADER
 }
 
 .social a.linkedin {
-    background-color: #005B8C;
+    background-color: #04245c;
 }
 
 .modal {
@@ -1002,8 +1006,8 @@ SECTIONS
 
 .boxed {
     box-shadow: 0 30px 50px 0 rgba(1, 1, 1, 0.18);
-    padding: 8rem 4rem 8rem;
-    background-color: #ffffff;
+    padding: 4rem 4rem 1rem;
+    background-color: #e1e5ec;
     margin-top: -60px;
 }
 
@@ -1045,7 +1049,7 @@ SECTIONS
 }
 
 .section.db {
-    background-color: #000000;
+    background-color: #04245c;
 }
 
 .slider-bottom {
@@ -1234,7 +1238,7 @@ COURSE MODULES
     right: 0;
     opacity: 0;
     top: 0;
-    background-color: #005B8C(46, 68, 206, 0.8);
+    background-color: #04245c(46, 68, 206, 0.8);
     -webkit-transition: visibility 0.35s ease-in-out, opacity 0.35s ease-in-out, top 0.35s ease-in-out, bottom 0.35s ease-in-out, left 0.35s ease-in-out, right 0.35s ease-in-out;
     -moz-transition: visibility 0.35s ease-in-out, opacity 0.35s ease-in-out, top 0.35s ease-in-out, bottom 0.35s ease-in-out, left 0.35s ease-in-out, right 0.35s ease-in-out;
     -o-transition: visibility 0.35s ease-in-out, opacity 0.35s ease-in-out, top 0.35s ease-in-out, bottom 0.35s ease-in-out, left 0.35s ease-in-out, right 0.35s ease-in-out;
@@ -1906,7 +1910,7 @@ FOOTER
 }
 
 .copyrights li a {
-    color: #005B8C ;
+    color: #04245c ;
 }
 
 .copyrights ul {
@@ -2096,7 +2100,7 @@ COLOR BLUE
 }
 
 .iconitem a.shopicon i {
-    color: #005B8C !important;
+    color: #04245c !important;
 }
 
 .shop-desc small,
@@ -2123,7 +2127,7 @@ a:hover,
 a:focus,
 .box i,
 .topbar .text-left i {
-    color: #005b8c;
+    color: #04245c;
 }
 
 .shop-extra .nav-tabs>li:hover a,
@@ -2152,8 +2156,8 @@ mark,
 .image-wrap:before,
 .image-wrap:after,
 .btn-primary {
-    border-color: #005B8C;
-    background-color: #005b8c;
+    border-color: #04245c;
+    background-color: #04245c;
     box-shadow: inset 0 0 0 0 #d4af37;
     -webkit-transition: all ease 0.5s;
     -moz-transition: all ease 0.5s;
@@ -2176,21 +2180,21 @@ COLOR GREEN
 
 .menu-widget small,
 .course-footer .pull-right a {
-    color: #005B8C;
+    color: #04245c;
 }
 
 .btn-default {
-    border-color: #005B8C;
-    background-color: #005B8C;
-    box-shadow: inset 0 0 0 0 #005B8C;
+    border-color: #04245c;
+    background-color: #04245c;
+    box-shadow: inset 0 0 0 0 #04245c;
     -webkit-transition: all ease 0.5s;
     -moz-transition: all ease 0.5s;
     transition: all ease 0.5s;
 }
 
 .btn-default:hover {
-    box-shadow: inset 0 100px 0 0 #005B8C;
-    border-color: #005B8C;
+    box-shadow: inset 0 100px 0 0 #04245c;
+    border-color: #04245c;
 }
 
 
