@@ -11,6 +11,12 @@ class MainvideoModelAdmin (admin.ModelAdmin):
     list_display = ['deus_magnus_first_video']
 admin.site.register(Mainvideo, MainvideoModelAdmin)
 
+#The DeusMagnus main post model admin
+class DeusMagnusMainPostModelAdmin (admin.ModelAdmin):
+    prepopulated_fields = {'deus_magnus_slug': ('deus_magnus_title',)}
+    list_display = ['deus_magnus_title','deus_magnus_description','deus_manus_video','deus_magnus_author']
+admin.site.register(DeusMagnusMainPost, DeusMagnusMainPostModelAdmin)
+
 #The Second DeusMagnus post post model admin of josepdam
 class SecondDeusMagnusMainPicturePosttModelAdmin (admin.ModelAdmin):
     prepopulated_fields = {'second_deus_magnus_slug': ('second_deus_magnus_title',)}
