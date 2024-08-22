@@ -3,13 +3,17 @@ from django.contrib import admin
 from . import models
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost, LastDeusMagnusMainPicturePost,SubPicture_2
 from .models import SubPicture_1, VideoSubImage, DeusMagnusEventBlog,OurManagementsInDeusMagnus,FAQs
-from .models import GLOSSARY,Mainvideo,BlogDeusMagnus
+from .models import GLOSSARY,Mainvideo,BlogDeusMagnus,FooterPost
 #The DeusMagnus post,post model admin
 
 
 class MainvideoModelAdmin (admin.ModelAdmin):
     list_display = ['deus_magnus_first_video']
 admin.site.register(Mainvideo, MainvideoModelAdmin)
+
+class FooterPostModelAdmin (admin.ModelAdmin):
+    list_display = ['footer_title']
+admin.site.register(FooterPost, FooterPostModelAdmin)
 
 #The DeusMagnus main post model admin
 class DeusMagnusMainPostModelAdmin (admin.ModelAdmin):

@@ -3,9 +3,15 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 from datetime import datetime, date
 
-#The search button model of locatin
+#The first main video on deusmagnus website
 class Mainvideo(models.Model):
     deus_magnus_first_video = models.FileField(upload_to='main_videos/') 
+#the footer description
+class FooterPost(models.Model):
+    footer_title = models.CharField(max_length=100, blank=True, null=True)
+    # other fields as needed
+    def __str__(self):
+        return self.footer_title
 # The main model for Deus Magnus Model category
 class DeusMagnusMainPost(models.Model):
     deus_magnus_title = models.CharField(max_length=255, blank=True, null=True)

@@ -4,18 +4,21 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.urls import reverse
 from django.urls import reverse_lazy
-from .models import SubPicture_1, SubPicture_2,VideoSubImage, BlogDeusMagnus,DeusMagnusEventBlog,FAQs,GLOSSARY,Mainvideo
-from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost, LastDeusMagnusMainPicturePost,OurManagementsInDeusMagnus
+from .models import SubPicture_1, SubPicture_2,VideoSubImage, BlogDeusMagnus,DeusMagnusEventBlog,FAQs,Mainvideo
+from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost,FooterPost
+from .models import LastDeusMagnusMainPicturePost,OurManagementsInDeusMagnus,GLOSSARY
 from django.contrib import messages
 from django.contrib.auth.models import User
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin  
 
 
 def index (request):
     return render (request, 'deus_magnus/index.html')
 
-def base (request):
-    return render(request,"base.html")
+def base_view(request):
+    posts = FooterPost.objects.all()
+    print(f"Posts: {posts}")  # Check the output in the terminal
+    return render(request, 'base.html', {'object_list': posts})
 
 #The main HomeView page
 class HomeView(ListView): 
