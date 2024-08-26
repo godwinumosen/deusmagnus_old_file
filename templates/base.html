@@ -18,7 +18,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="{% static 'images/logo.png' %}"height="50px" type="image/x-icon" />
+    <link rel="shortcut icon" href="{% static 'images/logo.png' %}"height="60px" type="image/x-icon" />
     <link rel="apple-touch-icon" href="{% static 'images/logo.png' %}">	<!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'> 
@@ -124,7 +124,7 @@
                             <li><a href="{% url 'glossary_items' %}">Glossary</a></li>
                         </ul>
                     </li>       
-                    <li><a href="{% url 'contact' %}"><small><button type="button"class="btn btn-primary" style="padding-top: 2px; padding-bottom: 2px; border-radius: 10px;" >Contact</button></small></a></li>     
+                    <li><a href="{% url 'contact' %}"><button type="button"class="btn btn-primary" style="padding-top: 2px; padding-bottom: 2px; border-radius: 5px;" >Contact</button></small></a></li>     
                 </ul>
             </div>  
         </nav><!-- end navbar -->
@@ -228,7 +228,13 @@
                 <div class="footer-links">
                     <ul class="list-inline">
                         
-                        <li>Copyright © 2024 - Dues Magnus Ltd. All Right Reserved</li>
+                        <li>
+                            {% if footer_post %}
+                                Copyright © {{ footer_post.copyright_year }} - Dues Magnus Ltd. All Rights Reserved
+                            {% else %}
+                                Copyright © 2024 - Dues Magnus Ltd. All Rights Reserved
+                            {% endif %}
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -252,4 +258,4 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>    
 
 </body>
-</html>
+</html> 

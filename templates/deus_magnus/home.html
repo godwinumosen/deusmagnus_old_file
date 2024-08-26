@@ -76,11 +76,11 @@
  
 
 <section class="section gb nopadtop">
-    <div class="container">
+    <div class="container"><br>
         <div class="section-title text-center">
-            <h3 style="color: #98681e;">Our Promise/Commitment</h3>
+            <h3 style="color: #98681e;">Commitment</h3>
             <p>With over 15 years of construction experience.</p>
-        </div><br><!-- end title -->
+        </div><br><br><!-- end title -->
         <div class="boxed boxedp3">
             <div class="row blog-grid">
                 <div class="col-md-4">
@@ -121,9 +121,9 @@
 
 <!-- the first category of the home page after cate -->
 <section class="section gb">
-    <div class="container">
+    <div class="container"><br>
         <div class="section-title text-center">
-            <h3 style="color: #98681e;">Up Coming Projects</h3>
+            <h3 style="color: #98681e;">Upcoming Projects</h3>
             <p> With over 20 years of combined construction experience, we embody.</p>
         </div><!-- end title -->
 
@@ -147,7 +147,7 @@
                     <div class="post-meta">
                         <span>
                             <div class="btn-wrapper">
-                                <a href="{% url 'detail' post.pk %}" class="btn btn-primary"style="border-radius: 10px;">Read More</a>
+                                <a href="{% url 'detail' post.pk %}" class="btn btn-primary"style="border-radius: 5px;">Read More</a>
                             </div>
                          </span>
                     </div><!-- end post-meta -->
@@ -160,13 +160,13 @@
 
 
 <section class="section db p110">
-    <div class="container">
+    <div class="container"><br>
         <div class="row">
             <div class="col-md-12">
                 <div class="tagline-message text-center">
                 <h3>"At Deus Magnus, we're not just building structures; we're crafting legacies. 
                     Our commitment to excellence and innovation drives us to create spaces that inspire, impress, and endure." <br><br>
-                    - Mr. Kuteyi Rasaq, CEO</h3>
+                    - Mr. Kuteyi Rasaq, CEO</h3><br>
                 </div>
             </div><!-- end col -->
         </div><!-- end row -->
@@ -175,7 +175,7 @@
 
     
 <section class="section gb">
-    <div class="container">
+    <div class="container"><br>
         <div class="section-title text-center">
             <h3 style="color: #98681e;">Featured Properties</h3>
             <p>Our collection of elegance, comfort and luxury at the heart of Lagos, Nigeria.</p>
@@ -199,7 +199,7 @@
                     <div class="post-meta">
                             <div class="btn-wrapper">
                                 <a href="{% url 'second_detail' second_construction.pk %}
-                                "class="btn btn-primary"style="border-radius: 10px;">See More Listings </a>
+                                "class="btn btn-primary"style="border-radius: 5px;">See More Listings </a>
                             </div>
                     </div><!-- end post-meta -->
                 </div><!-- end blog -->
@@ -215,7 +215,7 @@
             <div class="col-md-121">
                 <div class="tagline-message event-title text-center">
                     <div class="btn-wrapper">
-                        <a href="{% url 'contact' %}" class="btn btn-primary" style="border-radius: 10px;">Get in Touch with Dues Magnu</a>
+                        <a href="{% url 'contact' %}" class="btn btn-primary" style="border-radius: 5px;">Get in Touch with Dues Magnu</a>
                     </div>
                 </div>
             </div><!-- end col -->
@@ -224,7 +224,7 @@
 </section><!-- end section --><br><br>
 
 <section class="section gb">
-    <div class="container">
+    <div class="container"><br>
         <div class="section-title text-center">
             <h3 style="color: #98681e;">Recent News</h3>
             <p>Realizing Long-Term Value in Nigerian Real Estate.</p>
@@ -241,13 +241,13 @@
                         {% endif %}
                     </div><!-- end image-wrap -->
                     <div class="blog-desc">
-                        <h4><a href="{% url 'last_detail' last_construction.pk %}">{{ last_construction.last_deus_magnus_title |truncatechars:30}}</a></h4>
-                        <p> {{ last_construction.last_deus_magnus_description |truncatechars:70}}</p>
+                        <h4><a href="{% url 'last_detail' last_construction.pk %}">{{ last_construction.last_deus_magnus_title }}</a></h4>
+                        <p> {{ last_construction.last_deus_magnus_description |truncatechars:65}}</p>
                     </div><!-- end blog-desc -->
                     <div class="post-meta">
                         <div class="btn-wrapper">
-                            <a href="#">{{ last_construction.last_deus_magnus_publish_date }}</a>
-                            <a href="{% url 'last_detail' last_construction.pk %}" class="btn btn-primary" style="border-radius: 10px;">Read More</a>
+                            
+                            <a href="{% url 'last_detail' last_construction.pk %}" class="btn btn-primary" style="border-radius: 5px;">Read More</a>
                         </div>
                     </div><!-- end post-meta -->
                 </div><!-- end blog -->

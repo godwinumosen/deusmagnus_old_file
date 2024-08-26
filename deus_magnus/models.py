@@ -223,6 +223,7 @@ class GLOSSARY(models.Model):
 #the footer description
 class FooterPost(models.Model):
     footer_title = models.CharField(max_length=100, blank=True, null=True)
+    copyright_year = models.PositiveIntegerField(default=2025)
     # other fields as needed
     def __str__(self):
         return self.footer_title

@@ -16,9 +16,12 @@ def index (request):
     return render (request, 'deus_magnus/index.html')
 
 def base_view(request):
-    posts = FooterPost.objects.all()
-    print(f"Posts: {posts}")  # Check the output in the terminal
-    return render(request, 'base.html', {'object_list': posts})
+    try:
+        footer_post = FooterPost.objects.latest('id')  # Fetch the most recent footer post
+    except FooterPost.DoesNotExist:
+        footer_post = None
+
+    return render(request, 'base.html', {'footer_post': footer_post})
 
 #The main HomeView page
 class HomeView(ListView): 
