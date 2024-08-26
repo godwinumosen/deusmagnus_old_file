@@ -1020,6 +1020,7 @@ SECTIONS
     padding: 1rem 0;
     position: relative;
     display: block;
+    padding-top: 28px;
 }
 
 .section-title {
@@ -1573,7 +1574,6 @@ BLOG
     line-height: 1;
     padding: 0;
     margin: 0;
-    padding-top: 20px;
 }
 
 .stat-count h3 {
@@ -1880,7 +1880,7 @@ FOOTER
 
 .section.footer {
     padding: 12rem 0;
-    background-color: rgb(23, 23, 44)
+    background-color:#04245c;
 }
 
 .social-links i {
@@ -1905,8 +1905,8 @@ FOOTER
 }
 
 .copyrights {
-    background-color: rgb(23, 23, 44) ;
-    border-top: 1px solid rgb(23, 23, 44) ;
+    background-color: #04245c;
+    border-top: 1px solid #04245c ;
     padding: 30px 0;
 }
 
