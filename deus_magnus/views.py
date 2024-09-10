@@ -75,7 +75,7 @@ class LastConstructionDetailViewArticleDetailView(DetailView):
     context_object_name = 'last_construction'
     def LastConstructionDetailViewArticleDetailView(reques, pk):  
         object = get_object_or_404(LastDeusMagnusMainPicturePost, pk=pk
-        return render(request, 'deus_magnus/last_article_detail.html', {'last_construction': object})
+        return render(request, 'deus_magnus/last_article_detail.html', {'last_construction': obect})
      #This sub-model data related to the last article model instance of magnus
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
