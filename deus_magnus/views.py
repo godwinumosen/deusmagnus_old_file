@@ -71,7 +71,7 @@ class SecondConstructionDetailViewArticleDetailView(DetailView):
 #The last sub ArticleDetailView page    
 class LastConstructionDetailViewArticleDetailView(DetailView):
     model = LastDeusMagnusMainPicturePost
-    template_name = 'deus_magnus/last_article_detail.html
+    template_name = 'deus_magnus/last_article_detail.html'
     context_object_name = 'last_construction'
     def LastConstructionDetailViewArticleDetailView(request, pk):  
         object = get_object_or_404(LastDeusMagnusMainPicturePost, pk=pk)
