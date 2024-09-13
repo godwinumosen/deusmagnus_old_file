@@ -65,7 +65,7 @@ class SecondConstructionDetailViewArticleDetailView(DetailView):
     #This sub-model data related to the second article model instance in deus magnus group
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['subs'] = SubPicture_1.objects.all(
+        context['subs'] = SubPicture_1.objects.all() 
         return context
 
 #The last sub ArticleDetailView page    
