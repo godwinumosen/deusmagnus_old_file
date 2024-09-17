@@ -111,7 +111,7 @@ body {
 /* Media query for smaller screens */
 @media (max-width: 768px) {
     #myVideo {
-        height: 1000px; /* Adjust the height for smaller screens */
+        height: 250px; /* Adjust the height for smaller screens */
     }
 }
 
@@ -2325,3 +2325,4 @@ RESPONSIVE
         padding: 1em 0.7em;
     }
 }
+
