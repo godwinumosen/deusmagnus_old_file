@@ -111,7 +111,7 @@ body {
 /* Media query for smaller screens */
 @media (max-width: 768px) {
     #myVideo {
-        height: 250px; /* Adjust the height for smaller screens */
+        height: 240px; /* Adjust the height for smaller screens */
     }
 }
 
