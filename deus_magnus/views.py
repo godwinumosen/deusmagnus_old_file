@@ -64,7 +64,7 @@ class SecondConstructionDetailViewArticleDetailView(DetailView):
         return render(request, 'deus_magnus/second_article_detail.htm', {'second_detail': object})
     #This sub-model data related to the second article model instance in deus magnus group
     def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs
         context['subs'] = SubPicture_1.objects.all() 
         return context
 
