@@ -41,10 +41,10 @@ class HomeView(ListView):
 
 
  #The first Deus Magnus Video ArticleDetailView page
-class ArticleDetailView(DetailView):
+class ArticleDetailViewOfDeusmagnuslimited(DetailView):
     model = DeusMagnusMainPost
     template_name = 'deus_magnus/article_detail.html'
-    def ArticleDetailView(request, pk): 
+    def ArticleDetailViewDeusmagnuslimited(request, pk):
         object = get_object_or_404(DeusMagnusMainPost, pk=pk)
         return render(request, 'article_detail.html', {'detail': object})
     #This is the sub-model data related to the first video model instance
@@ -54,22 +54,22 @@ class ArticleDetailView(DetailView):
         return context
     
 #The second ArticleDetailView page of deus magnus group   
-class SecondConstructionDetailViewArticleDetailView(DetailView):
+class SecondConstructionDetailViewArticleDetailViewascanna(DetailView):
     model = SecondDeusMagnusMainPicturePost
     template_name = 'deus_magnus/second_article_detail.html'    
     context_object_name = 'second_construction'
 
-    def SecondConstructionDetailViewArticleDetailView(request, pk):
+    def SecondConstructionDetailViewArticleDetailViewlising(request, pk):
         object = get_object_or_404(SecondDeusMagnusMainPicturePost, pk=pk)
         return render(request, 'deus_magnus/second_article_detail.htm', {'second_detail': object})
     #This sub-model data related to the second article model instance in deus magnus group
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['subs'] = SubPicture_1.objects.all() 
-        return context
+        return context 
 
-#The last sub ArticleDetailView page    
-class LastConstructionDetailViewArticleDetailView(DetailView):
+#The last sub ArticleDetailView page
+class LastConstructionDetailViewArticleDetailViewfocus(DetailView):
     model = LastDeusMagnusMainPicturePost
     template_name = 'deus_magnus/last_article_detail.html'
     context_object_name = 'last_construction'
