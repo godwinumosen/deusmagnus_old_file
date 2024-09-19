@@ -41,7 +41,7 @@ class HomeView(ListView):
 
 
  #The first Deus Magnus Video ArticleDetailView page
-class ArticleDetailViewOfDeusmagnuslimited(DetailView):
+class ArticleDetailViewOfDeusmagnus(DetailView):
     model = DeusMagnusMainPost
     template_name = 'deus_magnus/article_detail.html'
     def ArticleDetailViewDeusmagnuslimited(request, pk):
