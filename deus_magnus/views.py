@@ -54,7 +54,7 @@ class ArticleDetailViewOfDeusmagnus(DetailView):
         return context
     
 #The second ArticleDetailView page of deus magnus group   
-class SecondConstructionDetailViewArticleDetailViewascanna(DetailView):
+class SecondConstructionDetailViewArticleDetailView(DetailView):
     model = SecondDeusMagnusMainPicturePost
     template_name = 'deus_magnus/second_article_detail.html'    
     context_object_name = 'second_construction'
