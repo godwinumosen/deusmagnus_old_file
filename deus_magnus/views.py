@@ -69,7 +69,7 @@ class SecondConstructionDetailViewArticleDetailView(DetailView):
         return context 
 
 #The last sub ArticleDetailView page
-class LastConstructionDetailViewArticleDetailViewfocus(DetailView):
+class LastConstructionDetailViewArticleDetailView(DetailView):
     model = LastDeusMagnusMainPicturePost
     template_name = 'deus_magnus/last_article_detail.html'
     context_object_name = 'last_construction'
