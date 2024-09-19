@@ -19,7 +19,7 @@
 <section class="section">
     <div class="container">
         <div class="section-title text-center">
-            <h3>We are proudly certified</h3>
+            <h3 style="color: #98681e;">We are proudly certified</h3>
              <p>Experienced professionals with expertise in construction, 
                 real estate, facility management, and business development..</p>
         </div><!-- end title -->
@@ -30,14 +30,14 @@
         <div class="teammembers">
             <a href="{% url 'our_management_team_article' post.pk %}">
             <div class="entry">
-                <img src="{{ post.our_team_img.url }}" alt="" class="img-responsive">
+                <img src="{{ post.our_team_img.url }}"height="150px" alt="" class="img-responsive">
             </div><!-- end box -->
             </a>
             <div class="teamdesc">
                 <h4><a href="{% url 'our_management_team_article' post.pk %}">{{ post.our_team_name }}</a></h4>
                 <hr>
-                <h6>{{ post.our_team_position }}</h6
-                <p>{{ post.our_team_description }}</p>
+                <h5 style="color: #98681e;">{{ post.our_team_position }}</h5>
+                <p>{{ post.our_team_description|truncatechars:77}}</p>
             </div><!-- end teamdesc -->
         </div><!-- end teammembers -->
         <br>
