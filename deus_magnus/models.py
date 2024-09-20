@@ -18,7 +18,7 @@ class DeusMagnusMainPost(models.Model):
     deus_magnus_author = models.ForeignKey(User, on_delete=models.CASCADE)
 
        
-    class Meta:
+    class Meta
         ordering =['-deus_magnus_publish_date']
     
     def __str__(self):
