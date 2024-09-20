@@ -15,7 +15,7 @@ class DeusMagnusMainPost(models.Model):
     deus_manus_video = models.FileField(upload_to='videos/'
     #thumbnail = models.ImageField(max_length=100, null=True, blank=True)
     deus_magnus_publish_date = models.DateTimeField (auto_now_add= True)
-    deus_magnus_author = models.ForeignKey(User, on_delete=models.CASCADE
+    deus_magnus_author = models.ForeignKey(User, on_delete=models.CASCADE)
 
        
     class Meta:
