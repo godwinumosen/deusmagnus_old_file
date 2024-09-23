@@ -31,13 +31,34 @@
                     </ul>
                 </div><!-- end blog-meta -->
                 <div class="blog-media">
-                    <img src="{{ object.deus_magnus_event_img.url }}" alt="" class="img-responsive img-rounded">   
+                    <img src="{{ object.deus_magnus_event_img.url }}"style="border-radius:5px;" alt="" class="img-responsive img-rounded">   
                 </div><!-- end media -->
                 <div class="blog-desc-big">
-                    <p style="color: #98681e;" class="lead">{{ object.deus_magnus_event_title|truncatechars:30 }}</p>
+                    <p style="color: #98681e;" class="lead">{{ object.deus_magnus_event_title}}</p>
                     <p>{{ object.deus_magnus_event_description  }}</p>  
                 </div><!-- end desc -->
-            </div><!-- end blog -->
+
+                <div class="blog-desc-big">
+                    <p style="color: #98681e;" class="lead">{{ object.deus_magnus_event_sub_title_1}}</p>
+                    <p>{{ object.deus_magnus_event_description_1  }}</p>  
+                </div><!-- end desc -->
+                <div class="blog-desc-big">
+                    <p style="color: #98681e;" class="lead">{{ object.deus_magnus_event_sub_title_2}}</p>
+                    <p>{{ object.deus_magnus_event_description_2  }}</p>  
+                </div><!-- end desc -->
+                <div class="blog-desc-big">
+                    <p style="color: #98681e;" class="lead">{{ object.deus_magnus_event_sub_title_3}}</p>
+                    <p>{{ object.deus_magnus_event_description_3  }}</p>  
+                </div><!-- end desc -->
+                <div class="blog-desc-big">
+                    <p style="color: #98681e;" class="lead">{{ object.deus_magnus_event_sub_title_4}}</p>
+                    <p>{{ object.deus_magnus_event_description_4  }}</p>  
+                </div><!-- end desc -->
+                <div class="blog-desc-big">
+                    <p style="color: #98681e;" class="lead">{{ object.deus_magnus_event_sub_title_5}}</p>
+                    <p>{{ object.deus_magnus_event_description_5  }}</p>  
+                </div><!-- end desc -->
+            </div><!-- end blog --><br>
             <div class="btn-wrapper">
                 <a href=""onclick="history.back(); return false;" class="btn btn-primary"style="border-radius: 10px;"><i class="fa fa-arrow-left"> Back</i></a>
             </div>
