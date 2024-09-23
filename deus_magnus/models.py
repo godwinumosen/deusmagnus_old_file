@@ -149,6 +149,11 @@ class BlogDeusMagnus(models.Model):
 class DeusMagnusEventBlog(models.Model):
     deus_magnus_event_title = models.CharField(max_length=255, blank=True, null=True)
     deus_magnus_event_description = models.TextField()
+    deus_magnus_event_description_1 = models.TextField()
+    deus_magnus_event_description_2 = models.TextField()
+    deus_magnus_event_description_3 = models.TextField()
+    deus_magnus_event_description_4 = models.TextField()
+    deus_magnus_event_description_5 = models.TextField()
     deus_magnus_event_slug = models.SlugField (max_length=255,blank=True, null=True)
     deus_magnus_event_img = models.ImageField(upload_to='even_images/')
     deus_magnus_event_author = models.ForeignKey(User, on_delete=models.CASCADE)
