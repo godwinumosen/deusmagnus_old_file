@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Dues Magnus Events {% endblock %}
+{% block content%}
+
+<section class="parallax event-section" data-stellar-background-ratio="0.5" style="background-image:url({% static "images/deusm.jpg" %});">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tagline-message event-title text-center">
+                    <h3>News, Events & Insights</h3>
+                    <a href="{% url 'contact' %}" class="btn btn-primary"style="border-radius: 10px;">Get in Touch <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div><!-- end col --> 
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section><!-- end section -->
+
+<section class="section">
+    <div class="container">
+        <div class="section-title text-center">
+            <h4 style="color: #98681e;">Possible sources to explore and include: Airbnb, Realtors.com,<br>
+                Sothebys, Services Related Regulatory Bodies in Nigeria.</h4>
+        </div><!-- end title -->
+
+        <div class="row text-center">
+            {% for post in object_list %}
+            <div class="col-md-4 col-sm-6">
+                <div class="teammembers">
+                    <div class="entry">
+                        <a href="{% url 'events_article_detail' post.pk %}">
+                            <img src="{{ post.deus_magnus_event_img.url }}"height="240px" alt="" >
+                        </a>
+                    </div><!-- end box -->
+                    <div class="teamdesc">
+                        <a href="{% url 'events_article_detail' post.pk %}">
+                        <h4 style="color: #98681e;">{{ post.deus_magnus_event_title|truncatechars:45}}</h4>
+                        </a>
+                        <hr>
+                        <h5>{{ post.deus_magnus_event_description|truncatechars:60 }}</h5>
+                        <div class="btn-wrapper">
+                            <a href="{% url 'events_article_detail' post.pk %}"class="btn btn-primary"style="border-radius: 10px;">Read More <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div><!-- end teamdesc -->
+                </div><!-- end teammembers -->
+            </div><!-- end col -->
+            {% endfor %}
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/66b25f401601a2195ba175fc/1i4kc85n1';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+
+
+
+{% endblock %}
