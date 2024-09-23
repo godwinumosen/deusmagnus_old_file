@@ -3,7 +3,7 @@ from django.contrib import admin
 from . import models
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost, LastDeusMagnusMainPicturePost,SubPicture_2
 from .models import SubPicture_1, VideoSubImage, DeusMagnusEventBlog,OurManagementsInDeusMagnus,FAQs
-from .models import GLOSSARY,Mainvideo,BlogDeusMagnus,FooterPost
+from .models import GLOSSARY,Mainvideo,BlogDeusMagnus,FooterPost,Guide
 #The DeusMagnus post,post model admin
 
 
@@ -57,12 +57,18 @@ class BlogDeusMagnusModelAdmin (admin.ModelAdmin):
     list_display = ['blog_deus_magnus_title','blog_deus_magnus_description','blog_deus_magnus_img','blog_deus_magnus_author']
 admin.site.register(BlogDeusMagnus, BlogDeusMagnusModelAdmin)
 
-#This is the board of director in Deus Magnus 
+#This is the event and news of Deus Magnus 
 class DeusMagnusEventBlogModelAdmin (admin.ModelAdmin):
     prepopulated_fields = {'deus_magnus_event_slug': ('deus_magnus_event_title',)}
     list_display = ['deus_magnus_event_title','deus_magnus_event_description','deus_magnus_event_img',
                     'deus_magnus_event_author']
 admin.site.register(DeusMagnusEventBlog, DeusMagnusEventBlogModelAdmin)
+
+#Guides section of Deus Magnus 
+class GuidesModelAdmin (admin.ModelAdmin):
+    prepopulated_fields = {'guides_slug': ('guides_title',)}
+    list_display = ['guides_title','guides_author','guides_img']
+admin.site.register(Guide, GuidesModelAdmin)
 
 #Our Team management of deus magnus view
 class OurManagementsInDeusMagnusModelAdmin (admin.ModelAdmin):

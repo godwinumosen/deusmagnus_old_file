@@ -198,9 +198,10 @@ class DeusMagnusEventBlogArticleDetailView(DetailView):
 
 
 #This article belong to deus_magnus Guids view
-class EventBlog(ListView):
+class GuidesView(ListView):
     model = DeusMagnusEventBlog
-    template_name = 'deus_magnus/deus_magnus_events.html'
+    template_name = 'deus_magnus/guides_1.html'
+
 #The event of deus magnus' article details class base view
 '''class DeusMagnusEventBlogArticleDetailView(DetailView):
     model = DeusMagnusEventBlog

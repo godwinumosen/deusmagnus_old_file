@@ -174,6 +174,26 @@ class DeusMagnusEventBlog(models.Model):
         return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail','last_detail',
                        'second_detail','detail','board_detail','blog_detail',)
 
+from django.db import models
+
+class Guide(models.Model):
+    guides_title = models.CharField(max_length=255)
+    guides_introduction_description = models.TextField()
+    guides_slug = models.SlugField (max_length=255,blank=True, null=True)
+    guides_key_factors = models.JSONField()  # To store key factors as a list of dicts
+    guides_investment_benefits = models.JSONField()  # Similar to key_factors
+    guides_steps_to_navigate = models.JSONField()  # Steps in the buying process
+    guides_conclusion = models.TextField()
+    guides_img = models.ImageField(upload_to='guides_images/')
+    guides_author = models.ForeignKey(User, on_delete=models.CASCADE)
+    guides_publish_date = models.DateTimeField (auto_now_add= True)
+    class Meta:
+        ordering =['-guides_publish_date']
+
+    def __str__(self):
+        return self.title
+    def get_absolute_url(self):
+        return reverse('home')
 
 #Our Team management of deus magnus view
 class OurManagementsInDeusMagnus(models.Model):
