@@ -34,7 +34,7 @@
                     </div><!-- end box -->
                     <div class="teamdesc">
                         <a href="{% url 'events_article_detail' post.pk %}">
-                        <h4 style="color: #98681e;">{{ post.deus_magnus_event_title|truncatechars:45}}</h4>
+                        <h4 style="color: #98681e;">{{ post.deus_magnus_event_title|truncatechars:55}}</h4>
                         </a>
                         <hr>
                         <h5>{{ post.deus_magnus_event_description|truncatechars:60 }}</h5>
@@ -42,7 +42,7 @@
                             <a href="{% url 'events_article_detail' post.pk %}"class="btn btn-primary"style="border-radius: 10px;">Read More <i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div><!-- end teamdesc -->
-                </div><!-- end teammembers -->
+                </div><!-- end teammembers --><br>
             </div><!-- end col -->
             {% endfor %}
         </div><!-- end row -->

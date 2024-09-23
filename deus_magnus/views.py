@@ -183,7 +183,7 @@ class BlogArticleDetail(DetailView):
         object = get_object_or_404(BlogDeusMagnus, pk=pk)
         return render(request, 'deus_magnus/blog_article_detail.html', {'blog_detail': object})
     
-#This article belong to deus_magnus_events view
+#This deus_magnus_events view
 class EventBlog(ListView):
     model = DeusMagnusEventBlog
     template_name = 'deus_magnus/deus_magnus_events.html'
@@ -195,6 +195,19 @@ class DeusMagnusEventBlogArticleDetailView(DetailView):
     def DeusMagnusEventBlogArticleDetailView(request, pk): 
         object = get_object_or_404(DeusMagnusEventBlog, pk=pk)
         return render(request, 'deus_magnus/deus_magnus_event_article.html',{'events_article_detail': object})
+
+
+#This article belong to deus_magnus Guids view
+class EventBlog(ListView):
+    model = DeusMagnusEventBlog
+    template_name = 'deus_magnus/deus_magnus_events.html'
+#The event of deus magnus' article details class base view
+'''class DeusMagnusEventBlogArticleDetailView(DetailView):
+    model = DeusMagnusEventBlog
+    template_name = 'deus_magnus/deus_magnus_event_article.html'
+    def DeusMagnusEventBlogArticleDetailView(request, pk): 
+        object = get_object_or_404(DeusMagnusEventBlog, pk=pk)
+        return render(request, 'deus_magnus/deus_magnus_event_article.html',{'events_article_detail': object})'''
     
 #Our Team management of deus magnus view
 class OurTeam(ListView):
