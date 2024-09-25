@@ -177,13 +177,18 @@ class DeusMagnusEventBlog(models.Model):
 from django.db import models
 
 class Guide(models.Model):
-    guides_title = models.CharField(max_length=255)
-    guides_introduction_description = models.TextField()
-    guides_slug = models.SlugField (max_length=255,blank=True, null=True)
-    guides_key_factors = models.JSONField()  # To store key factors as a list of dicts
-    guides_investment_benefits = models.JSONField()  # Similar to key_factors
-    guides_steps_to_navigate = models.JSONField()  # Steps in the buying process
-    guides_conclusion = models.TextField()
+    guides_title = models.CharField(max_length=255, blank=True, null=True)
+    guides_description = models.TextField()
+    guides_sub_title_1 = models.CharField(max_length=200, blank=True, null=True)
+    guides_description_1 = models.TextField()
+    guides_sub_title_2 = models.CharField(max_length=200, blank=True, null=True)
+    guides_description_2 = models.TextField()
+    guides_sub_title_3 = models.CharField(max_length=200, blank=True, null=True)
+    guides_description_3 = models.TextField()
+    guides_sub_title_4 = models.CharField(max_length=200, blank=True, null=True)
+    guides_description_4 = models.TextField()
+    guides_sub_title_5 = models.CharField(max_length=200, blank=True, null=True)
+    guides_description_5 = models.TextField()
     guides_img = models.ImageField(upload_to='guides_images/')
     guides_author = models.ForeignKey(User, on_delete=models.CASCADE)
     guides_publish_date = models.DateTimeField (auto_now_add= True)
@@ -191,7 +196,8 @@ class Guide(models.Model):
         ordering =['-guides_publish_date']
 
     def __str__(self):
-        return self.title
+       return self.guides_title
+
     def get_absolute_url(self):
         return reverse('home')
 

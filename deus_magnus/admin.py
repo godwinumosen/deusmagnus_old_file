@@ -66,7 +66,6 @@ admin.site.register(DeusMagnusEventBlog, DeusMagnusEventBlogModelAdmin)
 
 #Guides section of Deus Magnus 
 class GuidesModelAdmin (admin.ModelAdmin):
-    prepopulated_fields = {'guides_slug': ('guides_title',)}
     list_display = ['guides_title','guides_author','guides_img']
 admin.site.register(Guide, GuidesModelAdmin)
 
