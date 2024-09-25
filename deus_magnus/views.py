@@ -203,12 +203,12 @@ class GuidesView(ListView):
     template_name = 'deus_magnus/guides_1.html'
 
 #The event of deus magnus' article details class base view
-'''class DeusMagnusEventBlogArticleDetailView(DetailView):
+class DeusMagnusEventBlogArticleDetailView(DetailView):
     model = DeusMagnusEventBlog
     template_name = 'deus_magnus/deus_magnus_event_article.html'
     def DeusMagnusEventBlogArticleDetailView(request, pk): 
         object = get_object_or_404(DeusMagnusEventBlog, pk=pk)
-        return render(request, 'deus_magnus/deus_magnus_event_article.html',{'events_article_detail': object})'''
+        return render(request, 'deus_magnus/deus_magnus_event_article.html',{'events_article_detail': object})
     
 #Our Team management of deus magnus view
 class OurTeam(ListView):

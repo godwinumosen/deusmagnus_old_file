@@ -4,7 +4,7 @@ from . import views
 from .views import HomeView, ArticleDetailView, SecondConstructionDetailViewArticleDetailView,VideoImageDetailView
 from .views import LastConstructionDetailViewArticleDetailView, SubPictureDetailView,SubVideoDetailView
 from .views import BlogArticleDetail,EventBlog,OurTeam,ManagementTeamArticleOfDuesMagnusDetail
-from .views import DeusMagnusEventBlogArticleDetailView,BlogView,FAQs_item,GLOSSARY_item,GuidesView
+from .views import DeusMagnusEventBlogArticleDetailView,BlogView,FAQs_item,GLOSSARY_item,GuidesView,GuidesDetailView
 
 urlpatterns = [
     path('index/', views.index, name='index'),
@@ -25,6 +25,7 @@ urlpatterns = [
     path('deus_magnus_event/', EventBlog.as_view(), name='deus_magnus_event'),
     path('events_article_detail/<int:pk>/', DeusMagnusEventBlogArticleDetailView.as_view(), name='events_article_detail'),
     path('guides_1/', GuidesView.as_view(), name='guides_1'),
+    path('events_article_detail/<int:pk>/', GuidesDetailView.as_view(), name='events_article_detail'),
     path('our_management_team/', OurTeam.as_view(), name='our_management_team'),
     path('our_management_team_article/<int:pk>/', ManagementTeamArticleOfDuesMagnusDetail.as_view(), name="our_management_team_article"),
     path('mission_vision_strategy/', views.MissionVisionStrategesView, name='mission_vision_strategy'),
