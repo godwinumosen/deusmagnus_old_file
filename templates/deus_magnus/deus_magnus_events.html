@@ -9,7 +9,7 @@
             <div class="col-md-12">
                 <div class="tagline-message event-title text-center">
                     <h3>News, Events & Insights</h3>
-                    <a href="{% url 'contact' %}" class="btn btn-primary"style="border-radius: 10px;">Get in Touch <i class="fa fa-arrow-right"></i></a>
+                    <a href="{% url 'contact' %}" class="btn btn-primary"style="border-radius: 10px;">Get in Touch</a>
                 </div>
             </div><!-- end col --> 
         </div><!-- end row -->
@@ -22,7 +22,7 @@
             <h4 style="color: #98681e;">Possible sources to explore and include: Airbnb, Realtors.com,<br>
                 Sothebys, Services Related Regulatory Bodies in Nigeria.</h4>
         </div><!-- end title -->
-
+        
         <div class="row text-center">
             {% for post in object_list %}
             <div class="col-md-4 col-sm-6">
@@ -34,12 +34,12 @@
                     </div><!-- end box -->
                     <div class="teamdesc">
                         <a href="{% url 'events_article_detail' post.pk %}">
-                        <h4 style="color: #98681e;">{{ post.deus_magnus_event_title|truncatechars:55}}</h4>
+                        <h4 style="color: #98681e;">{{ post.deus_magnus_event_title}}</h4>
                         </a>
                         <hr>
                         <h5>{{ post.deus_magnus_event_description|truncatechars:60 }}</h5>
                         <div class="btn-wrapper">
-                            <a href="{% url 'events_article_detail' post.pk %}"class="btn btn-primary"style="border-radius: 10px;">Read More <i class="fa fa-arrow-right"></i></a>
+                            <a href="{% url 'events_article_detail' post.pk %}"class="btn btn-primary"style="border-radius: 10px;">Read More</a>
                         </div>
                     </div><!-- end teamdesc -->
                 </div><!-- end teammembers --><br>
