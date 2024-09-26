@@ -96,9 +96,6 @@ def RealEstateServices (request):
 # Project Management page of the deus magnus webapp
 def ProjectManagement (request):
     return render(request, 'deus_magnus/project_management.html', {})
-# Guides Management page of the deus magnus webapp
-def Guides (request):
-    return render(request, 'deus_magnus/guides.html', {})
 # Construction Development Management page of the deus magnus webapp
 def ConstructionDevelopment (request):
     return render(request, 'deus_magnus/construction_development.html', {})
