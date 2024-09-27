@@ -197,7 +197,7 @@ class Guide(models.Model):
         ordering = ['-guides_publish_date']
 
     def __str__(self):
-        return self.guides_publish_date
+        return self.guides_title
     
     def get_absolute_url(self):
         return reverse('home')
