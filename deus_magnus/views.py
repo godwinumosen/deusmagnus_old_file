@@ -5,7 +5,7 @@ from django.http import HttpResponse
 from django.urls import reverse
 from django.urls import reverse_lazy
 from .models import SubPicture_1, SubPicture_2,VideoSubImage, BlogDeusMagnus,DeusMagnusEventBlog,FAQs,Mainvideo
-from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost,FooterPost
+from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost
 from .models import LastDeusMagnusMainPicturePost,OurManagementsInDeusMagnus,GLOSSARY,Guide
 from django.contrib import messages
 from django.contrib.auth.models import User
@@ -16,12 +16,7 @@ def index (request):
     return render (request, 'deus_magnus/index.html')
 
 def base_view(request):
-    try:
-        footer_post = FooterPost.objects.latest('id')  # Fetch the most recent footer post
-    except FooterPost.DoesNotExist:
-        footer_post = None
-
-    return render(request, 'base.html', {'footer_post': footer_post})
+    return render(request, 'base.html')
 
 #The main HomeView page
 class HomeView(ListView): 
@@ -193,19 +188,17 @@ class DeusMagnusEventBlogArticleDetailView(DetailView):
         object = get_object_or_404(DeusMagnusEventBlog, pk=pk)
         return render(request, 'deus_magnus/deus_magnus_event_article.html',{'events_article_detail': object})
 
-
 #This article belong to deus_magnus Guids view
 class GuidesView(ListView):
     model = Guide
     template_name = 'deus_magnus/guides_1.html'
-
 #The guids_article for deus magnus' article details class base view
 class GuidesDetailView(DetailView):
     model = Guide
-    template_name = 'deus_magnus/guids_article.html'
+    template_name = 'deus_magnus/guides_article.html'
     def GuidesDetailView(request, pk): 
         object = get_object_or_404(Guide, pk=pk)
-        return render(request, 'deus_magnus/guids_article.html',{'guids_article': object})
+        return render(request, 'deus_magnus/guides_article.html',{'guides_article': object})
     
 #Our Team management of deus magnus view
 class OurTeam(ListView):

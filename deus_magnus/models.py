@@ -193,11 +193,11 @@ class Guide(models.Model):
     guides_author = models.ForeignKey(User, on_delete=models.CASCADE)
     guides_publish_date = models.DateTimeField (auto_now_add= True)
     class Meta:
-        ordering =['-guides_publish_date']
+        ordering = ['-guides_publish_date']
 
     def __str__(self):
-       return self.guides_title
-
+        return self.guides_publish_date
+    
     def get_absolute_url(self):
         return reverse('home')
 
@@ -256,10 +256,3 @@ class GLOSSARY(models.Model):
         return reverse('home')
 
 
-#the footer description
-class FooterPost(models.Model):
-    footer_title = models.CharField(max_length=100, blank=True, null=True)
-    copyright_year = models.PositiveIntegerField(default=2025)
-    # other fields as needed
-    def __str__(self):
-        return self.footer_title
