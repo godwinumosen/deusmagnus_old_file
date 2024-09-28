@@ -3,7 +3,7 @@ from django.contrib import admin
 from . import models
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost, LastDeusMagnusMainPicturePost,SubPicture_2
 from .models import SubPicture_1, VideoSubImage, DeusMagnusEventBlog,OurManagementsInDeusMagnus,FAQs
-from .models import GLOSSARY,Mainvideo,BlogDeusMagnus,Guide
+from .models import GLOSSARY,Mainvideo,BlogDeusMagnus,Guides
 #The DeusMagnus post,post model admin
 
 
@@ -63,7 +63,7 @@ admin.site.register(DeusMagnusEventBlog, DeusMagnusEventBlogModelAdmin)
 #Guides section of Deus Magnus 
 class GuidesModelAdmin (admin.ModelAdmin):
     list_display = ['guides_title','guides_author','guides_img']
-admin.site.register(Guide, GuidesModelAdmin)
+admin.site.register(Guides, GuidesModelAdmin)
 
 #Our Team management of deus magnus view
 class OurManagementsInDeusMagnusModelAdmin (admin.ModelAdmin):

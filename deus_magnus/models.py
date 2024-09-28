@@ -177,7 +177,7 @@ class DeusMagnusEventBlog(models.Model):
 
 from django.db import models
 
-class Guide(models.Model):
+class Guides(models.Model):
     guides_title = models.CharField(max_length=255, blank=True, null=True)
     guides_description = models.TextField()
     guides_sub_title_1 = models.CharField(max_length=200, blank=True, null=True)
@@ -192,9 +192,9 @@ class Guide(models.Model):
     guides_description_5 = models.TextField()
     guides_img = models.ImageField(upload_to='guides_images/')
     guides_author = models.ForeignKey(User, on_delete=models.CASCADE)
-    guides_publish_date = models.DateTimeField (auto_now_add= True)
+    '''guides_publish_date = models.DateTimeField (auto_now_add= True)
     class Meta:
-        ordering = ['-guides_publish_date']
+        ordering = ['-guides_publish_date']'''
 
     def __str__(self):
         return self.guides_title
@@ -255,5 +255,3 @@ class GLOSSARY(models.Model):
     
     def get_absolute_url(self):
         return reverse('home')
-
-

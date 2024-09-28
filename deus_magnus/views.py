@@ -6,7 +6,7 @@ from django.urls import reverse
 from django.urls import reverse_lazy
 from .models import SubPicture_1, SubPicture_2,VideoSubImage, BlogDeusMagnus,DeusMagnusEventBlog,FAQs,Mainvideo
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost
-from .models import LastDeusMagnusMainPicturePost,OurManagementsInDeusMagnus,GLOSSARY,Guide
+from .models import LastDeusMagnusMainPicturePost,OurManagementsInDeusMagnus,GLOSSARY,Guides
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.mixins import LoginRequiredMixin  
@@ -190,14 +190,14 @@ class DeusMagnusEventBlogArticleDetailView(DetailView):
 
 #This article belong to deus_magnus Guids view
 class GuidesView(ListView):
-    model = Guide
+    model = Guides
     template_name = 'deus_magnus/guides_1.html'
 #The guids_article for deus magnus' article details class base view
 class GuidesDetailView(DetailView):
-    model = Guide
+    model = Guides
     template_name = 'deus_magnus/guides_article.html'
     def GuidesDetailView(request, pk): 
-        object = get_object_or_404(Guide, pk=pk)
+        object = get_object_or_404(Guides, pk=pk)
         return render(request, 'deus_magnus/guides_article.html',{'guides_article': object})
     
 #Our Team management of deus magnus view
