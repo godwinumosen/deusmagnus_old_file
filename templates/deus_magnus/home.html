@@ -43,9 +43,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
+                {% for bash_p in bash_ps %}
                 <div class="custom-module">
-                    <img style="margin-top: 1px; border-radius: 5px;"src="{% static 'images/bash.jpg ' %}" alt="" class="img-responsive wow slideInLeft">
+                    <img style="margin-top: 1px; border-radius: 5px;"src="{{ bash_p.deus_magnus_bash_p.url }}" alt="" class="img-responsive wow slideInLeft">
                 </div><!-- end module -->
+                {% endfor %}
             </div><!-- end col -->
             <div class="col-md-8">  
                 <div class="custom-module p40l">
