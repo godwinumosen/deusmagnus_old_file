@@ -3,7 +3,7 @@ from django.contrib import admin
 from . import models
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost, LastDeusMagnusMainPicturePost,SubPicture_2
 from .models import SubPicture_1, VideoSubImage, DeusMagnusEventBlog,OurManagementsInDeusMagnus,FAQs
-from .models import GLOSSARY,Mainvideo,BlogDeusMagnus,Guides,Contactvideo,Aboutvideo
+from .models import GLOSSARY,Mainvideo,BlogDeusMagnus,Guides,Contactvideo,Aboutvideo,FounderPicture
 #The DeusMagnus post,post model admin
 
 
@@ -18,6 +18,9 @@ admin.site.register(Contactvideo, ContactvideoModelAdmin)
 class AboutvideoModelAdmin (admin.ModelAdmin):
     list_display = ['deus_magnus_about_video']
 admin.site.register(Aboutvideo, AboutvideoModelAdmin)
+class FounderPictureModelAdmin (admin.ModelAdmin):
+    list_display = ['deus_magnus_founder_p']
+admin.site.register(FounderPicture, FounderPictureModelAdmin)
 #The DeusMagnus main post model admin
 class DeusMagnusMainPostModelAdmin (admin.ModelAdmin):
     prepopulated_fields = {'deus_magnus_slug': ('deus_magnus_title',)}

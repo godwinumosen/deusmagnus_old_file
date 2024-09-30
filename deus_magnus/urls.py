@@ -5,6 +5,7 @@ from .views import HomeView, ArticleDetailView, SecondConstructionDetailViewArti
 from .views import LastConstructionDetailViewArticleDetailView, SubPictureDetailView,SubVideoDetailView
 from .views import BlogArticleDetail,EventBlog,OurTeam,ManagementTeamArticleOfDuesMagnusDetail,ContactView,AboutView
 from .views import DeusMagnusEventBlogArticleDetailView,BlogView,FAQs_item,GLOSSARY_item,GuidesView,GuidesDetailView
+from .views import FounderMessageView
 
 urlpatterns = [
     path('index/', views.index, name='index'),
@@ -13,7 +14,6 @@ urlpatterns = [
     path('article/<int:pk>/', ArticleDetailView.as_view(), name="detail"),
     path('article2/<int:pk>/', SecondConstructionDetailViewArticleDetailView.as_view(), name="second_detail"),
     path('article3/<int:pk>/', LastConstructionDetailViewArticleDetailView.as_view(), name="last_detail"),
-    #path('about/', views.AboutView, name='about'),
     path('about/', AboutView.as_view(), name='about'),
     path('contact/', ContactView.as_view(), name='contact'),
     #path('subpicture_1/', views.subpicture_1, name='subpicture_1'),
@@ -30,7 +30,8 @@ urlpatterns = [
     path('our_management_team/', OurTeam.as_view(), name='our_management_team'),
     path('our_management_team_article/<int:pk>/', ManagementTeamArticleOfDuesMagnusDetail.as_view(), name="our_management_team_article"),
     path('mission_vision_strategy/', views.MissionVisionStrategesView, name='mission_vision_strategy'),
-    path('founder_message/', views.FounderMessageView, name='founder_message'),
+    #path('founder_message/', views.FounderMessageView, name='founder_message'),
+    path('founder_message/', FounderMessageView.as_view(), name='founder_message'),
     path('services/', views.ServicesPage, name='services'),
     path('facility_management/', views.FacilityManagement, name='facility_management'),
     path('real_estate_services/', views.RealEstateServices, name='real_estate_services'),

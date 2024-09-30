@@ -5,7 +5,7 @@ from django.http import HttpResponse
 from django.urls import reverse
 from django.urls import reverse_lazy
 from .models import SubPicture_1, SubPicture_2,VideoSubImage, BlogDeusMagnus,DeusMagnusEventBlog,FAQs,Mainvideo
-from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost
+from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost,FounderPicture
 from .models import LastDeusMagnusMainPicturePost,OurManagementsInDeusMagnus,GLOSSARY,Guides,Contactvideo,Aboutvideo
 from django.contrib import messages
 from django.contrib.auth.models import User
@@ -224,5 +224,8 @@ class ManagementTeamArticleOfDuesMagnusDetail(DeleteView):
 def MissionVisionStrategesView (request):
     return render (request, 'deus_magnus/mission_vision.html', {})
 
-def FounderMessageView (request):
-    return render(request, 'deus_magnus/founder_message.html', {}) 
+class FounderMessageView(ListView):
+    model = FounderPicture
+    template_name = 'deus_magnus/founder_message.html'
+    def FounderMessageView (request):
+        return render(request, 'deus_magnus/founder_message.html', {}) 
