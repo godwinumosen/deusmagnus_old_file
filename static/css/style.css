@@ -98,6 +98,20 @@ body {
 
 }
 
+.section {
+    margin: 20px 0; /* Consistent vertical spacing */
+    padding: 20px;  /* Space inside the section */
+}
+
+.containerr {
+    margin: 0; /* Remove any margin from the containerr */
+    padding: 0; /* Remove any padding if unnecessary */
+}
+
+h4, h5, p {
+    margin: 10px 0; /* Consistent spacing for headings and paragraphs */
+    line-height: 1.5; /* Improve readability */
+}
 
 
 
@@ -2325,4 +2339,6 @@ RESPONSIVE
         padding: 1em 0.7em;
     }
 }
+
+
 
