@@ -100,7 +100,6 @@ body {
 
 
 
-
 /* Style the video element */
 #myVideo {
     object-fit: cover; /* Ensures the video covers the entire container */
@@ -111,7 +110,7 @@ body {
 /* Media query for smaller screens */
 @media (max-width: 768px) {
     #myVideo {
-        height: 1000px; /* Adjust the height for smaller screens */
+        height: 240px; /* Adjust the height for smaller screens */
     }
 }
 
@@ -2137,7 +2136,7 @@ a:hover,
 a:focus,
 .box i,
 .topbar .text-left i {
-    color: #cbc4b8;
+    color: #9e9485;
 }
 
 .shop-extra .nav-tabs>li:hover a,
@@ -2325,3 +2324,6 @@ RESPONSIVE
         padding: 1em 0.7em;
     }
 }
+
+
+
