@@ -11,6 +11,9 @@ class Mainvideo(models.Model):
 #The Contactvideo on deusmagnus website
 class Contactvideo(models.Model):
     deus_magnus_contact_video = models.FileField(upload_to='contact_videos/') 
+#The Aboutvideo on deusmagnus website
+class Aboutvideo(models.Model):
+    deus_magnus_about_video = models.FileField(upload_to='about_videos/') 
 # The main model for Deus Magnus Model category
 class DeusMagnusMainPost(models.Model):
     deus_magnus_title = models.CharField(max_length=255, blank=True, null=True)

@@ -6,7 +6,7 @@ from django.urls import reverse
 from django.urls import reverse_lazy
 from .models import SubPicture_1, SubPicture_2,VideoSubImage, BlogDeusMagnus,DeusMagnusEventBlog,FAQs,Mainvideo
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost
-from .models import LastDeusMagnusMainPicturePost,OurManagementsInDeusMagnus,GLOSSARY,Guides,Contactvideo
+from .models import LastDeusMagnusMainPicturePost,OurManagementsInDeusMagnus,GLOSSARY,Guides,Contactvideo,Aboutvideo
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.mixins import LoginRequiredMixin  
@@ -77,8 +77,12 @@ class LastConstructionDetailViewArticleDetailView(DetailView):
         return context
     
 # About page of  the deus magnus blog app
-def AboutView (request):
-    return render(request, 'deus_magnus/about_us.html', {})
+class AboutView(ListView): 
+    model = Aboutvideo
+    template_name = 'deus_magnus/about_us.html'
+    def AboutView (request):
+        return render(request, 'deus_magnus/about_us.html', {})
+    
 # Services page of the deus magnus webapp
 def ServicesPage (request):
     return render(request, 'deus_magnus/servicespage.html', {})
