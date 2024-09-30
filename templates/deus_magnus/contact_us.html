@@ -17,10 +17,13 @@
 
         <section class="section gb nopadtop">
             <div class="container">
+                {% for post in object_list %}
                 <video autoplay muted playsinline loop width="100%" height="60%"  controls>
-                    <source src="{% static "front.mp4" %}" type="video/mp4">
+                    <source src="{{ post.deus_magnus_contact_video.url }}" type="video/mp4">
+                    <source src="{{ post.deus_magnus_contact_video.url }}" type="video/webm">
                     Your browser does not support the video tags..
                 </video>
+                {% endfor %}
         
                 <div class="boxed boxedp4">
                     <div class="row contactv2 text-center">

@@ -8,6 +8,9 @@ from datetime import datetime, date
 class Mainvideo(models.Model):
     deus_magnus_first_video = models.FileField(upload_to='main_videos/') 
 
+#The Contactvideo on deusmagnus website
+class Contactvideo(models.Model):
+    deus_magnus_contact_video = models.FileField(upload_to='contact_videos/') 
 # The main model for Deus Magnus Model category
 class DeusMagnusMainPost(models.Model):
     deus_magnus_title = models.CharField(max_length=255, blank=True, null=True)
