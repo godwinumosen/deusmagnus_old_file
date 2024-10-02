@@ -2,7 +2,7 @@
 {% load static %}
 {% block title %} Services Page  {% endblock %}
 {% block content %}
-<section class="parallax event-section" data-stellar-background-ratio="0.5" style="background-image:url({% static "images/m_v_s.jpg" %});">
+<section class="parallax event-section" data-stellar-background-ratio="" style="background-image:url({% static "images/m_v_s.jpg" %});">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -17,9 +17,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
+                {% for post in object_list %}
                 <div class="custom-module">
-                    <img style="border-radius: 5px;"src="{% static 'images/mitchell.jpg ' %}" alt="" class="img-responsive wow slideInLeft">
+                    <img style="border-radius: 5px;"src="{{ post.deus_magnus_services_p.url }}" alt="" class="img-responsive wow slideInLeft">
                 </div><!-- end module -->
+                {% endfor %}
             </div><!-- end col -->
             <div class="col-md-8">  
                 <div class="custom-module p40l">
