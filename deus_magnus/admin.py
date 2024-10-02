@@ -4,7 +4,7 @@ from . import models
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost, LastDeusMagnusMainPicturePost,SubPicture_2
 from .models import SubPicture_1, VideoSubImage, DeusMagnusEventBlog,OurManagementsInDeusMagnus,FAQs,BashPicture
 from .models import GLOSSARY,Mainvideo,BlogDeusMagnus,Guides,Contactvideo,Aboutvideo,FounderPicture,ServicesPagePicture
-
+from .models import RealEstatePicture
 #The DeusMagnus post,post model admin
 
 
@@ -26,6 +26,9 @@ admin.site.register(FounderPicture, FounderPictureModelAdmin)
 class ServicesPagePictureModelAdmin (admin.ModelAdmin):
     list_display = ['deus_magnus_services_p']
 admin.site.register(ServicesPagePicture, ServicesPagePictureModelAdmin)
+class RealEstatePictureModelAdmin (admin.ModelAdmin):
+    list_display = ['deus_magnus_real_estate_p']
+admin.site.register(RealEstatePicture, RealEstatePictureModelAdmin)
 class BashPictureModelAdmin (admin.ModelAdmin):
     list_display = ['deus_magnus_bash_p']
 admin.site.register(BashPicture, BashPictureModelAdmin)
