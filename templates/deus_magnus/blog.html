@@ -2,21 +2,23 @@
 {% load static %}
 {% block title %}Blog News{% endblock %}
 {% block content %}
-
-        <section class="section db p120">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12"><br><br>
-                        <div class="tagline-message page-title text-center">
-                            <h3>Blog News</h3>
-                            <ul class="breadcrumb">
-                                <li><a href="{% url 'home' %}">Home Page</a></li>  
-                            </ul>
-                        </div>
-                    </div><!-- end col -->
-                </div><!-- end row -->
-            </div><!-- end container -->
-        </section><!-- end section -->
+<section class="parallax event-section" data-stellar-background-ratio="0.5" style="background-image:url({% static "images/m_v_s.jpg" %});">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tagline-message event-title text-center">
+                        <h3>Blog News</h3>
+                        <ul class="breadcrumb">
+                            <li><a href="{% url 'home' %}">Home Page</a></li>  
+                        </ul>
+                    </div>
+                </div>
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section><!-- end section -->
+<section class="section">
+      
 
         <section class="section gb nopadtop">
             <div class="container">
