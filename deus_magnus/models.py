@@ -5,26 +5,7 @@ from django.urls import reverse
 from datetime import datetime, date
 
 #The first main video on deusmagnus website
-class Mainvideo(models.Model):
-    deus_magnus_first_video = models.FileField(upload_to='main_videos/') 
-#The Contactvideo on deusmagnus website
-class Contactvideo(models.Model):
-    deus_magnus_contact_video = models.FileField(upload_to='contact_videos/') 
-#The Aboutvideo on deusmagnus website
-class Aboutvideo(models.Model):
-    deus_magnus_about_video = models.FileField(upload_to='about_videos/') 
-class FounderPicture(models.Model):
-    deus_magnus_founder_p = models.ImageField(upload_to='founder_p/') 
-class BashPicture(models.Model):
-    deus_magnus_bash_p = models.ImageField(upload_to='bash_p/') 
-class ServicesPagePicture(models.Model):
-    deus_magnus_services_p = models.ImageField(upload_to='services_p/') 
-class RealEstatePicture(models.Model):
-    deus_magnus_real_estate_p = models.ImageField(upload_to='real_estate_p/') 
-class FacilityManagementPicture(models.Model):
-    deus_magnus_facility_p = models.ImageField(upload_to='facility_p/')
-class ConstructionPicture(models.Model):
-    deus_magnus_construction_p = models.ImageField(upload_to='construction_p/')
+
 # The main model for Deus Magnus Model category
 class DeusMagnusMainPost(models.Model):
     deus_magnus_title = models.CharField(max_length=255, blank=True, null=True)
@@ -272,3 +253,35 @@ class GLOSSARY(models.Model):
     
     def get_absolute_url(self):
         return reverse('home')
+
+class Mainvideo(models.Model):
+    deus_magnus_first_video = models.FileField(upload_to='main_videos/') 
+
+#The Contactvideo on deusmagnus website
+class Contactvideo(models.Model):
+    deus_magnus_contact_video = models.FileField(upload_to='contact_videos/') 
+
+#The Aboutvideo on deusmagnus website
+class Aboutvideo(models.Model):
+    deus_magnus_about_video = models.FileField(upload_to='about_videos/') 
+
+class FounderPicture(models.Model):
+    deus_magnus_founder_p = models.ImageField(upload_to='founder_p/') 
+
+class BashPicture(models.Model):
+    deus_magnus_bash_p = models.ImageField(upload_to='bash_p/') 
+
+class ServicesPagePicture(models.Model):
+    deus_magnus_services_p = models.ImageField(upload_to='services_p/') 
+
+class RealEstatePicture(models.Model):
+    deus_magnus_real_estate_p = models.ImageField(upload_to='real_estate_p/') 
+
+class FacilityManagementPicture(models.Model):
+    deus_magnus_facility_p = models.ImageField(upload_to='facility_p/')
+
+class ConstructionPicture(models.Model):
+    deus_magnus_construction_p = models.ImageField(upload_to='construction_p/')
+    
+class ProjectPicture(models.Model):
+    deus_magnus_project_p = models.ImageField(upload_to='project_p/')

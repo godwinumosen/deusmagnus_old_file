@@ -4,40 +4,8 @@ from . import models
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost, LastDeusMagnusMainPicturePost,SubPicture_2
 from .models import SubPicture_1, VideoSubImage, DeusMagnusEventBlog,OurManagementsInDeusMagnus,FAQs,BashPicture
 from .models import GLOSSARY,Mainvideo,BlogDeusMagnus,Guides,Contactvideo,Aboutvideo,FounderPicture,ServicesPagePicture
-from .models import RealEstatePicture,FacilityManagementPicture,ConstructionPicture
-#The DeusMagnus post,post model admin
+from .models import RealEstatePicture,FacilityManagementPicture,ConstructionPicture,ProjectPicture
 
-
-class MainvideoModelAdmin (admin.ModelAdmin):
-    list_display = ['deus_magnus_first_video']
-admin.site.register(Mainvideo, MainvideoModelAdmin)
-
-class ContactvideoModelAdmin (admin.ModelAdmin):
-    list_display = ['deus_magnus_contact_video']
-admin.site.register(Contactvideo, ContactvideoModelAdmin)
-
-class AboutvideoModelAdmin (admin.ModelAdmin):
-    list_display = ['deus_magnus_about_video']
-admin.site.register(Aboutvideo, AboutvideoModelAdmin)
-
-class FounderPictureModelAdmin (admin.ModelAdmin):
-    list_display = ['deus_magnus_founder_p']
-admin.site.register(FounderPicture, FounderPictureModelAdmin)
-class ServicesPagePictureModelAdmin (admin.ModelAdmin):
-    list_display = ['deus_magnus_services_p']
-admin.site.register(ServicesPagePicture, ServicesPagePictureModelAdmin)
-class RealEstatePictureModelAdmin (admin.ModelAdmin):
-    list_display = ['deus_magnus_real_estate_p']
-admin.site.register(RealEstatePicture, RealEstatePictureModelAdmin)
-class BashPictureModelAdmin (admin.ModelAdmin):
-    list_display = ['deus_magnus_bash_p']
-admin.site.register(BashPicture, BashPictureModelAdmin)
-class FacilityManagementPictureModelAdmin (admin.ModelAdmin):
-    list_display = ['deus_magnus_facility_p']
-admin.site.register(FacilityManagementPicture, FacilityManagementPictureModelAdmin)
-class ConstructionPictureModelAdmin (admin.ModelAdmin):
-    list_display = ['deus_magnus_construction_p']
-admin.site.register(ConstructionPicture, ConstructionPictureModelAdmin)
 #The DeusMagnus main post model admin
 class DeusMagnusMainPostModelAdmin (admin.ModelAdmin):
     prepopulated_fields = {'deus_magnus_slug': ('deus_magnus_title',)}
@@ -110,3 +78,38 @@ class GLOSSARYModelAdmin (admin.ModelAdmin):
     list_display = ['GLOSSARY_title','GLOSSARY_response','GLOSSARY_author']
 admin.site.register(GLOSSARY, GLOSSARYModelAdmin)
 
+
+
+class MainvideoModelAdmin (admin.ModelAdmin):
+    list_display = ['deus_magnus_first_video']
+admin.site.register(Mainvideo, MainvideoModelAdmin)
+
+class ContactvideoModelAdmin (admin.ModelAdmin):
+    list_display = ['deus_magnus_contact_video']
+admin.site.register(Contactvideo, ContactvideoModelAdmin)
+
+class AboutvideoModelAdmin (admin.ModelAdmin):
+    list_display = ['deus_magnus_about_video']
+admin.site.register(Aboutvideo, AboutvideoModelAdmin)
+
+class FounderPictureModelAdmin (admin.ModelAdmin):
+    list_display = ['deus_magnus_founder_p']
+admin.site.register(FounderPicture, FounderPictureModelAdmin)
+class ServicesPagePictureModelAdmin (admin.ModelAdmin):
+    list_display = ['deus_magnus_services_p']
+admin.site.register(ServicesPagePicture, ServicesPagePictureModelAdmin)
+class RealEstatePictureModelAdmin (admin.ModelAdmin):
+    list_display = ['deus_magnus_real_estate_p']
+admin.site.register(RealEstatePicture, RealEstatePictureModelAdmin)
+class BashPictureModelAdmin (admin.ModelAdmin):
+    list_display = ['deus_magnus_bash_p']
+admin.site.register(BashPicture, BashPictureModelAdmin)
+class FacilityManagementPictureModelAdmin (admin.ModelAdmin):
+    list_display = ['deus_magnus_facility_p']
+admin.site.register(FacilityManagementPicture, FacilityManagementPictureModelAdmin)
+class ConstructionPictureModelAdmin (admin.ModelAdmin):
+    list_display = ['deus_magnus_construction_p']
+admin.site.register(ConstructionPicture, ConstructionPictureModelAdmin)
+class ProjectPictureModelAdmin (admin.ModelAdmin):
+    list_display = ['deus_magnus_project_p']
+admin.site.register(ProjectPicture, ProjectPictureModelAdmin)
