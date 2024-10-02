@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.urls import reverse
 from django.urls import reverse_lazy
+from .models import ServicesPagePicture
 from .models import SubPicture_1, SubPicture_2,VideoSubImage, BlogDeusMagnus,DeusMagnusEventBlog,FAQs,Mainvideo
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost,FounderPicture,BashPicture
 from .models import LastDeusMagnusMainPicturePost,OurManagementsInDeusMagnus,GLOSSARY,Guides,Contactvideo,Aboutvideo
@@ -85,8 +86,11 @@ class AboutView(ListView):
         return render(request, 'deus_magnus/about_us.html', {})
     
 # Services page of the deus magnus webapp
-def ServicesPage (request):
-    return render(request, 'deus_magnus/servicespage.html', {})
+class ServicesPage(ListView):
+    model = ServicesPagePicture
+    template_name = 'deus_magnus/servicespage.html'
+    def ServicesPage (request):
+        return render(request, 'deus_magnus/servicespage.html', {})
 # Facility Management page of the deus magnus webapp
 def FacilityManagement (request):
     return render(request, 'deus_magnus/facility_management.html', {})

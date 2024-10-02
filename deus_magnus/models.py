@@ -18,6 +18,8 @@ class FounderPicture(models.Model):
     deus_magnus_founder_p = models.ImageField(upload_to='founder_p/') 
 class BashPicture(models.Model):
     deus_magnus_bash_p = models.ImageField(upload_to='bash_p/') 
+class ServicesPagePicture(models.Model):
+    deus_magnus_services_p = models.ImageField(upload_to='services_p/') 
 # The main model for Deus Magnus Model category
 class DeusMagnusMainPost(models.Model):
     deus_magnus_title = models.CharField(max_length=255, blank=True, null=True)
