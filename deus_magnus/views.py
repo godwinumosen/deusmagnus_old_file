@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.urls import reverse
 from django.urls import reverse_lazy
-from .models import ServicesPagePicture,RealEstatePicture
+from .models import ServicesPagePicture,RealEstatePicture,FacilityManagementPicture,ConstructionPicture
 from .models import SubPicture_1, SubPicture_2,VideoSubImage, BlogDeusMagnus,DeusMagnusEventBlog,FAQs,Mainvideo
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost,FounderPicture,BashPicture
 from .models import LastDeusMagnusMainPicturePost,OurManagementsInDeusMagnus,GLOSSARY,Guides,Contactvideo,Aboutvideo
@@ -90,10 +90,13 @@ class ServicesPage(ListView):
     model = ServicesPagePicture
     template_name = 'deus_magnus/servicespage.html'
     def ServicesPage (request):
-        return render(request, 'deus_magnus/servicespage.html', {})
+        return render(request, 'deus_magnus/servicespage.html', {}) 
 # Facility Management page of the deus magnus webapp
-def FacilityManagement (request):
-    return render(request, 'deus_magnus/facility_management.html', {})
+class FacilityManagement(ListView):
+    model = FacilityManagementPicture
+    template_name = 'deus_magnus/facility_management.html'
+    def FacilityManagement (request):
+        return render(request, 'deus_magnus/facility_management.html', {})
 # Real Estate Services page of the deus magnus webapp
 class RealEstateServices(ListView):
     model = RealEstatePicture
@@ -104,8 +107,11 @@ class RealEstateServices(ListView):
 def ProjectManagement (request):
     return render(request, 'deus_magnus/project_management.html', {})
 # Construction Development Management page of the deus magnus webapp
-def ConstructionDevelopment (request):
-    return render(request, 'deus_magnus/construction_development.html', {})
+class ConstructionDevelopment(ListView):
+    model = ConstructionPicture
+    template_name = 'deus_magnus/construction_development.html'
+    def ConstructionDevelopment (request):
+        return render(request, 'deus_magnus/construction_development.html', {})
 
 # The frequently ask qeustion page of the media dropdown
 class FAQs_item(ListView):

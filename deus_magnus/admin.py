@@ -4,7 +4,7 @@ from . import models
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost, LastDeusMagnusMainPicturePost,SubPicture_2
 from .models import SubPicture_1, VideoSubImage, DeusMagnusEventBlog,OurManagementsInDeusMagnus,FAQs,BashPicture
 from .models import GLOSSARY,Mainvideo,BlogDeusMagnus,Guides,Contactvideo,Aboutvideo,FounderPicture,ServicesPagePicture
-from .models import RealEstatePicture
+from .models import RealEstatePicture,FacilityManagementPicture,ConstructionPicture
 #The DeusMagnus post,post model admin
 
 
@@ -32,6 +32,12 @@ admin.site.register(RealEstatePicture, RealEstatePictureModelAdmin)
 class BashPictureModelAdmin (admin.ModelAdmin):
     list_display = ['deus_magnus_bash_p']
 admin.site.register(BashPicture, BashPictureModelAdmin)
+class FacilityManagementPictureModelAdmin (admin.ModelAdmin):
+    list_display = ['deus_magnus_facility_p']
+admin.site.register(FacilityManagementPicture, FacilityManagementPictureModelAdmin)
+class ConstructionPictureModelAdmin (admin.ModelAdmin):
+    list_display = ['deus_magnus_construction_p']
+admin.site.register(ConstructionPicture, ConstructionPictureModelAdmin)
 #The DeusMagnus main post model admin
 class DeusMagnusMainPostModelAdmin (admin.ModelAdmin):
     prepopulated_fields = {'deus_magnus_slug': ('deus_magnus_title',)}

@@ -7,7 +7,6 @@ from datetime import datetime, date
 #The first main video on deusmagnus website
 class Mainvideo(models.Model):
     deus_magnus_first_video = models.FileField(upload_to='main_videos/') 
-
 #The Contactvideo on deusmagnus website
 class Contactvideo(models.Model):
     deus_magnus_contact_video = models.FileField(upload_to='contact_videos/') 
@@ -22,6 +21,10 @@ class ServicesPagePicture(models.Model):
     deus_magnus_services_p = models.ImageField(upload_to='services_p/') 
 class RealEstatePicture(models.Model):
     deus_magnus_real_estate_p = models.ImageField(upload_to='real_estate_p/') 
+class FacilityManagementPicture(models.Model):
+    deus_magnus_facility_p = models.ImageField(upload_to='facility_p/')
+class ConstructionPicture(models.Model):
+    deus_magnus_construction_p = models.ImageField(upload_to='construction_p/')
 # The main model for Deus Magnus Model category
 class DeusMagnusMainPost(models.Model):
     deus_magnus_title = models.CharField(max_length=255, blank=True, null=True)
