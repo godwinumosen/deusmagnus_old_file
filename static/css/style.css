@@ -979,14 +979,14 @@ SECTIONS
 .event-section {
     height: 50vh;
     height: 30%;
-    padding:90px 6;
+    padding:120px 6;
 }
 
 .parallax {
     background-attachment: fixed;
     background-position: 50% 0;
     background-repeat: no-repeat;
-    height: 40%;
+    height: 50%;
     position: relative;
     -webkit-background-size: cover;
     -moz-background-size: cover;

@@ -104,7 +104,7 @@
                             </div>
                             <!-- end image-wrap -->
                             <div class="course-details shop-box text-center">
-                                <a href="{% url 'sub_detail' pk=sub.pk %}">{{ sub.sub_title_1|truncatechars:30 }}</a>
+                                <a href="{% url 'sub_detail' pk=sub.pk %}">{{ sub.sub_title_1 }}</a>
                                 <p>{{ sub.sub_description_1|truncatechars:40 }}</p>
                                 <a href="{% url 'sub_detail' pk=sub.pk %}"><small>View More</small></a>
                             </div><!-- end details -->
