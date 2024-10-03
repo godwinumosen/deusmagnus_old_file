@@ -3,84 +3,75 @@
 {% block title %} Contact Us {% endblock %}
 {% block content %}
 
-<section class="parallax event-section" data-stellar-background-ratio="10.5" style="background-image:url({% static "images/m_v_s.jpg" %});">
+
+
+<br><br>
+<section class="section gb nopadtop">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="tagline-message event-title text-center">
-                    <h3>Partner with Nigeria's Real Estate Innovators </h3>
-                </div>
-            </div><!-- end col -->
-        </div><!-- end row -->
-    </div><!-- end container -->
-</section><!-- end section -->
+        {% for post in object_list %}
+        <video autoplay muted playsinline loop width="100%" height="60%"  controls>
+            <source src="{{ post.deus_magnus_contact_video.url }}" type="video/mp4">
+            <source src="{{ post.deus_magnus_contact_video.url }}" type="video/webm">
+            Your browser does not support the video tags..
+        </video>
+        {% endfor %}
 
-        <section class="section gb nopadtop">
-            <div class="container">
-                {% for post in object_list %}
-                <video autoplay muted playsinline loop width="100%" height="60%"  controls>
-                    <source src="{{ post.deus_magnus_contact_video.url }}" type="video/mp4">
-                    <source src="{{ post.deus_magnus_contact_video.url }}" type="video/webm">
-                    Your browser does not support the video tags..
-                </video>
-                {% endfor %}
-        
-                <div class="boxed boxedp4">
-                    <div class="row contactv2 text-center">
-                        <div class="col-md-4">
-                            <div class="small-box">
-                                <i style="color: #98681e;"class="fa fa-whatsapp"></i>
-                                <a href="https://wa.me/+2348106941149?text=Hi Deus Magnus Limited?"target="_blank">
-                                <p>Book an Inspection via Whatsapp</p>
-                                <p>+2349076814880</p>
-                                <p>+2348124928163</p>
-                            </a>
-                            </div><!-- end small-box -->
-                        </div><!-- end col -->
-                    
-                        <div class="col-md-4">
-                            <div class="small-box">
-                                <i style="color: #98681e;"class="fa fa-envelope"></i>
-                                <a href="mailto:info@deusmagnus.com"target="_blank">
-                                <h4>Send Us an Email</h4>
-                                <p><a href="mailto:info@deusmagnus.com"target="_blank">info@deusmagnus.com</a></p>
-                               </a> 
-                            </div><!-- end small-box -->
-                        </div><!-- end col -->
+        <div class="boxed boxedp4">
+            <div class="row contactv2 text-center">
+                <div class="col-md-4">
+                    <div class="small-box">
+                        <i style="color: #98681e;"class="fa fa-whatsapp"></i>
+                        <a href="https://wa.me/+2348106941149?text=Hi Deus Magnus Limited?"target="_blank">
+                        <p>Book an Inspection via Whatsapp</p>
+                        <p>+2349076814880</p>
+                        <p>+2348124928163</p>
+                    </a>
+                    </div><!-- end small-box -->
+                </div><!-- end col -->
+            
+                <div class="col-md-4">
+                    <div class="small-box">
+                        <i style="color: #98681e;"class="fa fa-envelope"></i>
+                        <a href="mailto:info@deusmagnus.com"target="_blank">
+                        <h4>Send Us an Email</h4>
+                        <p><a href="mailto:info@deusmagnus.com"target="_blank">info@deusmagnus.com</a></p>
+                        </a> 
+                    </div><!-- end small-box -->
+                </div><!-- end col -->
 
-                        <div class="col-md-4">
-                            <div class="small-box">
-                                <i style="color: #98681e;"class="fa fa-map-marker"></i>
-                                <a href="https://maps.app.goo.gl/XrDA6gAnCSKkDuGN6"target="_blank">
-                                <h4>Visit Our Offices</h4>
-                                <p>Block 58a, Plot 10a, Omorinre Johnson Street, Lekki, Nigeria</p>
-                                <p>View on Google Map</p>
-                               </a> 
-                            </div><!-- end small-box -->
-                        </div><!-- end col -->    
-                    </div><!-- end contactv2 -->
+                <div class="col-md-4">
+                    <div class="small-box">
+                        <i style="color: #98681e;"class="fa fa-map-marker"></i>
+                        <a href="https://maps.app.goo.gl/XrDA6gAnCSKkDuGN6"target="_blank">
+                        <h4>Visit Our Offices</h4>
+                        <p>Block 58a, Plot 10a, Omorinre Johnson Street, Lekki, Nigeria</p>
+                        <p>View on Google Map</p>
+                        </a> 
+                    </div><!-- end small-box -->
+                </div><!-- end col -->    
+            </div><!-- end contactv2 -->
 
-                    <div class="row">
-                        <div class="col-md-6 col-md-offset-3">
-                            <div class="section-title text-center">
-                                <h3>Contact Form</h3>
-                                <p>Ready to elevate your property portfolio in Lagos or beyond? 
-                                    Our team of experts is prepared to bring your vision to life, 
-                                    ensuring quality, efficiency, and long-term value for your real estate investments.</p>
-                            </div><!-- end title -->
-                            <form method="POST">
-                                {% csrf_token %}
-                                <input name="message-name" type="text" class="form-control" placeholder="Enter your name.."><br>
-                                <input name="message-email" type="email" class="form-control" placeholder="Enter email.."><br>
-                                <input name="message-subject" type="text" class="form-control" placeholder="Subject.."><br>
-                                <textarea name="message" class="form-control" placeholder="Message goes here.."></textarea><br>
-                                <center><button type="submit" class="btn btn-primary" style="border-radius:5px;">Submit</button></center>
-                            </form>
-                        </div><!-- end col -->
-                    </div><!-- end row -->
-                </div><!-- end container -->
-            </div>
-        </section>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="section-title text-center">
+                        <h3>Contact Form</h3>
+                        <p>Ready to elevate your property portfolio in Lagos or beyond? 
+                            Our team of experts is prepared to bring your vision to life, 
+                            ensuring quality, efficiency, and long-term value for your real estate investments.</p>
+                    </div><!-- end title -->
+                    <form method="POST">
+                        {% csrf_token %}
+                        <input name="message-name" type="text" class="form-control" placeholder="Enter your name.."><br>
+                        <input name="message-email" type="email" class="form-control" placeholder="Enter email.."><br>
+                        <input name="message-subject" type="text" class="form-control" placeholder="Subject.."><br>
+                        <textarea name="message" class="form-control" placeholder="Message goes here.."></textarea><br>
+                        <center><button type="submit" class="btn btn-primary" style="border-radius:5px;">Submit</button></center>
+                    </form>
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div>
+</section>
 
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
