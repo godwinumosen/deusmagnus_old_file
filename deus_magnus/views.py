@@ -7,7 +7,7 @@ from django.urls import reverse_lazy
 from .models import ServicesPagePicture,RealEstatePicture,FacilityManagementPicture,ConstructionPicture
 from .models import SubPicture_1, SubPicture_2,VideoSubImage, BlogDeusMagnus,DeusMagnusEventBlog,FAQs,Mainvideo
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost,FounderPicture,BashPicture,ProjectPicture
-from .models import LastDeusMagnusMainPicturePost,OurManagementsInDeusMagnus,GLOSSARY,Guides,Contactvideo,Aboutvideo
+from .models import OurManagementsInDeusMagnus,GLOSSARY,Guides,Contactvideo,Aboutvideo
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.mixins import LoginRequiredMixin  
@@ -33,8 +33,21 @@ class HomeView(ListView):
     #context['user'] = self.request.user
         context['second_constructions'] = SecondDeusMagnusMainPicturePost.objects.all()
     #Last deus magnus sub category of the blog for picture 
-        context['last_constructions'] = LastDeusMagnusMainPicturePost.objects.all()   
+        context['news_constructions'] = DeusMagnusEventBlog.objects.all()   
         return context    
+
+#This deus_magnus_events view
+class EventBlog(ListView):
+    model = DeusMagnusEventBlog
+    template_name = 'deus_magnus/deus_magnus_events.html'
+
+#The event of deus magnus' article details class base view
+class DeusMagnusEventBlogArticleDetailView(DetailView):
+    model = DeusMagnusEventBlog
+    template_name = 'deus_magnus/deus_magnus_event_article.html'
+    def DeusMagnusEventBlogArticleDetailView(request, pk): 
+        object = get_object_or_404(DeusMagnusEventBlog, pk=pk)
+        return render(request, 'deus_magnus/deus_magnus_event_article.html',{'events_article_detail': object})
 
  #The first Deus Magnus Video ArticleDetailView page
 class ArticleDetailView(DetailView):
@@ -64,20 +77,6 @@ class SecondConstructionDetailViewArticleDetailView(DetailView):
         context['subs'] = SubPicture_1.objects.all() 
         return context 
 
-#The last sub ArticleDetailView page
-class LastConstructionDetailViewArticleDetailView(DetailView):
-    model = LastDeusMagnusMainPicturePost
-    template_name = 'deus_magnus/last_article_detail.html'
-    context_object_name = 'last_construction'
-    def LastConstructionDetailViewArticleDetailView(request, pk):  
-        object = get_object_or_404(LastDeusMagnusMainPicturePost, pk=pk)
-        return render(request, 'deus_magnus/last_article_detail.html', {'last_construction': object})
-     #This sub-model data related to the last article model instance of magnus
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['subs_2'] = SubPicture_2.objects.all() 
-        return context
-    
 # About page of  the deus magnus blog app
 class AboutView(ListView): 
     model = Aboutvideo
@@ -201,19 +200,6 @@ class BlogArticleDetail(DetailView):
         object = get_object_or_404(BlogDeusMagnus, pk=pk)
         return render(request, 'deus_magnus/blog_article_detail.html', {'blog_detail': object})
     
-#This deus_magnus_events view
-class EventBlog(ListView):
-    model = DeusMagnusEventBlog
-    template_name = 'deus_magnus/deus_magnus_events.html'
-
-#The event of deus magnus' article details class base view
-class DeusMagnusEventBlogArticleDetailView(DetailView):
-    model = DeusMagnusEventBlog
-    template_name = 'deus_magnus/deus_magnus_event_article.html'
-    def DeusMagnusEventBlogArticleDetailView(request, pk): 
-        object = get_object_or_404(DeusMagnusEventBlog, pk=pk)
-        return render(request, 'deus_magnus/deus_magnus_event_article.html',{'events_article_detail': object})
-
 #This article belong to deus_magnus Guids view
 class GuidesView(ListView):
     model = Guides

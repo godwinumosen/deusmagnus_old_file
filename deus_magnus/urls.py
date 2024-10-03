@@ -2,7 +2,7 @@
 from django.urls import path
 from . import views
 from .views import HomeView, ArticleDetailView, SecondConstructionDetailViewArticleDetailView,VideoImageDetailView
-from .views import LastConstructionDetailViewArticleDetailView, SubPictureDetailView,SubVideoDetailView,ProjectManagement
+from .views import SubPictureDetailView,SubVideoDetailView,ProjectManagement
 from .views import BlogArticleDetail,EventBlog,OurTeam,ManagementTeamArticleOfDuesMagnusDetail,ContactView,AboutView
 from .views import DeusMagnusEventBlogArticleDetailView,BlogView,FAQs_item,GLOSSARY_item,GuidesView,GuidesDetailView
 from .views import FounderMessageView,ServicesPage,RealEstateServices,FacilityManagement,ConstructionDevelopment
@@ -13,10 +13,8 @@ urlpatterns = [
     path('home/', HomeView.as_view(), name='home'),
     path('article/<int:pk>/', ArticleDetailView.as_view(), name="detail"),
     path('article2/<int:pk>/', SecondConstructionDetailViewArticleDetailView.as_view(), name="second_detail"),
-    path('article3/<int:pk>/', LastConstructionDetailViewArticleDetailView.as_view(), name="last_detail"),
     path('about/', AboutView.as_view(), name='about'),
     path('contact/', ContactView.as_view(), name='contact'),
-    #path('subpicture_1/', views.subpicture_1, name='subpicture_1'),
     path('sub_picture/<int:pk>/', SubPictureDetailView.as_view(), name="sub_detail"),
     path('sub_video/<int:pk>/', SubVideoDetailView.as_view(), name="sub_detail_video"),
     path('sub_video_img/<int:pk>/', VideoImageDetailView.as_view(), name="sub_video_img_detail"),
