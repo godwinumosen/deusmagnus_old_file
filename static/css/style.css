@@ -134,7 +134,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: #000;
+    color: #04245c;
 }
 
 h1,
@@ -150,7 +150,7 @@ h6 {
 /* Pls dont touch this color */
 .cop-logo img,
 a {
-    color: #000;
+    color: #04245c;
     text-decoration: none !important;
     -webkit-transition: all ease 0.3s;
     -moz-transition: all ease 0.3s;
@@ -881,7 +881,6 @@ CONTACT
 .small-box a {
     margin-top: 15px;
     display: block;
-    text-decoration: underline !important;
     font-weight: 600;
     font-size: 16px;
 }
