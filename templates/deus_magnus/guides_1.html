@@ -32,7 +32,7 @@
                     </div><!-- end box -->
                     <div class="teamdesc">
                         <a href="{% url 'guides_article' post.pk %}">
-                        <h4 style="color: #98681e;font-family: Georgia;">{{ post.guides_title|truncatechars:45}}</h4>
+                        <h4 style="color: #98681e;font-family: Georgia;">{{ post.guides_title}}</h4>
                         </a>
                         <hr>
                         <h5>{{ post.guides_description|truncatechars:60 }}</h5>

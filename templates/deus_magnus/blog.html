@@ -1,57 +1,51 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %}Blog News{% endblock %}
+{% block title %}Blog {% endblock %}
 {% block content %}
-<section class="parallax event-section" data-stellar-background-ratio="0.5" style="background-image:url({% static "images/m_v_s.jpg" %});">
+<section class="section db p120">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="tagline-message event-title text-center">
-                        <h3>Blog News</h3>
-                        <ul class="breadcrumb">
-                            <li><a href="{% url 'home' %}">Home Page</a></li>  
-                        </ul>
-                    </div>
+            <div class="col-md-12"><br><br>
+                <div class="tagline-message page-title text-center">
+                    <h3>Blog</h3>
                 </div>
             </div><!-- end col -->
         </div><!-- end row -->
     </div><!-- end container -->
-</section><!-- end section -->
-<section class="section">
-      
+</section><!-- end section -->      
 
-        <section class="section gb nopadtop">
-            <div class="container">
-                <div class="boxed">
-                    <div class="row">
-                {% for blog in object_list %}
-                        <div class="col-md-8">
-                            <div class="content blog-list">
-                                <div class="blog-wrapper clearfix">
-                                    <div class="blog-meta">  
-                                        <h3 style="font-family: Georgia;"><a href="{% url 'blog_detail' blog.pk %}" >{{ blog.blog_deus_magnus_title }}</a></h3>
-                                        <ul class="list-inline">
-                                            <li>{{ blog.blog_deus_magnus_publish_date }}</li>
-                                            <li><span>written by</span> Deus Magnus</li>
-                                        </ul>
-                                    </div><!-- end blog-meta -->
-                                    <div class="blog-media">
-                                        <a href="{% url 'blog_detail' blog.pk %}" ><img src="{{ blog.blog_deus_magnus_img.url }}" alt="" class="img-responsive img-rounded"></a>
-                                    </div><!-- end media -->
-                                    <div class="blog-desc-big">
-                                        <p class="lead" style="color: #98681e;font-family: Georgia;">{{ blog.blog_deus_magnus_title }}</p>
-                                        <p>{{ blog.blog_deus_magnus_description|truncatechars:200 }}</p>
-                                        <a href="{% url 'blog_detail' blog.pk %}" class="btn btn-primary"style="border-radius: 10px;"> Read More </a>
-                                        
-                                    </div><!-- end desc -->
-                                </div><!-- end blog -->
-                            </div><!-- end content -->  
-                        </div><!-- end sidebar -->
-                        {% endfor %}
-                    </div><!-- end row -->
-                </div><!-- end boxed -->
-            </div><!-- end container -->
-        </section>
+<section class="section gb nopadtop">
+    <div class="container">
+        <div class="boxed">
+            <div class="row">
+        {% for blog in object_list %}
+                <div class="col-md-8">
+                    <div class="content blog-list">
+                        <div class="blog-wrapper clearfix">
+                            <div class="blog-meta">  
+                                <h3 style="font-family: Georgia;"><a href="{% url 'blog_detail' blog.pk %}" >{{ blog.blog_deus_magnus_title }}</a></h3>
+                                <ul class="list-inline">
+                                    <li>{{ blog.blog_deus_magnus_publish_date }}</li>
+                                    <li><span>written by</span> Deus Magnus</li>
+                                </ul>
+                            </div><!-- end blog-meta -->
+                            <div class="blog-media">
+                                <a href="{% url 'blog_detail' blog.pk %}" ><img src="{{ blog.blog_deus_magnus_img.url }}" alt="" class="img-responsive img-rounded"></a>
+                            </div><!-- end media -->
+                            <div class="blog-desc-big">
+                                <p class="lead" style="color: #98681e;font-family: Georgia;">{{ blog.blog_deus_magnus_title }}</p>
+                                <p>{{ blog.blog_deus_magnus_description|truncatechars:200 }}</p>
+                                <a href="{% url 'blog_detail' blog.pk %}" class="btn btn-primary"style="border-radius: 10px;"> Read More </a>
+                                
+                            </div><!-- end desc -->
+                        </div><!-- end blog -->
+                    </div><!-- end content -->  
+                </div><!-- end sidebar -->
+                {% endfor %}
+            </div><!-- end row -->
+        </div><!-- end boxed -->
+    </div><!-- end container -->
+</section>
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
