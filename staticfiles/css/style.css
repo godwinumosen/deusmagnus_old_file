@@ -88,7 +88,7 @@ SKELETON
 ******************************************/
 
 body {
-    background-color: #fff;
+    background-color: #f9f9f9ab;
     line-height: 1.5;
     font-size: 15px;
     color: #52565b;
@@ -134,7 +134,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: #000;
+    color: #04245c;
 }
 
 h1,
@@ -150,7 +150,7 @@ h6 {
 /* Pls dont touch this color */
 .cop-logo img,
 a {
-    color: #000;
+    color: #04245c;
     text-decoration: none !important;
     -webkit-transition: all ease 0.3s;
     -moz-transition: all ease 0.3s;
@@ -329,7 +329,8 @@ HEADER
 
 .navbar-default .dropdown-menu li a {
     color: #222;
-    font-size: 14px;
+    font-size: 12px;
+    font-family: sans-serif; 
 }
 
 .navbar-default .fa-angle-right {
@@ -497,6 +498,7 @@ MEGA MENU
 @media (max-width: 767px) {
     .navbar-default .navbar-nav .open .dropdown-menu>li>a {
         color: #fff;
+        font-family:sans-serif;
     }
 }
 
@@ -879,7 +881,6 @@ CONTACT
 .small-box a {
     margin-top: 15px;
     display: block;
-    text-decoration: underline !important;
     font-weight: 600;
     font-size: 16px;
 }
@@ -971,16 +972,16 @@ SECTIONS
 ******************************************/
 
 .event-section {
-    height: 100vh;
-    height: 100%;
-    padding: 30rem 0;
+    height: 50vh;
+    height: 30%;
+    padding:90px 6;
 }
 
 .parallax {
     background-attachment: fixed;
     background-position: 50% 0;
     background-repeat: no-repeat;
-    height: 50%;
+    height: 40%;
     position: relative;
     -webkit-background-size: cover;
     -moz-background-size: cover;
