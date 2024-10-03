@@ -25,13 +25,19 @@
                 {% endfor %}
             </div><!-- end col -->
             <div class="col-md-8">  
-                <div class="custom-module p40l">
-                    <h3 style="color: #98681e;">Comprehensive/Sustainable Building Solutions for Nigeria's Real Estate Challenges</h3>
-                    <p>From tackling Nigeria's infrastructure deficit to optimizing long-term asset performance in prime locations like Victoria Island and Ikoyi, 
-                        we are your trusted partner in navigating the complexities of the African real estate landscape.
-                        Deus Magnus Limited offers end-to-end services in construction, real estate development, and facility management. Our expertise spans:
-                    </p><br>
-            
+                <div class="custom-module p40l">   
+                    <a href="{% url 'construction_development' %}"><h3 style="color: #98681e;">Construction Services</h3></a>
+                    <div class="row">
+                        <div class="col-lg-10 col-md-4 col-sm-4 col-xs-12 first">
+                            <ul class="check">
+                                <li>Building construction (residential, commercial, industrial)</li>
+                                <li>Civil engineering (roads, bridges, water supply)</li>
+                                <li>Renovation and Upgrades (Structural changes, major overhauls)</li>
+                                <li>Project management and consultancy</li>
+                            </ul><!-- end check -->
+                        </div><!-- end col-lg-4 -->    
+                    </div><!-- end row -->
+
                     <a href="{% url 'real_estate_services' %}"><h3 style="color: #98681e;">Real Estate</h3></a>
                     <div class="row">
                         <div class="col-lg-10 col-md-4 col-sm-4 col-xs-12 first">
@@ -50,18 +56,6 @@
                                 <li>Property maintenance and repairs</li>
                                 <li>Utilities management (energy, water, waste)</li>
                                 <li>Facility operations</li>
-                            </ul><!-- end check -->
-                        </div><!-- end col-lg-4 -->    
-                    </div><!-- end row -->
-
-                    <a href="{% url 'construction_development' %}"><h3 style="color: #98681e;">Construction</h3></a>
-                    <div class="row">
-                        <div class="col-lg-10 col-md-4 col-sm-4 col-xs-12 first">
-                            <ul class="check">
-                                <li>Building construction (residential, commercial, industrial)</li>
-                                <li>Civil engineering (roads, bridges, water supply)</li>
-                                <li>Renovation and Upgrades (Structural changes, major overhauls)</li>
-                                <li>Project management and consultancy</li>
                             </ul><!-- end check -->
                         </div><!-- end col-lg-4 -->    
                     </div><!-- end row -->
