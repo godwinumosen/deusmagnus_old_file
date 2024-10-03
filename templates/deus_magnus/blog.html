@@ -19,16 +19,10 @@
         <div class="boxed">
             <div class="row">
         {% for blog in object_list %}
-                <div class="col-md-2">
+                <div class="col-md-4">
                     <div class="content blog-list">
                         <div class="blog-wrapper clearfix">
-                            <div class="blog-meta">  
-                                <h3 style="font-family: Georgia;"><a href="{% url 'blog_detail' blog.pk %}" >{{ blog.blog_deus_magnus_title }}</a></h3>
-                                <ul class="list-inline">
-                                    <li>{{ blog.blog_deus_magnus_publish_date }}</li>
-                                    <li><span>written by</span> Deus Magnus</li>
-                                </ul>
-                            </div><!-- end blog-meta -->
+                            
                             <div class="blog-media">
                                 <a href="{% url 'blog_detail' blog.pk %}" ><img src="{{ blog.blog_deus_magnus_img.url }}" alt="" class="img-responsive img-rounded"></a>
                             </div><!-- end media -->
@@ -45,7 +39,7 @@
             </div><!-- end row -->
         </div><!-- end boxed -->
     </div><!-- end container -->
-</section>
+</section><br><br>
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
