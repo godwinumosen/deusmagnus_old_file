@@ -120,63 +120,6 @@
     </div><!-- end container -->
 </section><br><br><br>
 
-
-
-<!-- the first category of the home page after cate -->
-<section class="section gb">
-    <div class="container"><br>
-        <div class="section-title text-center">
-            <h3 style="color: #98681e;">Ongoing Projects</h3>
-            <p> With over 20 years of combined construction experience, we embody.</p>
-        </div><!-- end title -->
-
-        <div class="row">
-            {% for post in object_list %}
-            <div class="col-lg-4 col-md-12">
-                <div class="blog-box">
-                    <!-- Video player wrapper -->
-                    <a href="{% url 'detail' post.pk %}">
-                    <div class="image-wrap entry">
-                        <video autoplay muted playsinline loop width="100%" height="40%"  controls>
-                            <source src="{{ post.deus_manus_video.url }}" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div><!-- end image-wrap -->
-                    </a>
-                    <div class="blog-desc">
-                        <h4><a href="{% url 'detail' post.pk %}">{{post.deus_magnus_title}}</a></h4>
-                        <p>{{post.deus_magnus_description|truncatechars:77}}</p>
-                    </div><!-- end blog-desc -->
-                    <div class="post-meta">
-                        <span>
-                            <div class="btn-wrapper">
-                                <a href="{% url 'detail' post.pk %}" class="btn btn-primary"style="border-radius: 5px;">Read More</a>
-                            </div>
-                         </span>
-                    </div><!-- end post-meta -->
-                </div><!-- end blog-box -->
-            </div><!-- end col -->
-            {%endfor%}
-        </div><!-- end row -->
-    </div><!-- end container -->
-</section><br><br><br>
-
-
-<section class="section db p110">
-    <div class="container"><br>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="tagline-message text-center">
-                <h3>"At Deus Magnus, we're not just building structures; we're crafting legacies. 
-                    Our commitment to excellence and innovation drives us to create spaces that inspire, impress, and endure." <br><br>
-                    - Mr. Kuteyi Rasaq, CEO</h3><br>
-                </div>
-            </div><!-- end col -->
-        </div><!-- end row -->
-    </div><!-- end container -->
-</section><!-- end section --><br><br><br>
-
-    
 <section class="section gb">
     <div class="container"><br>
         <div class="section-title text-center">
@@ -210,7 +153,66 @@
             {%endfor%}
         </div><!-- end row -->
     </div><!-- end container -->
+</section><br><br><br>
+
+
+<section class="section db p110">
+    <div class="container"><br>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="tagline-message text-center">
+                <h3>"At Deus Magnus, we're not just building structures; we're crafting legacies. 
+                    Our commitment to excellence and innovation drives us to create spaces that inspire, impress, and endure." <br><br>
+                    - Mr. Kuteyi Rasaq, CEO</h3><br>
+                </div>
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section><!-- end section --><br><br><br>
+
+    
+
+
+
+<!-- the first category of the home page after cate -->
+<section class="section gb">
+    <div class="container"><br>
+        <div class="section-title text-center">
+            <h3 style="color: #98681e;">Upcoming Projects</h3>
+            <p> With over 20 years of combined construction experience, we embody.</p>
+        </div><!-- end title -->
+
+        <div class="row">
+            {% for post in object_list %}
+            <div class="col-lg-4 col-md-12">
+                <div class="blog-box">
+                    <!-- Video player wrapper -->
+                    <a href="{% url 'detail' post.pk %}">
+                    <div class="image-wrap entry">
+                        <video autoplay muted playsinline loop width="100%" height="40%"  controls>
+                            <source src="{{ post.deus_manus_video.url }}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div><!-- end image-wrap -->
+                    </a>
+                    <div class="blog-desc">
+                        <h4><a href="{% url 'detail' post.pk %}">{{post.deus_magnus_title}}</a></h4>
+                        <p>{{post.deus_magnus_description|truncatechars:77}}</p>
+                    </div><!-- end blog-desc -->
+                    <div class="post-meta">
+                        <span>
+                            <div class="btn-wrapper">
+                                <a href="{% url 'detail' post.pk %}" class="btn btn-primary"style="border-radius: 5px;">Read More</a>
+                            </div>
+                         </span>
+                    </div><!-- end post-meta -->
+                </div><!-- end blog-box -->
+            </div><!-- end col -->
+            {%endfor%}
+        </div><!-- end row -->
+    </div><!-- end container -->
 </section><br><br>
+
 
 <section class="parallax event-section" data-stellar-background-ratio="0.5" style="background-image:url({% static "images/device_01.png" %});">
     <div class="container">
@@ -230,9 +232,9 @@
     <div class="container"><br>
         <div class="section-title text-center">
             <h3 style="color: #98681e;">Recent News</h3>
-            <p>Realizing Long-Term Value in Nigerian Real Estate.</p>
+            <p>Read the latest news and update from Deusmagnus and the construction industry.</p>
         </div><!-- end title -->
-        <div class="row">
+        <div class="row"> 
             {% for news_construction in news_constructions %}
             <div class="col-lg-4 col-md-12">
                 <div class="blog-box">
