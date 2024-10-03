@@ -121,7 +121,7 @@ class ConstructionDevelopment(ListView):
 class FAQs_item(ListView):
     model = FAQs
     template_name = 'deus_magnus/faqs.html'
-    context_object_name = 'faqs_items'n
+    context_object_name = 'faqs_items'
 
 # The GLOSSARY page of the media dropdown
 class GLOSSARY_item(ListView):
