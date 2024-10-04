@@ -3,14 +3,12 @@
 {% block title %}{{ object.our_team_name }} {% endblock %}
 {% block content%}
 
-
-
 <section class="section db p120">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="tagline-message page-title text-center"><br><br>
-                    <h3>Deus Magnus & Management Team.</h3>                  
+            <div class="col-md-12"><br><br>
+                <div class="tagline-message page-title text-center">
+                    <h1 style="color:fff;font-family: Georgia;font-size:50px;">Deus Magnus & Management Team.</h1>
                 </div>
             </div><!-- end col -->
         </div><!-- end row -->
@@ -21,15 +19,10 @@
     <div class="container">
         <div class="boxed">
             <div class="row">
-                <div class="col-md-11">
+                <div class="col-md-8">
                     <div class="content blog-list">
                         <div class="blog-wrapper clearfix">
-                            <div class="blog-meta">
-                                <h3>{{ object.our_team_name }}</h3>
-                                <ul class="list-inline">
-                                    <li>{{ object.our_team_publish_date }}</li>
-                                    <li><span>written by</span> Deus Magnus</li>
-                                </ul>
+                            <div class="blog-meta">           
                             </div><!-- end blog-meta -->
                             <div class="blog-media">
                                 <img src="{{ object.our_team_img.url }}" alt="" class="img-responsive img-rounded"> 
@@ -37,7 +30,7 @@
                             <div class="blog-desc-big">
                                 <p class="lead">{{ object.our_team_name }}</p>
                                 <hr>
-                               <p><b>{{ object.our_team_position }}</b></p> 
+                               <p style="color: #98681e;"><b>{{ object.our_team_position }}</b></p> 
                                 <p>{{ object.our_team_description }}</p> 
                             </div><!-- end desc -->
                         </div><!-- end blog -->
