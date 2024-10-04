@@ -7,8 +7,8 @@
 }
 
 .text-primary {
-    color: #04245c;
-}
+    color: #04245c; 
+} 
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     @font-face {
@@ -76,6 +76,10 @@
 
 .flaticon-add:before {
     content: "\f10c";
+}
+
+.h2, h2 {
+    font-size: 25;
 }
 
 .flaticon-html-coding:before {
@@ -470,7 +474,7 @@ MEGA MENU
 audio, canvas, progress, video {
     display: inline-block;
     vertical-align: baseline;
-    background-color: #f6f6f6;
+   
 }
 
 .yamm .nav,
@@ -723,7 +727,7 @@ EVENTS
 ******************************************/
 
 .event-title.tagline-message h3 {
-    font-size: 64px;
+    font-size: 53px;
 }
 
 .event-title p {
@@ -979,14 +983,14 @@ SECTIONS
 .event-section {
     height: 50vh;
     height: 30%;
-    padding:90px 6;
+    padding:120px 6;
 }
 
 .parallax {
     background-attachment: fixed;
     background-position: 50% 0;
     background-repeat: no-repeat;
-    height: 40%;
+    height: 50%;
     position: relative;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -1044,8 +1048,8 @@ SECTIONS
     margin: 0 0 25px;
     padding: 0;
     line-height: 1;
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 26px;
+    font-weight: 600;
     font-family:Georgia;
 }
 
@@ -1197,7 +1201,7 @@ COURSE MODULES
 }
 
 .course-details h4 {
-    font-size: 18px;
+    font-size: 19px;
     padding: 0 0 1.5rem;
     font-weight: 700;
     margin: 0;
@@ -1730,8 +1734,8 @@ TESTIMONIAL
 
 .callout .lead {
     color: #ffffff;
-    font-size: 29px;
-    font-weight: bold;
+    font-size: 26px;
+    font-weight: 500;
     line-height: 36px;
     padding: 30px 8px 0;
 }
@@ -2142,7 +2146,7 @@ a:hover,
 a:focus,
 .box i,
 .topbar .text-left i {
-    color: #9e9485;
+    color: #98681e;
 }
 
 .shop-extra .nav-tabs>li:hover a,
