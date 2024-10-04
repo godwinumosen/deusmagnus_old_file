@@ -51,7 +51,7 @@
                         <div class="tab-content">
                             <div id="home" class="tab-pane fade in active">
                                 <p>{{ object.second_deus_magnus_description }}</p>
-                                <a href="{% url 'home' %}" class="btn btn-primary"style="border-radius: 10px;">Back Home</a>
+                                <a style="font-family: Georgia;" href="{% url 'home' %}" class="btn btn-primary"style="border-radius: 10px;">Back Home</a>
                             </div>
                             <div id="menu2" class="tab-pane fade">
                                 <h3>Reviews</h3>
@@ -78,7 +78,7 @@
                                         <input type="email" class="form-control" placeholder="Enter email..">
                                     </div>             
                                     <div class="col-md-12">
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="submit" class="btn btn-primary" style="font-family: Georgia;">Submit</button>
                                     </div>              
                                 </form>
                             </div>
@@ -106,7 +106,7 @@
                             <div class="course-details shop-box text-center">
                                 <a href="{% url 'sub_detail' pk=sub.pk %}">{{ sub.sub_title_1 }}</a>
                                 <p>{{ sub.sub_description_1|truncatechars:40 }}</p>
-                                <a href="{% url 'sub_detail' pk=sub.pk %}"><small>View More</small></a>
+                                <a style="font-family: Georgia;" href="{% url 'sub_detail' pk=sub.pk %}"><small>View More</small></a>
                             </div><!-- end details -->
                         </div> 
                              
