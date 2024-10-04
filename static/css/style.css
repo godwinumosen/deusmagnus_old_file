@@ -472,10 +472,18 @@ HEADER
 MEGA MENU
 ******************************************/
 audio, canvas, progress, video {
-    display: inline-block;
-    vertical-align: baseline;
+    display: block;
+    margin: 0;
+    padding: 0;
    
 }
+
+video {
+    display: block; /* Remove inline spacing */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+}
+
 
 .yamm .nav,
 .yamm .collapse,

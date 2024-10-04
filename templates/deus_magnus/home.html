@@ -177,42 +177,39 @@
     
 <!-- the first category of the home page after cate -->
 <section class="section gb">
-    <div class="container"><br>
+    <div class="container">
         <div class="section-title text-center">
             <h3 style="color: #98681e;">Upcoming Projects</h3>
-            <p> Designed to redefine excellence in construction and real estate.</p>
-        </div><!-- end title -->
+            <p>Designed to redefine excellence in construction and real estate.</p>
+        </div>
 
         <div class="row">
             {% for post in object_list %}
             <div class="col-lg-4 col-md-12">
                 <div class="blog-box">
-                    <!-- Video player wrapper -->
                     <a href="{% url 'detail' post.pk %}">
-                    <div class="image-wrap entry">
-                        <video autoplay muted playsinline loop width="100%" height="40%"  controls>
-                            <source src="{{ post.deus_manus_video.url }}" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div><!-- end image-wrap -->
+                        <div class="image-wrap entry">
+                            <video autoplay muted playsinline loop controls width="100%" height="auto"style="border-radius: 5px;">
+                                <source src="{{ post.deus_manus_video.url }}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
                     </a>
                     <div class="blog-desc">
-                        <h4><a href="{% url 'detail' post.pk %}">{{post.deus_magnus_title}}</a></h4>
-                        <p>{{post.deus_magnus_description|truncatechars:77}}</p>
-                    </div><!-- end blog-desc -->
+                        <h4><a href="{% url 'detail' post.pk %}">{{ post.deus_magnus_title }}</a></h4>
+                        <p>{{ post.deus_magnus_description|truncatechars:77 }}</p>
+                    </div>
                     <div class="post-meta">
-                        <span>
-                            <div class="btn-wrapper">
-                                <a href="{% url 'detail' post.pk %}" class="btn btn-primary"style="border-radius: 5px;font-family: Georgia;">Read More</a>
-                            </div>
-                         </span>
-                    </div><!-- end post-meta -->
-                </div><!-- end blog-box -->
-            </div><!-- end col -->
-            {%endfor%}
-        </div><!-- end row -->
-    </div><!-- end container -->
-</section><br><br>
+                        <div class="btn-wrapper">
+                            <a href="{% url 'detail' post.pk %}" class="btn btn-primary" style="border-radius: 5px; font-family: Georgia;">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section><br>
 
 
 <section class="parallax event-section" data-stellar-background-ratio="0.5" style="background-image:url({% static "images/device_01.png" %});">
