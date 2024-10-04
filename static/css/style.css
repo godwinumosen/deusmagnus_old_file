@@ -7,8 +7,8 @@
 }
 
 .text-primary {
-    color: #04245c;
-}
+    color: #04245c; 
+} 
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     @font-face {
@@ -470,7 +470,7 @@ MEGA MENU
 audio, canvas, progress, video {
     display: inline-block;
     vertical-align: baseline;
-    background-color: #f6f6f6;
+   
 }
 
 .yamm .nav,
