@@ -78,6 +78,10 @@
     content: "\f10c";
 }
 
+.h2, h2 {
+    font-size: 25;
+}
+
 .flaticon-html-coding:before {
     content: "\f10d";
 }
