@@ -42,9 +42,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-2">
-                {% for post in object_list %}
+                {% for construction in constructions %}
                 <div class="custom-module">
-                    <img style="border-radius: 5px;"src="{{ post.deus_magnus_services_p.url }}" alt="" class="img-responsive wow slideInLeft">
+                    <img style="border-radius: 5px;"src="{{ construction.deus_magnus_construction_p.url }}" alt="" class="img-responsive wow slideInLeft">
                 </div><!-- end module -->
                 {% endfor %}
             </div><!-- end col -->
