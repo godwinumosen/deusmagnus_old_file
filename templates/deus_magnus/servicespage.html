@@ -77,9 +77,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-2">
-                {% for post in object_list %}
+                {% for real in reals %}
                 <div class="custom-module">
-                    <img style="border-radius: 5px;"src="{{ post.deus_magnus_services_p.url }}" alt="" class="img-responsive wow slideInLeft">
+                    <img style="border-radius: 5px;"src="{{ real.deus_magnus_real_estate_p.url }}" alt="" class="img-responsive wow slideInLeft">
                 </div><!-- end module -->
                 {% endfor %}
             </div><!-- end col -->
@@ -113,9 +113,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-2">
-                {% for post in object_list %}
+                {% for facility in facilitys %}
                 <div class="custom-module">
-                    <img style="border-radius: 5px;"src="{{ post.deus_magnus_services_p.url }}" alt="" class="img-responsive wow slideInLeft">
+                    <img style="border-radius: 5px;"src="{{ facility.deus_magnus_facility_p.url }}" alt="" class="img-responsive wow slideInLeft">
                 </div><!-- end module -->
                 {% endfor %}
             </div><!-- end col -->

@@ -36,14 +36,7 @@ class HomeView(ListView):
         context['news_constructions'] = DeusMagnusEventBlog.objects.all()   
         return context    
 
-# Services page of the deus magnus webapp
-class ServicesPage(ListView):
-    model = ServicesPagePicture
-    template_name = 'deus_magnus/servicespage.html'
-    def get_context_data(self, **kwargs):  
-        context = super().get_context_data(**kwargs)
-        context['constructions'] = ConstructionPicture.objects.all()   
-        return context
+
 #This deus_magnus_events view
 class EventBlog(ListView):
     model = DeusMagnusEventBlog
@@ -91,7 +84,18 @@ class AboutView(ListView):
     template_name = 'deus_magnus/about_us.html'
     def AboutView (request):
         return render(request, 'deus_magnus/about_us.html', {})
-    
+
+# Services page of the deus magnus webapp
+class ServicesPage(ListView):
+    model = ServicesPagePicture
+    template_name = 'deus_magnus/servicespage.html'
+    def get_context_data(self, **kwargs):  
+        context = super().get_context_data(**kwargs)
+        context['reals'] = RealEstatePicture.objects.all() 
+        context['facilitys'] = FacilityManagementPicture.objects.all() 
+        context['constructions'] = ConstructionPicture.objects.all() 
+
+        return context 
 
 # Facility Management page of the deus magnus webapp
 class FacilityManagement(ListView):
