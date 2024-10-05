@@ -6,7 +6,7 @@ from django.urls import reverse
 from django.urls import reverse_lazy
 from .models import ServicesPagePicture,RealEstatePicture,FacilityManagementPicture,ConstructionPicture
 from .models import SubPicture_1, SubPicture_2,VideoSubImage, BlogDeusMagnus,DeusMagnusEventBlog,FAQs,Mainvideo
-from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost,FounderPicture,BashPicture,ProjectPicture
+from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost,FounderPicture,BashPicture
 from .models import OurManagementsInDeusMagnus,GLOSSARY,Guides,Contactvideo,Aboutvideo
 from django.contrib import messages
 from django.contrib.auth.models import User
@@ -103,12 +103,6 @@ class RealEstateServices(ListView):
     def RealEstateServices (request):
         return render(request, 'deus_magnus/real_estate_services.html', {})
     
-# Project Management page of the deus magnus webapp
-class ProjectManagement(ListView):
-    model = ProjectPicture
-    template_name = 'deus_magnus/project_management.html'
-    def ProjectManagement (request):
-        return render(request, 'deus_magnus/project_management.html', {})
 # Construction Development Management page of the deus magnus webapp
 class ConstructionDevelopment(ListView):
     model = ConstructionPicture
