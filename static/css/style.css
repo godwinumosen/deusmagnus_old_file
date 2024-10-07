@@ -1637,10 +1637,22 @@ BLOG
 }
 
 
+
+
 .blog-grid .col-md-6,
 .blog-grid .col-md-4 {
     margin-bottom: 30px
 }
+
+/* For sticky navbar (Bootstrap 4+ recommended approach) */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it's above other content */
+    background-color:#fff;
+}
+
+
 
 
 /******************************************
