@@ -1,42 +1,22 @@
-	$(".js-height-full").height($(window).height());
-	$(".js-height-parent").each(function() {
-	    $(this).height($(this).parent().first().height());
-	});
+document.addEventListener('DOMContentLoaded', function() {
+    const stats = [
+        { id: 'years-experience', target: 15, duration: 2000 },
+        { id: 'properties-sold', target: 10, duration: 2000 },
+        { id: 'completed-projects', target: 12, duration: 2000 }
+    ];
 
-
-	// Fun Facts
-	function count($this) {
-	    var current = parseInt($this.html(), 10);
-	    current = current + 1; /* Where 50 is increment */
-
-	    $this.html(++current);
-	    if (current > $this.data('count')) {
-	        $this.html($this.data('count'));
-	    } else {
-	        setTimeout(function() {
-	            count($this)
-	        }, 50);
-	    }
-	}
-
-	$(".stat-timer").each(function() {
-	    $(this).data('count', parseInt($(this).html(), 10));
-	    $(this).html('0');
-	    count($(this));
-	});
-
-
-
-	$('.header').affix({
-	    offset: {
-	        top: 100,
-	        bottom: function() {
-	            return (this.bottom = $('.footer').outerHeight(true))
-	        }
-	    }
-	})
-
-	$(window).load(function() {
-	    $("#preloader").on(500).fadeOut();
-	    $(".preloader").on(600).fadeOut("slow");
-	});
+    stats.forEach(stat => {
+        const element = document.getElementById(stat.id);
+        let count = 0;
+        const increment = Math.ceil(stat.target / (stat.duration / 100));
+        
+        const interval = setInterval(() => {
+            count += increment;
+            if (count >= stat.target) {
+                count = stat.target; // Ensure it doesn't go over
+                clearInterval(interval);
+            }
+            element.textContent = count + '+';
+        }, 100);
+    });
+});

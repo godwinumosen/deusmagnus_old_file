@@ -1028,11 +1028,20 @@ SECTIONS
     transition: all .4s ease-in-out;
 }
 
+.boxe {
+    box-shadow: 0 30px 50px 0 rgba(1, 1, 1, 0.18);
+    padding: 4rem 4rem 1rem;
+    background-color: #e1e5ec;
+    margin-top: -60px;
+    padding-left: 30px;
+}
+
 .boxed {
     box-shadow: 0 30px 50px 0 rgba(1, 1, 1, 0.18);
     padding: 4rem 4rem 1rem;
     background-color: #e1e5ec;
     margin-top: -60px;
+    padding-left: 30px;
 }
 
 .boxed.boxedp4 {
@@ -1588,6 +1597,10 @@ BLOG
     padding: 0;
     margin: 0;
 }
+.plus {
+    font-size: 36px; /* Slightly smaller size for the + */
+    color: #98681e; /* Same color as the subtitle */
+}
 
 .stat-count h3,
 .stat-count h4 {
@@ -1621,6 +1634,12 @@ BLOG
     font-family: 'Droid Serif', sans-serif;
     font-style: italic;
 }
+
+.stat-timer {
+    visibility: visible; /* Ensure it's set to visible */
+    opacity: 1; /* Ensure it’s fully opaque */
+}
+
 
 .blog-grid .col-md-6,
 .blog-grid .col-md-4 {

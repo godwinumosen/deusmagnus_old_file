@@ -1635,6 +1635,12 @@ BLOG
     font-style: italic;
 }
 
+.stat-timer {
+    visibility: visible; /* Ensure it's set to visible */
+    opacity: 1; /* Ensure it’s fully opaque */
+}
+
+
 .blog-grid .col-md-6,
 .blog-grid .col-md-4 {
     margin-bottom: 30px
