@@ -254,6 +254,7 @@ HEADER
     
 }
 
+
 .header {
     position: static;
     z-index: 111;
@@ -1635,16 +1636,23 @@ BLOG
     font-style: italic;
 }
 
-.stat-timer {
-    visibility: visible; /* Ensure it's set to visible */
-    opacity: 1; /* Ensure it’s fully opaque */
-}
+
 
 
 .blog-grid .col-md-6,
 .blog-grid .col-md-4 {
     margin-bottom: 30px
 }
+
+/* For sticky navbar (Bootstrap 4+ recommended approach) */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure it's above other content */
+    background-color:#fff;
+}
+
+
 
 
 /******************************************
