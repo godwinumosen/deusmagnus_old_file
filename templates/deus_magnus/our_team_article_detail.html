@@ -31,7 +31,7 @@
                                 <p class="lead">{{ object.our_team_name }}</p>
                                 <hr>
                                <p style="color: #98681e;"><b>{{ object.our_team_position }}</b></p> 
-                                <p>{{ object.our_team_description }}</p> 
+                                <p>{{ object.our_team_description|truncatechars:60}}</p> 
                             </div><!-- end desc -->
                         </div><!-- end blog -->
                         <div class="btn-wrapper">
