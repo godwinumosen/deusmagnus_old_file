@@ -9,6 +9,7 @@ from datetime import datetime, date
 # The main model for Deus Magnus Model category
 class DeusMagnusMainPost(models.Model):
     deus_magnus_title = models.CharField(max_length=255, blank=True, null=True)
+    deus_magnus_status = models.CharField(max_length=255, blank=True, null=True)
     deus_magnus_description = models.TextField()
     deus_magnus_slug = models.SlugField (max_length=255,blank=True, null=True)
     deus_manus_video = models.FileField(upload_to='videos/') 

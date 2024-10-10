@@ -168,7 +168,6 @@ def deus_magnus_whatsapp_message(request):
 class ContactView(ListView): 
     model = Contactvideo
     template_name = 'deus_magnus/contact_us.html'
-
     def ContactView (request):
         email='info@deusmagnus.com'
         if request.method == 'POST':
@@ -183,7 +182,6 @@ class ContactView(ListView):
                 'email':email
             } 
             return render(request, 'deus_magnus/contact_us.html', {})
-
 def message (request):
     return render (request, 'deus_magnus/message.html', {})
 

@@ -141,7 +141,7 @@
                         <a href="{% url 'second_detail' second_construction.pk %}">
                         <img src="{{ second_construction.second_deus_magnus_img.url }}"height="230px"  class="custom-image">
                         </a>
-                        <span  style="font-family:sarif;" class="badge rounded-pill bg-primary">{{ second_construction.second_deus_magnus_status}}</span>
+                        <!--<span  style="font-family:sarif;" class="badge rounded-pill bg-primary">{{ second_construction.second_deus_magnus_status}}</span>-->
                         {% endif %}
                        
                     </div><!-- end image-wrap -->
@@ -196,6 +196,7 @@
                                 <source src="{{ post.deus_manus_video.url }}" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
+                            <!--<span  style="font-family:sarif;" class="badge rounded-pill bg-primary">{{  post.deus_magnus_status }}</span>-->
                         </div>
                     </a>
                     <div class="blog-desc">

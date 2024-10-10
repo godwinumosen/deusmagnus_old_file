@@ -9,7 +9,7 @@ from .models import RealEstatePicture,FacilityManagementPicture,ConstructionPict
 #The DeusMagnus main post model admin
 class DeusMagnusMainPostModelAdmin (admin.ModelAdmin):
     prepopulated_fields = {'deus_magnus_slug': ('deus_magnus_title',)}
-    list_display = ['deus_magnus_title','deus_magnus_description','deus_manus_video','deus_magnus_author']
+    list_display = ['deus_magnus_title','deus_magnus_description','deus_magnus_status','deus_manus_video','deus_magnus_author']
 admin.site.register(DeusMagnusMainPost, DeusMagnusMainPostModelAdmin)
 
 #The Second DeusMagnus post post model admin of josepdam
