@@ -170,19 +170,26 @@ class ContactView(ListView):
     template_name = 'deus_magnus/contact_us.html'
 
     def get(self, request):
-        videos = Contactvideo.objects.all()  # Fetch videos
-        return render(request, self.template_name, {'object_list': videos})
-    def post(self, request):
-        message_name = request.POST['message-name']
-        message_email = request.POST['message-email']
-        message = request.POST['message']
-        
-        # Here you can add code to send an email or save the message to the database
+        videos = Contactvideo.objects.all()
+        return render(request, self.template_name, {'object_list': videos,})
 
-        return redirect('success_url')
+    def post(self, request):
+        if request.method == 'POST':
+            message_name = request.POST['message-name']
+            message_email = request.POST['message-email']
+            message = request.POST['message']
+
+            # Process the form (e.g., send an email)
+            messages.success(request, f'Your email was Successfully {message_name}..')
+
+            return render(request, 'deus_magnus/message.html', {'message_name': message_name})
+        else:
+            # If the form is not valid, render the template again with the form errors
+            videos = Contactvideo.objects.all()
+            return render(request, self.template_name, {'object_list': videos,})
            
-'''def message (request):
-    return render (request, 'deus_magnus/message.html', {})'''
+def message (request):
+    return render (request, 'deus_magnus/message.html', {})
 
 #This is the blog services category of deus magnus
 class BlogView(ListView):
