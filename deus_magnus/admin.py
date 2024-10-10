@@ -15,7 +15,7 @@ admin.site.register(DeusMagnusMainPost, DeusMagnusMainPostModelAdmin)
 #The Second DeusMagnus post post model admin of josepdam
 class SecondDeusMagnusMainPicturePosttModelAdmin (admin.ModelAdmin):
     prepopulated_fields = {'second_deus_magnus_slug': ('second_deus_magnus_title',)}
-    list_display = ['second_deus_magnus_title','second_deus_magnus_description','second_deus_magnus_img','second_deus_magnus_author']
+    list_display = ['second_deus_magnus_title','second_deus_magnus_status','second_deus_magnus_description','second_deus_magnus_img','second_deus_magnus_author']
 admin.site.register(SecondDeusMagnusMainPicturePost, SecondDeusMagnusMainPicturePosttModelAdmin)
 
 #The inner sub category of the detailview page view
