@@ -76,14 +76,14 @@
                             Our team of experts is prepared to bring your vision to life, 
                             ensuring quality, efficiency, and long-term value for your real estate investments.</p>
                     </div><!-- end title -->
-                    <form method="POST">
+                    <form action="{% url 'contact' %}" method="post">
                         {% csrf_token %}
-                        <input name="message-name" type="text" class="form-control" placeholder="Enter your name.."><br>
-                        <input name="message-email" type="email" class="form-control" placeholder="Enter email.."><br>
-                        <input name="message-subject" type="text" class="form-control" placeholder="Subject.."><br>
+                        <input type="text" name="message-name" class="form-control" placeholder="Enter your name.."><br>
+                        <input type="email" name="message-email" class="form-control" placeholder="Enter email.."><br>
                         <textarea name="message" class="form-control" placeholder="Message goes here.."></textarea><br>
-                        <center><button type="submit" class="btn btn-primary" style="border-radius: 5px;font-family: Georgia;">Submit</button></center>
+                        <center><button type="submit" class="btn btn-primary" style="border-radius: 5px; font-family: Georgia;">Submit</button></center>
                     </form>
+                    
                 </div><!-- end col -->
             </div><!-- end row -->
         </div><!-- end container -->

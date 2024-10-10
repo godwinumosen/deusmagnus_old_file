@@ -165,25 +165,24 @@ def deus_magnus_whatsapp_message(request):
     return render(request, 'deus_magnus_kwhatsapp_message.html', context)
 
 # The Contact view been implemented
-class ContactView(ListView): 
+class ContactView(ListView):
     model = Contactvideo
     template_name = 'deus_magnus/contact_us.html'
-    def ContactView (request):
-        email='info@deusmagnus.com'
-        if request.method == 'POST':
-            message_name = request.POST['message-name']
-            message_email = request.POST['message-email']
-            message_subject = request.POST['message-subject']
-            message = request.POST['message'] 
-            messages.success(request, f'Your email was Successfully sent to Deus Magnus {message_name}..!')
-            return redirect('/message')
-        else:
-            context={
-                'email':email
-            } 
-            return render(request, 'deus_magnus/contact_us.html', {})
-def message (request):
-    return render (request, 'deus_magnus/message.html', {})
+
+    def get(self, request):
+        videos = Contactvideo.objects.all()  # Fetch videos
+        return render(request, self.template_name, {'object_list': videos})
+    def post(self, request):
+        message_name = request.POST['message-name']
+        message_email = request.POST['message-email']
+        message = request.POST['message']
+        
+        # Here you can add code to send an email or save the message to the database
+
+        return redirect('success_url')
+           
+'''def message (request):
+    return render (request, 'deus_magnus/message.html', {})'''
 
 #This is the blog services category of deus magnus
 class BlogView(ListView):
