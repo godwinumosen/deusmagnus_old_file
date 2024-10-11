@@ -181,7 +181,6 @@ class ContactView(ListView):
 
             # Process the form (e.g., send an email)
             messages.success(request, f'Your email was Successfully {message_name}..')
-
             return render(request, 'deus_magnus/message.html', {'message_name': message_name})
         else:
             # If the form is not valid, render the template again with the form errors
