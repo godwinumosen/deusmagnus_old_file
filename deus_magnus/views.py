@@ -178,7 +178,6 @@ class ContactView(ListView):
             message_name = request.POST['message-name']
             message_email = request.POST['message-email']
             message = request.POST['message']
-
             # Process the form (e.g., send an email)
             messages.success(request, f'Your email was Successfully {message_name}..')
             return render(request, 'deus_magnus/message.html', {'message_name': message_name})
