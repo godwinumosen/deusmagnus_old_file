@@ -1199,6 +1199,22 @@ hr.invis {
 }
 
 
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #ffffff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #04245c;
+    border-radius: 10px;
+    margin-left: 12px;
+}
+
 /******************************************
 COURSE MODULES
 ******************************************/
@@ -1636,9 +1652,6 @@ BLOG
     font-style: italic;
 }
 
-
-
-
 .blog-grid .col-md-6,
 .blog-grid .col-md-4 {
     margin-bottom: 30px
@@ -1651,8 +1664,6 @@ BLOG
     z-index: 1000; /* Ensure it's above other content */
     background-color:#fff;
 }
-
-
 
 
 /******************************************
