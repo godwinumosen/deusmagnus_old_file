@@ -177,6 +177,7 @@ class ContactView(ListView):
         if request.method == 'POST':
             message_name = request.POST['message-name']
             message_email = request.POST['message-email']
+            message_subject = request.POST['message-subject']
             message = request.POST['message']
             # Process the form (e.g., send an email)
             messages.success(request, f'Your email was Successfully {message_name}..')
