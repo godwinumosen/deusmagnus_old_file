@@ -161,7 +161,7 @@ a {
     transition: all ease 0.3s;
 }
 
-.ch li:before {
+.ch li:before 
     content: "\f00c";
     font-family: "sans-serif";
     font-size: 16px;
