@@ -59,7 +59,6 @@ class SubPicture_1(models.Model):
 
     class Meta:
         ordering =['sub_publish_date_1']
-    
     def __str__(self):
         return self.sub_title_1 + ' | ' + str(self.sub_author_1)
 
