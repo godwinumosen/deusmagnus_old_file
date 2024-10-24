@@ -153,6 +153,7 @@ class SubPictureDetailView(DetailView):
         object = get_object_or_404(SubPictureDetailView, pk=pk)
         return render(request, 'deus_magnus/sub_picture_detail.html', {'sub_detail': object})
     
+    
 #sub_picture article display inside second detailsview
 class SubVideoDetailView(DetailView):
     model = SubPicture_2
