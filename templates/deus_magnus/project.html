@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %} {{object.deus_magnus_event_title}}{% endblock %}
+{% block title %} {{ sub_picture.sub_title_1 }}{% endblock %}
 {% block content%}
 
 
@@ -30,11 +30,11 @@
                     </ul>
                 </div><!-- end blog-meta -->
                 <div class="blog-media">
-                    <img src="{{ object.deus_magnus_event_img.url }}"style="border-radius:5px;" alt="" class="img-responsive img-rounded">   
+                    <img src="{{ sub_picture.sub_image_1.url }}"style="border-radius:5px;" alt="" class="img-responsive img-rounded">   
                 </div><!-- end media -->
                 <div class="blog-desc-big">
-                    <p style="color: #98681e;font-family: Georgia;" class="lead">{{ object.deus_magnus_event_title}}</p>
-                    <p>{{ object.deus_magnus_event_description  }}</p>  
+                    <p style="color: #98681e;font-family: Georgia;" class="lead">{{ sub_picture.sub_title_1 }}</p>
+                    <p>{{ sub_picture.sub_description_1 }}</p>  
                 </div><!-- end desc -->
 
                 <div class="blog-desc-big">
