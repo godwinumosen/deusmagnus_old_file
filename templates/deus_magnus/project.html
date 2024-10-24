@@ -1,71 +1,51 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %} {{ sub_picture.sub_title_1 }}{% endblock %}
+{% block title %} {{ sub.sub_title_1 }} {% endblock %}
 {% block content%}
-
 
 <section class="section db p120">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="tagline-message page-title text-center"><br><br>
-                    <h1 style="color:fff;font-family: Georgia;font-size:50px;">Deus Magnus</h1>
+            <div class="col-md-12"><br><br>
+                <div class="tagline-message page-title text-center">
+                    <h1 style="color:fff;font-family: Georgia;font-size:50px;">Our Projects</h1>
                 </div>
             </div><!-- end col -->
         </div><!-- end row -->
     </div><!-- end container -->
 </section><!-- end section -->
 
-<section class="section gb nopadtop">
-<div class="container">
-<div class="boxed">
-<div class="row">
-    <div class="col-md-11">
-        <div class="content blog-list">
-            <div class="blog-wrapper clearfix">
-                <div class="blog-meta">
-                   
-                    <ul class="list-inline">
-                        <li><span>written by</span>Deus Magnus</li>
-                    </ul>
-                </div><!-- end blog-meta -->
-                <div class="blog-media">
-                    <img src="{{ sub_picture.sub_image_1.url }}"style="border-radius:5px;" alt="" class="img-responsive img-rounded">   
-                </div><!-- end media -->
-                <div class="blog-desc-big">
-                    <p style="color: #98681e;font-family: Georgia;" class="lead">{{ sub_picture.sub_title_1 }}</p>
-                    <p>{{ sub_picture.sub_description_1 }}</p>  
-                </div><!-- end desc -->
 
-                <div class="blog-desc-big">
-                    <p style="color: #98681e;font-family: Georgia;" class="lead">{{ object.deus_magnus_event_sub_title_1}}</p>
-                    <p>{{ object.deus_magnus_event_description_1  }}</p>  
-                </div><!-- end desc -->
-                <div class="blog-desc-big">
-                    <p style="color: #98681e;font-family: Georgia;" class="lead">{{ object.deus_magnus_event_sub_title_2}}</p>
-                    <p>{{ object.deus_magnus_event_description_2  }}</p>  
-                </div><!-- end desc -->
-                <div class="blog-desc-big">
-                    <p style="color: #98681e;font-family: Georgia;" class="lead">{{ object.deus_magnus_event_sub_title_3}}</p>
-                    <p>{{ object.deus_magnus_event_description_3  }}</p>  
-                </div><!-- end desc -->
-                <div class="blog-desc-big">
-                    <p style="color: #98681e;font-family: Georgia;" class="lead">{{ object.deus_magnus_event_sub_title_4}}</p>
-                    <p>{{ object.deus_magnus_event_description_4  }}</p>  
-                </div><!-- end desc -->
-                <div class="blog-desc-big">
-                    <p style="color: #98681e;font-family: Georgia;" class="lead">{{ object.deus_magnus_event_sub_title_5}}</p>
-                    <p>{{ object.deus_magnus_event_description_5  }}</p>  
-                </div><!-- end desc -->
-            </div><!-- end blog --><br>
-            <div class="btn-wrapper">
-                <a href=""onclick="history.back(); return false;" class="btn btn-primary"style="border-radius: 5px;font-family: Georgia;"> Back</a>
-            </div>
-        </div><!-- end content -->
-    </div><!-- end col -->
-</div><!-- end row -->
-</div><!-- end boxed -->
-</div><!-- end container -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title text-center">
+            <h3 style="color: #98681e;font-family: Georgia;">Read the latest news and update from Deus Magnus<br>and the construction industry</h3>
+            </div><!-- end title -->
+        
+        <div class="row text-center">
+            {% for sub in subs %}
+            <div class="col-md-4 col-sm-6">
+                <div class="teammembers">
+                    <div class="entry">
+                        <a href="{% url 'sub_detail' pk=sub.pk %}">
+                            <img src="{{ sub.sub_image_1.url }}"height="240px"style="border-radius: 5px; alt="" >
+                        </a>
+                    </div><!-- end box -->
+                    <div class="teamdesc">
+                       <a href="{% url 'sub_detail' pk=sub.pk %}">
+                        <h4 style="color: #98681e;font-family: Georgia;">{{ sub.sub_title_1 }}</h4>
+                        </a>
+                        <hr>
+                        <h5>{{ sub.sub_description_1|truncatechars:40 }}</h5>
+                        <div class="btn-wrapper">
+                            <a href="{% url 'sub_detail' pk=sub.pk %}"class="btn btn-primary"style="border-radius: 5px;font-family: Georgia;">Read More</a>
+                        </div>
+                    </div><!-- end teamdesc -->
+                </div><!-- end teammembers --><br>
+            </div><!-- end col -->
+            {% endfor %}
+        </div><!-- end row -->
+    </div><!-- end container -->
 </section>
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
@@ -80,4 +60,8 @@
     })();
     </script>
     <!--End of Tawk.to Script-->
+
+
+
+
 {% endblock %}
