@@ -30,6 +30,7 @@ urlpatterns = [
     path('mission_vision_strategy/', views.MissionVisionStrategesView, name='mission_vision_strategy'),
     path('founder_message/', FounderMessageView.as_view(), name='founder_message'),
     path('services/', ServicesPage.as_view(), name='services'),
+     path('projects', SubPictureDetailView.as_view(), name="projects"),
     path('facility_management/', FacilityManagement.as_view(), name='facility_management'),
     path('real_estate_services/', RealEstateServices.as_view(), name='real_estate_services'),
     path('construction_development/', ConstructionDevelopment.as_view(), name='construction_development'),
