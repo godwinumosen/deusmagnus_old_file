@@ -138,7 +138,12 @@ class VideoImageDetailView(DetailView):
     def VideoImageDetailView(request, pk):  
         object = get_object_or_404(VideoImageDetailView, pk=pk)
         return render(request, 'deus_magnus/sub_video_img_detail.html', {'sub_video_img_detail': object})
-    
+
+#This is for our projects view
+class Project(ListView):
+    model = SubPicture_1
+    template_name = 'deus_magnus/project.html'
+
 #sub_picture article display inside second detailsview
 class SubPictureDetailView(DetailView):
     model = SubPicture_1
