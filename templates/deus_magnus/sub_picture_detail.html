@@ -28,11 +28,16 @@
                                 {% endif  %}
                             </div><!-- end image-wrap -->
                         </div>
-                    </div><!-- end row -->
-                        <hr class="invis">
-                        <div class="row">
-                    </div><!-- end row -->
+                  
                 </div><!-- end col -->
+                <div class="blog-desc-big">
+                    <p style="color: #98681e;font-family: Georgia;"class="lead">{{ sub_picture.sub_title_1 }}</p>
+                    <p>{{ sub_picture.sub_description_1 }}</p>  
+                </div><!-- end desc -->
+                <div class="btn-wrapper">
+                    <a href=""onclick="history.back(); return false;" class="btn btn-primary"style="border-radius: 5px;font-family: Georgia;">Back </a>
+                </div>
+            </div>
                
             <div class="row">   
                 <div class="col-md-12">
@@ -43,7 +48,7 @@
                                 <p>{{ sub_picture.sub_description_1 }}</p>             
                             </div>
                             <div class="btn-wrapper">
-                                <a href=""onclick="history.back(); return false;" class="btn btn-primary"style="border-radius: 5px;font-family: Georgia;">Back Page</a>
+                                <a href=""onclick="history.back(); return false;" class="btn btn-primary"style="border-radius: 5px;font-family: Georgia;">Back </a>
                             </div>
                         </div>
                     </div><!-- end shop-extra -->
@@ -52,7 +57,48 @@
         </div><!-- end boxed -->
     </div><!-- end container -->
 </section>
+
+
+<section class="section">
+    <div class="container">
+        <div class=" ">
+            <div class="row">
+                <div class="col-md-9 shop-media">
+                    <div class="row">
+                        <div class="col-md-11">
+                            <div class="image-wrap entry">
+                                {% if sub_picture.sub_image_1 %}                     
+                                <img src="{{ sub_picture.sub_image_1.url }}" alt="" class="img-responsive">
+                                {% endif  %}
+                            </div><!-- end image-wrap -->
+                        </div>
+                    </div><!-- end row -->
+                        <hr class="invis">
+                        <div class="row">
+                    </div><!-- end row -->
+                </div><!-- end col -->
+
+                <div class="col-md-9">
+                    <div class="shop-desc">
+                        <h3 style="color: #98681e;">{{ sub_picture.sub_title_1 }}</h3>
+                        <p>{{ sub_picture.sub_description_1 }}</p> 
+                        <div class="shop-meta">
+                            <div class="btn-wrapper">
+                                <a href=""onclick="history.back(); return false;" class="btn btn-primary"style="border-radius: 5px;font-family: Georgia;">Back </a>
+                            </div>
+                            <ul class="list-inline">
+                                <li>{{ object.second_deus_magnus_publish_date }}</li>
+                                <li>Posted by: Deus Magnus</li>
+                            </ul>
+                        </div><!-- end shop meta -->
+                    </div><!-- end desc -->
+                </div><!-- end col -->   
+            </div><!-- end related -->
+        </div><!-- end boxed -->
+    </div><!-- end container -->
+</section>
 <!--Start of Tawk.to Script-->
+
 <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
