@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let count = 0;
         const increment = Math.ceil(stat.target / (stat.duration / 100));
         
-        // Update the stat with the "+" sign
+        // Update the stat with the "+" sign      
         const interval = setInterval(() => {
             count += increment;
             if (count >= stat.target) {
