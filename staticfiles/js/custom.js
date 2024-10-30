@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     const stats = [
-        { id: 'years-experience', target: 15, duration: 2000 },
+        { id: 'years-experience', target: 5, duration: 2000 },
         { id: 'properties-sold', target: 10, duration: 2000 },
-        { id: 'completed-projects', target: 12, duration: 2000 }
+        { id: 'ongoing-projects', target: 21, duration: 2000 },
+        { id: 'completed-projects', target: 5, duration: 2000 }
     ];
 
     stats.forEach(stat => {
@@ -10,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let count = 0;
         const increment = Math.ceil(stat.target / (stat.duration / 100));
         
-        // Update the stat with the "+" sign
+        // Update the stat with the "+" sign      
         const interval = setInterval(() => {
             count += increment;
             if (count >= stat.target) {
