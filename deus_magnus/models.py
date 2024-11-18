@@ -265,3 +265,17 @@ class ConstructionPicture(models.Model):
     
 class ProjectPicture(models.Model):
     deus_magnus_project_p = models.ImageField(upload_to='project_p/')
+
+
+class TeamMemberBirthday(models.Model):
+    birthday_name = models.CharField(max_length=200)
+    birthday_date = models.DateField()
+    birthday_image = models.ImageField(upload_to='birthday_p/')
+    birthday_author = models.ForeignKey(User, on_delete=models.CASCADE)
+    birthday_publish_date = models.DateTimeField (auto_now_add= True)
+
+    class Meta:
+        ordering =['-birthday_publish_date']
+
+    def __str__(self):
+        return self.name
