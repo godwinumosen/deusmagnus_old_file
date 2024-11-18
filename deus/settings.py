@@ -131,18 +131,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'ochikezie@josepdam.com.com'
-EMAIL_HOST_PASSWORD = 'Josepdam123'
 
-from celery.schedules import crontab
-
-CELERY_BEAT_SCHEDULE = {
-    'check-birthdays-everyday': {
-        'task': 'reminders.tasks.check_birthdays_task',
-        'schedule': crontab(minute=0, hour=9),  # runs every day at 9 AM
-    },
-}
