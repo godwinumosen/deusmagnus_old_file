@@ -7,11 +7,8 @@ from django.urls import reverse_lazy
 from .models import ServicesPagePicture,RealEstatePicture,FacilityManagementPicture,ConstructionPicture
 from .models import SubPicture_1, SubPicture_2,VideoSubImage, BlogDeusMagnus,DeusMagnusEventBlog,FAQs,Mainvideo
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost,FounderPicture,BashPicture
-from .models import OurManagementsInDeusMagnus,GLOSSARY,Guides,Contactvideo,Aboutvideo,TeamMemberBirthday
+from .models import OurManagementsInDeusMagnus,GLOSSARY,Guides,Contactvideo,Aboutvideo
 from django.contrib import messages
-from django.utils import timezone
-from django.core.mail import send_mail
-from django.conf import settings
 from django.contrib.auth.models import User
 from django.contrib.auth.mixins import LoginRequiredMixin  
 

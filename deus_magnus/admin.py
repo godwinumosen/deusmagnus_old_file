@@ -4,7 +4,7 @@ from . import models
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost,SubPicture_2
 from .models import SubPicture_1, VideoSubImage, DeusMagnusEventBlog,OurManagementsInDeusMagnus,FAQs,BashPicture
 from .models import GLOSSARY,Mainvideo,BlogDeusMagnus,Guides,Contactvideo,Aboutvideo,FounderPicture,ServicesPagePicture
-from .models import RealEstatePicture,FacilityManagementPicture,ConstructionPicture,TeamMemberBirthday
+from .models import RealEstatePicture,FacilityManagementPicture,ConstructionPicture
 
 #The DeusMagnus main post model admin
 class DeusMagnusMainPostModelAdmin (admin.ModelAdmin):
@@ -105,6 +105,3 @@ class ConstructionPictureModelAdmin (admin.ModelAdmin):
     list_display = ['deus_magnus_construction_p']
 admin.site.register(ConstructionPicture, ConstructionPictureModelAdmin)
 
-class TeamMemberBirthdayModelAdmin (admin.ModelAdmin):
-    list_display = ['birthday_name','birthday_date']
-admin.site.register(TeamMemberBirthday, TeamMemberBirthdayModelAdmin)
