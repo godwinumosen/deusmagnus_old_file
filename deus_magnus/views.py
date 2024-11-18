@@ -7,8 +7,11 @@ from django.urls import reverse_lazy
 from .models import ServicesPagePicture,RealEstatePicture,FacilityManagementPicture,ConstructionPicture
 from .models import SubPicture_1, SubPicture_2,VideoSubImage, BlogDeusMagnus,DeusMagnusEventBlog,FAQs,Mainvideo
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost,FounderPicture,BashPicture
-from .models import OurManagementsInDeusMagnus,GLOSSARY,Guides,Contactvideo,Aboutvideo
+from .models import OurManagementsInDeusMagnus,GLOSSARY,Guides,Contactvideo,Aboutvideo,TeamMemberBirthday
 from django.contrib import messages
+from django.utils import timezone
+from django.core.mail import send_mail
+from django.conf import settings
 from django.contrib.auth.models import User
 from django.contrib.auth.mixins import LoginRequiredMixin  
 
@@ -242,3 +245,22 @@ class FounderMessageView(ListView):
     template_name = 'deus_magnus/founder_message.html'
     def FounderMessageView (request):
         return render(request, 'deus_magnus/founder_message.html', {}) 
+    
+
+def check_birthdays(request):
+    today = timezone.now().date()
+    birthday_people = TeamMemberBirthday.objects.filter(birthday=today)
+
+    if birthday_people.exists():
+        # Send reminder email to the team
+        for person in birthday_people:
+            send_birthday_reminder(person)
+    return render(request, 'deus_magnus/birthday_reminder.html', {'birthday_people': birthday_people})
+
+def send_birthday_reminder(person):
+    # This is a simple email function. You can expand this as needed.
+    subject = f"Happy Birthday, {person.name}!"
+    message = f"Today is {person.name}'s Birthday, We Deus Magnus wish you a happy birthday today."
+    recipient_list = ['.com']  # Send to team email list
+    
+    send_mail(subject, message, settings.EMAIL_HOST_USER, recipient_list)
