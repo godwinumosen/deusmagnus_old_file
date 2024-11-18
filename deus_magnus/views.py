@@ -21,9 +21,8 @@ def base_view(request):
 
 #The main HomeView page
 class HomeView(ListView): 
-    model = DeusMagnusMainPost
+    model = DeusMagnusMainPost 
     template_name = 'deus_magnus/home.html'
-
     #This model is for the second deus magnus sub category of the blog
     def get_context_data(self, **kwargs):  
         context = super().get_context_data(**kwargs)
@@ -55,7 +54,7 @@ class ArticleDetailView(DetailView):
     model = DeusMagnusMainPost
     template_name = 'deus_magnus/article_detail.html'
     def ArticleDetailViewDeusmagnuslimited(request, pk):
-        object = get_object_or_404(DeusMagnusMainPost, pk=pk)
+        object = get_object_or_404(DeusMagnusMainPost, pk=pk)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
         return render(request, 'article_detail.html', {'detail': object})
     #This is the sub-model data related to the first video model instance
     def get_context_data(self, **kwargs):
@@ -63,7 +62,7 @@ class ArticleDetailView(DetailView):
         context['sub_v_imgs'] = VideoSubImage.objects.all() 
         return context
     
-#The second ArticleDetailView page of deus magnus group   
+#The second ArticleDetailView page of deus magnus group
 class SecondConstructionDetailViewArticleDetailView(DetailView):
     model = SecondDeusMagnusMainPicturePost
     template_name = 'deus_magnus/second_article_detail.html'    
