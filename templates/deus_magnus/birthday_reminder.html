@@ -1,0 +1,10 @@
+<h1>Today's Birthdays</h1>
+{% if birthday_people %}
+    <ul>
+    {% for person in birthday_people %}
+        <li>{{ person.name }} - {{ person.birthday }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No birthdays today!</p>
+{% endif %}

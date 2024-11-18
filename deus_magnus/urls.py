@@ -36,5 +36,6 @@ urlpatterns = [
     path('construction_development/', ConstructionDevelopment.as_view(), name='construction_development'),
     path('faqs_items/', FAQs_item.as_view(), name='faqs_items'),
     path('glossary_items/', GLOSSARY_item.as_view(), name='glossary_items'),
+    path('birthday-reminder/', views.check_birthdays, name='birthday_reminder'),
     
 ]   

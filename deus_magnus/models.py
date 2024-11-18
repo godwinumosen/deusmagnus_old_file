@@ -278,4 +278,4 @@ class TeamMemberBirthday(models.Model):
         ordering =['-birthday_publish_date']
 
     def __str__(self):
-        return self.name
+        return self.birthday_name
