@@ -259,8 +259,8 @@ def check_birthdays(request):
 
 def send_birthday_reminder(person):
     # This is a simple email function. You can expand this as needed.
-    subject = f"Happy Birthday, {person.name}!"
-    message = f"Today is {person.name}'s Birthday, We Deus Magnus wish you a happy birthday today."
+    subject = f"Happy Birthday, {person.name}"
+    message = f"Today is {person.name}'s Birthday, We Deus Magnus wish you a happy birthday today..."
     recipient_list = ['ochikezie@josepdam.com']  # Send to team email list
     
     send_mail(subject, message, settings.EMAIL_HOST_USER, recipient_list)
