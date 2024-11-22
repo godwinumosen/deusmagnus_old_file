@@ -53,7 +53,7 @@ class DeusMagnusEventBlogArticleDetailView(DetailView):
 class ArticleDetailView(DetailView):
     model = DeusMagnusMainPost
     template_name = 'deus_magnus/article_detail.html'
-    def ArticleDetailViewDeusmagnuslimited(request, pk):
+    def ArticleDetailViewDeusmagnuslimited(request, pk): 
         object = get_object_or_404(DeusMagnusMainPost, pk=pk)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
         return render(request, 'article_detail.html', {'detail': object})
     #This is the sub-model data related to the first video model instance
