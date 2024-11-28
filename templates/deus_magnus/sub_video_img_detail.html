@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-md-12"><br><br>
                 <div class="tagline-message page-title text-center">
-                    <h1 style="color:fff;font-family: Georgia;font-size:50px;">{{ sub_video_img.video_sub_title }}</h1>
+                    <h1 style="color:fff;font-family: Georgia;font-size:50px;">{{ sub_video_img.video_sub_title|truncatechars:22 }}</h1>
                 </div>
             </div><!-- end_col -->
         </div><!-- end_row -->
@@ -23,7 +23,7 @@
                     <div class="content blog-list">
                         <div class="blog-wrapper clearfix">
                             <div class="blog-meta">
-                                <h3 style="color: #98681e;">{{ sub_video_img.video_sub_title }}</h3>
+                                <h3 style="color: #98681e;"> </h3>
                                 <ul class="list-inline">  
                                     <li>{{ sub_video_img.video_sub_publish_date }}</li>
                                     <li><span>written by</span>Deus Magnus</li>
