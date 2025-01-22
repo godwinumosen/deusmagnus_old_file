@@ -54,6 +54,8 @@ class SubPicture_1(models.Model):
     sub_description_1 = models.TextField()
     sub_slug_1 = models.SlugField (max_length=255,blank=True, null=True)
     sub_image_1 = models.ImageField(upload_to='images_sub/')
+    sub_image_2 = models.ImageField(upload_to='images_sub2/')
+    sub_image_3 = models.ImageField(upload_to='images_sub2/')
     sub_publish_date_1 = models.DateTimeField (auto_now_add= True)
     sub_author_1 = models.ForeignKey(User, on_delete=models.CASCADE)
 
