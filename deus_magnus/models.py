@@ -54,19 +54,18 @@ class SubPicture_1(models.Model):
     sub_description_1 = models.TextField()
     sub_slug_1 = models.SlugField (max_length=255,blank=True, null=True)
     sub_image_1 = models.ImageField(upload_to='images_sub/')
-    sub_image_2 = models.ImageField(upload_to='images_sub2/')
-    sub_image_3 = models.ImageField(upload_to='images_sub2/')
+    #sub_image_2 = models.ImageField(upload_to='images_sub2/')
+    #sub_image_3 = models.ImageField(upload_to='images_sub2/')
     sub_publish_date_1 = models.DateTimeField (auto_now_add= True)
     sub_author_1 = models.ForeignKey(User, on_delete=models.CASCADE)
 
     class Meta:
-        ordering =['sub_publish_date_1']
+        ordering =['-sub_publish_date_1']
     def __str__(self):
         return self.sub_title_1 + ' | ' + str(self.sub_author_1)
 
     def get_absolute_url(self):
-        return reverse('home','sub_video_img_detail','sub_detail_video','sub_detail',
-                       'board_detail','blog_detail','last_detail','second_detail','detail')
+        return reverse('home')
 
 class SubPicture_2 (models.Model):
     sub_title_2 = models.CharField(max_length=255, blank=True, null=True)
