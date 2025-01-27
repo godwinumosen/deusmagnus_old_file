@@ -4,7 +4,8 @@ from . import models
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost,SubPicture_2
 from .models import SubPicture_1, VideoSubImage, DeusMagnusEventBlog,OurManagementsInDeusMagnus,FAQs,BashPicture
 from .models import GLOSSARY,Mainvideo,BlogDeusMagnus,Guides,Contactvideo,Aboutvideo,FounderPicture,ServicesPagePicture
-from .models import RealEstatePicture,FacilityManagementPicture,ConstructionPicture
+from .models import RealEstatePicture,FacilityManagementPicture,ConstructionPicture,SpecializedServices
+from .models import ConcreteSupply,BoomPump,EquipmentHire,MaterialSupply
 
 #The DeusMagnus main post model admin
 class DeusMagnusMainPostModelAdmin (admin.ModelAdmin):
@@ -104,4 +105,24 @@ admin.site.register(FacilityManagementPicture, FacilityManagementPictureModelAdm
 class ConstructionPictureModelAdmin (admin.ModelAdmin):
     list_display = ['deus_magnus_construction_p']
 admin.site.register(ConstructionPicture, ConstructionPictureModelAdmin)
+
+class EquipmentHireModelAdmin (admin.ModelAdmin):
+    list_display = ['deus_magnus_equipment_p']
+admin.site.register(EquipmentHire, EquipmentHireModelAdmin)
+
+class BoomPumpModelAdmin (admin.ModelAdmin):
+    list_display = ['deus_magnus_boom_p']
+admin.site.register(BoomPump, BoomPumpModelAdmin)
+
+class ConcreteSupplyModelAdmin (admin.ModelAdmin):
+    list_display = ['deus_magnus_concrete_p']
+admin.site.register(ConcreteSupply, ConcreteSupplyModelAdmin)
+
+class MaterialSupplyModelAdmin (admin.ModelAdmin):
+    list_display = ['deus_magnus_material_p']
+admin.site.register(MaterialSupply, MaterialSupplyModelAdmin)
+
+class SpecializedServicesModelAdmin (admin.ModelAdmin):
+    list_display = ['deus_magnus_specialized_p']
+admin.site.register(SpecializedServices, SpecializedServicesModelAdmin)
 

@@ -265,5 +265,20 @@ class ConstructionPicture(models.Model):
     
 class ProjectPicture(models.Model):
     deus_magnus_project_p = models.ImageField(upload_to='project_p/')
+    
+class EquipmentHire(models.Model):
+    deus_magnus_equipment_p= models.ImageField(upload_to='equipment_p/')
+    
+class BoomPump(models.Model):
+    deus_magnus_boom_p = models.ImageField(upload_to='boom_p/')
+    
+class ConcreteSupply(models.Model):
+    deus_magnus_concrete_p = models.ImageField(upload_to='concrete_p/')
+    
+class MaterialSupply(models.Model):
+    deus_magnus_material_p = models.ImageField(upload_to='material_p/')
+    
+class SpecializedServices(models.Model):
+    deus_magnus_specialized_p = models.ImageField(upload_to='specialized_p/')
 
 
