@@ -29,13 +29,14 @@ urlpatterns = [
     path('our_management_team/', OurTeam.as_view(), name='our_management_team'),
     path('our_management_team_article/<int:pk>/', ManagementTeamArticleOfDuesMagnusDetail.as_view(), name="our_management_team_article"),
     path('mission_vision_strategy/', views.MissionVisionStrategesView, name='mission_vision_strategy'),
+    path('faqs_items/', FAQs_item.as_view(), name='faqs_items'),
+    path('glossary_items/', GLOSSARY_item.as_view(), name='glossary_items'),
     path('founder_message/', FounderMessageView.as_view(), name='founder_message'),
     path('services/', ServicesPage.as_view(), name='services'),
     path('facility_management/', FacilityManagement.as_view(), name='facility_management'),
     path('real_estate_services/', RealEstateServices.as_view(), name='real_estate_services'),
     path('construction_development/', ConstructionDevelopment.as_view(), name='construction_development'),
-    path('faqs_items/', FAQs_item.as_view(), name='faqs_items'),
-    path('glossary_items/', GLOSSARY_item.as_view(), name='glossary_items'),
+
     
     
 ]   

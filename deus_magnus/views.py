@@ -8,6 +8,7 @@ from .models import ServicesPagePicture,RealEstatePicture,FacilityManagementPict
 from .models import SubPicture_1, SubPicture_2,VideoSubImage, BlogDeusMagnus,DeusMagnusEventBlog,FAQs,Mainvideo
 from .models import DeusMagnusMainPost, SecondDeusMagnusMainPicturePost,FounderPicture,BashPicture
 from .models import OurManagementsInDeusMagnus,GLOSSARY,Guides,Contactvideo,Aboutvideo
+from .models import EquipmentHire,BoomPump,ConcreteSupply,MaterialSupply,SpecializedServices
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.mixins import LoginRequiredMixin  
@@ -93,6 +94,11 @@ class ServicesPage(ListView):
         context['reals'] = RealEstatePicture.objects.all() 
         context['facilitys'] = FacilityManagementPicture.objects.all() 
         context['constructions'] = ConstructionPicture.objects.all() 
+        context['equipments'] = EquipmentHire.objects.all() 
+        context['booms'] = BoomPump.objects.all() 
+        context['concretes'] = ConcreteSupply.objects.all() 
+        context['materialSupplys'] = MaterialSupply.objects.all() 
+        context['specializeds'] = SpecializedServices.objects.all() 
 
         return context 
 
