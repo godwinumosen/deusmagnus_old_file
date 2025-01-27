@@ -37,13 +37,16 @@
             <div class="col-md-2">
                 {% for equipment in equipments %}
                 <div class="custom-module">
+                    <a href="{% url 'equipmenthire' %}">
                     <img style="border-radius: 5px; "src="{{ equipment.deus_magnus_equipment_p.url }}" alt="" class="img-responsive wow slideInLeft">
+                    </a>
                 </div><!-- end module -->
                 {% endfor %}
             </div><!-- end col -->
             <div class="col-md-7">  
                 <div class="custom-module p40l">
-                    <h3 style="color: #98681e;font-family: Georgia;">Equipment Hire</h3>
+                    <a href="{% url 'equipmenthire' %}">
+                    <h3 style="color: #98681e;font-family: Georgia;">Equipment Hire</h3></a>
                     <p>Offers construction vehicles and equipment such as boom pumps, double drum 
                         rollers, and more to support efficient project execution.   
                     </p>               

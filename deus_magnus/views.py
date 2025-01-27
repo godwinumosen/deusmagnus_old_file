@@ -121,6 +121,13 @@ class ConstructionDevelopment(ListView):
     template_name = 'deus_magnus/construction_development.html'
     def ConstructionDevelopment (request):
         return render(request, 'deus_magnus/construction_development.html', {})
+    
+# equipment page of the deus magnus webapp
+class Equipment(ListView):
+    model = EquipmentHire
+    template_name = 'deus_magnus/equipment.html'
+    def ConstructionDevelopment (request):
+        return render(request, 'deus_magnus/equipment.html', {})
 
 # The frequently ask qeustion page of the media dropdown
 class FAQs_item(ListView):
