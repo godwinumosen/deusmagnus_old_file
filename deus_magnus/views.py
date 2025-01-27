@@ -149,6 +149,13 @@ class Material(ListView):
     template_name = 'deus_magnus/material.html'
     def Material (request):
         return render(request, 'deus_magnus/material.html', {})
+    
+#Specialized page of the deus magnus webapp Material
+class Specialized(ListView):
+    model = SpecializedServices
+    template_name = 'deus_magnus/Specialized.html'
+    def Specialized (request):
+        return render(request, 'deus_magnus/Specialized.html', {})
 
 # The frequently ask qeustion page of the media dropdown
 class FAQs_item(ListView):

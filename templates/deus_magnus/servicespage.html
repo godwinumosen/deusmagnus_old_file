@@ -141,13 +141,16 @@
             <div class="col-md-2">
                 {% for specialized in specializeds %}
                 <div class="custom-module">
+                    <a href="{% url 'specialized' %}">
                     <img style="border-radius: 5px; "src="{{ specialized.deus_magnus_specialized_p.url }}" alt="" class="img-responsive wow slideInLeft">
+                    </a>
                 </div><!-- end module -->
                 {% endfor %}
             </div><!-- end col -->
             <div class="col-md-7">  
                 <div class="custom-module p40l">
-                    <h3 style="color: #98681e;font-family: Georgia;">Specialized Services</h3>
+                    <a href="{% url 'specialized' %}">
+                    <h3 style="color: #98681e;font-family: Georgia;">Specialized Services</h3></a>
                     <p>Includes project consultation, site supervision, and logistical support to 
                         ensure seamless operations from start to finish.
                     </p>               
