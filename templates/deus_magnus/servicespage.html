@@ -35,6 +35,127 @@
     <div class="container">
         <div class="row">
             <div class="col-md-2">
+                {% for equipment in equipments %}
+                <div class="custom-module">
+                    <img style="border-radius: 5px; "src="{{ equipment.deus_magnus_equipment_p.url }}" alt="" class="img-responsive wow slideInLeft">
+                </div><!-- end module -->
+                {% endfor %}
+            </div><!-- end col -->
+            <div class="col-md-7">  
+                <div class="custom-module p40l">
+                    <h3 style="color: #98681e;font-family: Georgia;">Equipment Hire</h3>
+                    <p>Offers construction vehicles and equipment such as boom pumps, double drum 
+                        rollers, and more to support efficient project execution.   
+                    </p>               
+                </div><!-- end module -->
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section><br><br>
+
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                {% for boom in booms %}
+                <div class="custom-module">
+                    <img style="border-radius: 5px; "src="{{ boom.deus_magnus_boom_p.url }}" alt="" class="img-responsive wow slideInLeft">
+                </div><!-- end module -->
+                {% endfor %}
+            </div><!-- end col -->
+            <div class="col-md-7">  
+                <div class="custom-module p40l">
+                    <h3 style="color: #98681e;font-family: Georgia;">Boom Pump</h3>
+                    <p>Welcome Home to Power and Precision: The 52M Boom Pump
+                        Whether you’re taking on high-rise builds or expansive construction projects, our 52-meter boom pump brings reach, 
+                        power, and efficiency straight to your site. Capable of delivering concrete exactly 
+                        where it’s needed—no matter the height or depth—our pump is designed for the highest standards in modern construction.
+                        </p>               
+                </div><!-- end module -->
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section><br><br>
+
+
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                {% for concrete in concretes %}
+                <div class="custom-module">
+                    <img style="border-radius: 5px; "src="{{ concrete.deus_magnus_concrete_p.url }}" alt="" class="img-responsive wow slideInLeft">
+                </div><!-- end module -->
+                {% endfor %}
+            </div><!-- end col -->
+            <div class="col-md-7">  
+                <div class="custom-module p40l">
+                    <h3 style="color: #98681e;font-family: Georgia;">Concrete Supply</h3>
+                    <p>Provides mixed concrete solutions tailored to project specifications, 
+                        ensuring consistency and quality.
+                    </p>               
+                </div><!-- end module -->
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section><br><br>
+
+
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                {% for materialSupply in materialSupplys %}
+                <div class="custom-module">
+                    <img style="border-radius: 5px; "src="{{ materialSupply.deus_magnus_material_p.url }}" alt="" class="img-responsive wow slideInLeft">
+                </div><!-- end module -->
+                {% endfor %}
+            </div><!-- end col -->
+            <div class="col-md-7">  
+                <div class="custom-module p40l">
+                    <h3 style="color: #98681e;font-family: Georgia;">Material Supply</h3>
+                    <p>Supplies essential construction materials, including granite and sand, directly to project sites. 
+                    </p>               
+                </div><!-- end module -->
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section><br><br>
+
+
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                {% for specialized in specializeds %}
+                <div class="custom-module">
+                    <img style="border-radius: 5px; "src="{{ specialized.deus_magnus_specialized_p.url }}" alt="" class="img-responsive wow slideInLeft">
+                </div><!-- end module -->
+                {% endfor %}
+            </div><!-- end col -->
+            <div class="col-md-7">  
+                <div class="custom-module p40l">
+                    <h3 style="color: #98681e;font-family: Georgia;">Specialized Services</h3>
+                    <p>Includes project consultation, site supervision, and logistical support to 
+                        ensure seamless operations from start to finish.
+                    </p>               
+                </div><!-- end module -->
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div><!-- end container -->
+</section><br><br>
+
+
+
+
+
+
+
+
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
                 {% for post in object_list %}
                 <div class="custom-module">
                     <img style="border-radius: 5px; "src="{{ post.deus_magnus_services_p.url }}" alt="" class="img-responsive wow slideInLeft">
