@@ -6,7 +6,7 @@ from .views import SubPictureDetailView,SubVideoDetailView
 from .views import BlogArticleDetail,EventBlog,OurTeam,ManagementTeamArticleOfDuesMagnusDetail,ContactView,AboutView
 from .views import DeusMagnusEventBlogArticleDetailView,BlogView,FAQs_item,GLOSSARY_item,GuidesView,GuidesDetailView
 from .views import FounderMessageView,ServicesPage,RealEstateServices,FacilityManagement,ConstructionDevelopment,Project
-from .views import Equipment
+from .views import Equipment,Boom,Concrete,Material
 
 urlpatterns = [
     path('index/', views.index, name='index'),
@@ -38,6 +38,9 @@ urlpatterns = [
     path('real_estate_services/', RealEstateServices.as_view(), name='real_estate_services'),
     path('construction_development/', ConstructionDevelopment.as_view(), name='construction_development'),
     path('equipmenthire/', Equipment.as_view(), name='equipmenthire'),
+    path('boom/', Boom.as_view(), name='boom'),
+    path('concrete/', Concrete.as_view(), name='concrete'),
+    path('material/', Material.as_view(), name='material'),
 
     
     

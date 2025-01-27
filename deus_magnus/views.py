@@ -97,7 +97,7 @@ class ServicesPage(ListView):
         context['equipments'] = EquipmentHire.objects.all() 
         context['booms'] = BoomPump.objects.all() 
         context['concretes'] = ConcreteSupply.objects.all() 
-        context['materialSupplys'] = MaterialSupply.objects.all() 
+        context['materials'] = MaterialSupply.objects.all() 
         context['specializeds'] = SpecializedServices.objects.all() 
 
         return context 
@@ -128,6 +128,27 @@ class Equipment(ListView):
     template_name = 'deus_magnus/equipment.html'
     def ConstructionDevelopment (request):
         return render(request, 'deus_magnus/equipment.html', {})
+    
+# Boom Pump page of the deus magnus webapp
+class Boom(ListView):
+    model = BoomPump
+    template_name = 'deus_magnus/boom.html'
+    def Boom (request):
+        return render(request, 'deus_magnus/boom.html', {})
+    
+#concrete page of the deus magnus webapp 
+class Concrete(ListView):
+    model = ConcreteSupply
+    template_name = 'deus_magnus/concrete.html'
+    def Concrete (request):
+        return render(request, 'deus_magnus/concrete.html', {})
+    
+#Material page of the deus magnus webapp Material
+class Material(ListView):
+    model = MaterialSupply
+    template_name = 'deus_magnus/material.html'
+    def Material (request):
+        return render(request, 'deus_magnus/material.html', {})
 
 # The frequently ask qeustion page of the media dropdown
 class FAQs_item(ListView):
