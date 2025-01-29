@@ -115,7 +115,7 @@ class RealEstateServices(ListView):
     def RealEstateServices (request):
         return render(request, 'deus_magnus/real_estate_services.html', {})
     
-# Construction Development Management page of the deus magnus webapp
+# Construction Development Management page of the deus magnus webappZ
 class ConstructionDevelopment(ListView):
     model = ConstructionPicture
     template_name = 'deus_magnus/construction_development.html'
